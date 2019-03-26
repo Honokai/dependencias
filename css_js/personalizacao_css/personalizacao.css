@@ -1,0 +1,7 @@
+/* Bootstrap */
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #ADD8E6;
+}
+/*.table-striped  tbody, .table-hover tbody {
+  background-color: #DCDCDC;
+}*/
