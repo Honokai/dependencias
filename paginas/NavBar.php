@@ -1,3 +1,4 @@
+<<<<<<< HEAD:php/paginas/NavBar.php
 <script type="text/javascript">
     function exibeMenuSistemas() {
         document.getElementById('menuSistemas').style.display = 'block';
@@ -40,6 +41,8 @@
 	}
 </script>
 
+=======
+>>>>>>> b0da7e1f46e1de4aef2b8793af5cdf2cf1b20fbd:paginas/NavBar.php
 <div id="fechar_allmenu" style="display:none;" class="fechar_allmenu"  onmouseover="javascript:fecharAllMenu();"></div>
 
 <div>
