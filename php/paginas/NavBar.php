@@ -27,9 +27,10 @@
 		sistema = '<?php echo $_GET['sistema'] ?>'; 
 		pagina = '<?php echo $_GET['pagina'] ?>';
 		search = document.getElementById('search').value.trim();
-		if(search == '')
+		if(search == ''){
+			<?php setcookie('buscaVazia', 1, time() + 3600); ?>;
 			window.location = window.location.origin + '/' + sistema + '/' + pagina;
-		else
+		}else
 			window.location = window.location.origin + '/' + sistema + '/' + pagina + '/search/' + search;
 	}
 	function verificaSubmit(event) {
