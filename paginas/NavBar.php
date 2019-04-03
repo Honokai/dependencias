@@ -103,7 +103,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" onmouseover="javascript:exibeMenuPrincipal();">MENU</a>
                         <div id="menuPrincipal" style="display:none;" class="groupMenuPrincipal">
-                            <?php 
+                            <?php
                             switch ($_GET['sistema']) {
                                 case "ftp":
                                     echo '
@@ -155,6 +155,38 @@
                                 </div>
                             ';
                                     break;
+                                case "suporte":
+                                    echo '
+                                <div id="DivMenuPrincipal">
+                                    <div style="background-color:#E6E6E6">
+                                        <font color="#A4A4A4">SUPORTE</font>
+                                    </div>
+                                    <div>
+                                        <a href="/suporte/chamado/create" onclick=abrirIFrame("/suporte/chamado/create") id="rota" data-target="#modal" data-toggle="modal">ABRIR CHAMADO</a><br><br>
+                                    </div>
+                                    <div style="background-color:#E6E6E6">
+                                        <font color="#A4A4A4">VISUALIZAR CHAMADOS</font>
+                                    </div>
+                                    <div>
+                                        <a href="/suporte/chamado/CALIBRACAO">CALIBRAÇÃO</a><br>
+                                        <a href="/suporte/chamado/COMPRAS">COMPRAS</a><br>
+                                        <a href="/suporte/chamado/MANUTENCAO">MANUTENÇÃO</a><br>
+                                        <a href="/suporte/chamado/QUALIDADE">QUALIDADE</a><br>
+                                        <a href="/suporte/chamado/SECRETARIA">SECRETARIA</a><br>
+                                        <a href="/suporte/chamado/SPET">SPET</a><br>
+                                        <a href="/suporte/chamado/TI">TI</a>
+                                    </div>
+                                </div>
+                                <div id="DivMenuPrincipal">
+                                    <div style="background-color:#E6E6E6">
+                                        <font color="#A4A4A4">ÁREA ADMINISTRATIVA</font>
+                                    </div>
+                                    <div>
+                                        <a href="/suporte/categoria/create">CATEGORIAS</a> <br>
+                                        <a href="/suporte/subcategoria/create">SUBCATEGORIAS E TEMPLATES </a>
+                                    </div>
+                                </div>
+                            ';
                             }
                             ?>
                         </div>
@@ -194,4 +226,4 @@
             </div>
         </div>
     </div>
-</div> 
+</div>
