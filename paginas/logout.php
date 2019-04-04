@@ -7,5 +7,5 @@ if (!empty($_COOKIE)) {
     }
 }
 
-header('Location: /login');
+header('Location: /dev/login');
 exit;
