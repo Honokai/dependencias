@@ -1,9 +1,23 @@
 <style>
+    /* Tamanho do texto para todos os sistemas */
+    body {
+        font-size: 14px;
+    }
+
     /* Bootstrap cor do hover das listas em zebra */
     .table-hover tbody tr:hover td,
     .table-hover tbody tr:hover th {
         background-color: #ADD8E6;
+    }
+
+    /* Muda o cursor de eta para mão - View principal chamado */
+    .arrow-hover-hand {
         cursor: pointer;
+    }
+
+    /* Texto negrito - View principal chamado */
+    .text-bold {
+        font-weight: bold;
     }
 
     /*.table-striped tbody, .table-hover tbody {
@@ -77,4 +91,4 @@
         zoom: 1;
         /* For IE 6/7 (trigger hasLayout) */
     }
-</style> 
+</style>
