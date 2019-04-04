@@ -10,7 +10,7 @@
         background-color: #ADD8E6;
     }
 
-    /* Muda o cursor de eta para mão - View principal chamado */
+    /* Muda o cursor de eta para mão -View principal chamado */
     .arrow-hover-hand {
         cursor: pointer;
     }
