@@ -9,10 +9,6 @@
         width: 960px;
     }
 
-    /* Alinhar modal a esquerda (Estudando para melhora view de modal - Tiago)
-    https://pt.stackoverflow.com/questions/100711/como-centralizar-um-modal-box-na-horizontal-e-vertical-com-css3-%C3%89-poss%C3%ADvel
-    */
-
     /* Bootstrap cor do hover das listas em zebra */
     .table-hover tbody tr:hover td,
     .table-hover tbody tr:hover th {
