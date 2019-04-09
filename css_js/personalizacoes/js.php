@@ -79,6 +79,11 @@
         startTimer(count, display);
     }
 
+    // Contador, Fecha div de timeout
+    function fecharTimeout() {
+        document.getElementById('timeout_logout').style.display = 'none';
+    }
+
     // (suporte.chamadoshow) textarea aumentar tamanho de acordo com linhas do texto 
     $("textarea").bind("input", function(e) {
         while ($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth")) &&
@@ -87,11 +92,6 @@
             $(this).height($(this).height() + 1);
         };
     });
-
-    // Fecha div de timeout
-    function fecharTimeout() {
-        document.getElementById('timeout_logout').style.display = 'none';
-    }
 
     // (suporte.chamadoshow) textarea do tamanho do texto carregado do sistema
     document.addEventListener("DOMContentLoaded", function() {
