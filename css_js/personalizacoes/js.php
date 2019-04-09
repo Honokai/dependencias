@@ -47,14 +47,16 @@
     }
 
     // Contador para abrir div informando timout de sessão (em milessegundo, 1h:55min)
-    onload=setTimeout(function(){
-        document.getElementById('timeout_logout').style.display = 'block'; 
+    onload = setTimeout(function() {
+        document.getElementById('timeout_logout').style.display = 'block';
     }, 6900000);
 
     // Contador encaminha para logoff (em segundo, 2h)
     var contador = '7200';
+
     function startTimer(duration, display) {
-        var timer = duration, minutes, seconds;
+        var timer = duration,
+            minutes, seconds;
         setInterval(function() {
             minutes = parseInt(timer / 60, 10)
             seconds = parseInt(timer % 60, 10);
@@ -62,10 +64,10 @@
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
 
-            display.textContent = minutes+ "m" + ":" + seconds + "s";
+            display.textContent = minutes + "m" + ":" + seconds + "s";
 
             if (--timer < 0) {
-                window.location.href="http://localhost/dependencias/paginas/logout.php";
+                window.location.href = "http://10.10.0.14/dependencias/paginas/logout.php";
             }
         }, 1000);
     }
@@ -85,6 +87,11 @@
             $(this).height($(this).height() + 1);
         };
     });
+
+    // Fecha div de timeout
+    function fecharTimeout() {
+        document.getElementById('timeout_logout').style.display = 'none';
+    }
 
     // (suporte.chamadoshow) textarea do tamanho do texto carregado do sistema
     document.addEventListener("DOMContentLoaded", function() {
