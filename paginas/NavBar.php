@@ -47,6 +47,14 @@
 
 <div id="fechar_allmenu" style="display:none;" class="fechar_allmenu" onmouseover="javascript:fecharAllMenu();"></div>
 
+<div id="timeout_logout" style="display:none;" class="timeout_logout">
+    <font size="5">
+        Sua sessão irá expirar em menos de <span id="time">Carregando...</span><br />
+        Atualize a página para se manter conectado <br /><br />
+        <a href="#" onclick="location.reload()">Atualizar página</a> ● <a href="#" onclick="fecharTimeout()">Fechar mensagem</a>
+    </font>
+</div>
+
 <div>
     <header>
         <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">

@@ -1,26 +1,27 @@
 <style>
-    /* Tamanho do texto para todos os sistemas */
+    /* (todos os sistemas) Tamanho do texto */
     body {
         font-size: 14px;
     }
 
-    /* Aumenta a largura do modal */
-    .modal-content {
-        width: 960px;
+    /* (todos os sistemas) Define tamanho e posição do modal*/
+    .modal .modal-content {
+        right: initial !important;
+        width: 1000px;
     }
 
-    /* Bootstrap cor do hover das listas em zebra */
+    /* (todos os sistemas) Bootstrap cor do hover das listas em zebra */
     .table-hover tbody tr:hover td,
     .table-hover tbody tr:hover th {
         background-color: #ADD8E6;
     }
 
-    /* Muda o cursor de eta para mão - View principal chamado */
+    /* (suporte.chamadolist) Muda o cursor de eta para mão */
     .arrow-hover-hand {
         cursor: pointer;
     }
 
-    /* Texto negrito - View principal chamado */
+    /* (suporte.chamadolist) Texto negrito */
     .text-bold {
         font-weight: bold;
     }
@@ -90,10 +91,23 @@
 
     .fechar_allmenu {
         top: 57px;
-        width: 3000px;
-        height: 1000px;
+        width: 100%;
+        height: 100%;
         position: fixed;
         zoom: 1;
         /* For IE 6/7 (trigger hasLayout) */
+    }
+
+    .timeout_logout {
+        width: 100%;
+        height: 150px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        position: fixed;
+        top: 50%;
+        /* posiciona na metade da tela */
+        margin-top: -25px;
+        /* e retrocede metade da altura */
     }
 </style>
