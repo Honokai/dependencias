@@ -49,7 +49,8 @@
 
 <div id="timeout_logout" style="display:none;" class="timeout_logout">
     <font size="5">
-        Sua sessão irá expirar em menos de <span id="time">Carregando...</span><br />
+        <br /><br /><br /><br /><br />
+        Sua sessão irá expirar em <span id="time">Carregando...</span><br />
         Atualize a página para se manter conectado <br /><br />
         <a href="#" onclick="location.reload()">Atualizar página</a> ● <a href="#" onclick="fecharTimeout()">Fechar mensagem</a>
     </font>
