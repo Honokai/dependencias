@@ -84,7 +84,7 @@
         document.getElementById('timeout_logout').style.display = 'none';
     }
 
-    // (suporte.chamadoshow) textarea aumentar tamanho de acordo com linhas do texto 
+    // (suporte.chamadoshow) textarea responder aumentar tamanho de acordo com linhas do texto 
     $("textarea").bind("input", function(e) {
         while ($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth")) &&
             $(this).height() < 500
@@ -93,41 +93,8 @@
         };
     });
 
-    // (suporte.chamadoshow) textarea do tamanho do texto carregado do sistema
-    document.addEventListener("DOMContentLoaded", function() {
-        var txtarea = document.querySelector("textarea.form-auto-height");
-        txtarea.style.height = txtarea.scrollHeight + 3 + "px";
-    });
-
     // (almoxarife.index, suporte.index) Função js abre iframe no modal somente quando é chamado
     function abrirIFrame(rota) {
         document.getElementById("js_iframe").src = rota;
     }
-
-    // Select 2
-    function selectext(texto) {
-        document.getElementById('texto_escolhido').innerHTML = texto;
-    }
-    $(".myselect").select2();
-
-    // Select 2 /** CRIANDO/PROGRAMANDO/EM ANDAMENTO (Tiago) */
-    $('.itemName').select2({
-        placeholder: 'Pesquisar, ex.: Formulario, Compra, Porta, Pipeta, Computador ou etc.',
-        ajax: {
-            url: '/suporte/select2ChamadoNew',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            text: item.categoria,
-                            id: item.id,
-                        }
-                    })
-                };
-            },
-            cache: false
-        }
-    });
 </script>
