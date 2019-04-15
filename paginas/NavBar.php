@@ -191,8 +191,7 @@
                                         <font color="#A4A4A4">ÁREA ADMINISTRATIVA</font>
                                     </div>
                                     <div>
-                                        <a href="/suporte/categoria/create">CATEGORIAS</a> <br>
-                                        <a href="/suporte/subcategoria/create">SUBCATEGORIAS E TEMPLATES </a>
+                                        <a href="/suporte/categoria" onclick=abrirIFrame("/suporte/categoria") id="rota" data-target="#modal" data-toggle="modal">CATEGORIAS / SUBCATEGORIA</a><br><br>
                                     </div>
                                 </div>
                             ';
