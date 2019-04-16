@@ -6,7 +6,6 @@
 
     /* (todos os sistemas) Define tamanho e posição do modal*/
     .modal .modal-content {
-        right: initial !important;
         width: 1000px;
     }
 

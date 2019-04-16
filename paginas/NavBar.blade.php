@@ -1,3 +1,9 @@
+<?php
+if($_GET['push'] === 'dev/')
+    $ambiente = '/dev';
+else
+    $ambiente = '';
+?>
 <script type="text/javascript">
     function exibeMenuSistemas() {
         document.getElementById('menuSistemas').style.display = 'block';
@@ -197,7 +203,7 @@
                         <a class="nav-link" href="#" onmouseover="javascript:exibeMenuUsuario();">USER</a>
                         <div id="menuUsuario" style="display:none;" class="DivMenuUser">
                             <div>
-                                @php<a href="/dependencias/paginas/logout.php?env={{ env('APP_TESTE') }}">Sair do sistema</a>@endphp
+                                <a href="/dependencias/paginas/logout.php?env=$ambiente">Sair do sistema</a>
                             </div>
                         </div>
                     </li>
