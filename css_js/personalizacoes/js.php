@@ -112,7 +112,7 @@
                 return {
                     results: $.map(data, function(item) {
                         return {
-                            id: item.categoria,
+                            id: item.id,
                             text: item.categoria,
                         }
                     })
@@ -121,4 +121,57 @@
             cache: false
         }
     });
+
+    //TODO:Ordem em que o jQuery foi carregado no sistema está incorreta.
+    //Carregando o jQuery depois de app.js, que é o certo.
+    loadFile('//code.jquery.com/jquery-3.4.0.min.js');
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+        }
+    });
+    $('.categorias').on("change", function (e) { 
+        var categoria =  $(this).val();        
+        //Carrega setores da categoria
+        $.ajax({
+            url: '/suporte/select2ChamadoNewRecuperaSetor/' + categoria,
+            method: 'get',
+            success: function(data) {
+                $('input[name=setor]').val(data);
+            }
+        });
+        //Carrega template da categoria
+        $.ajax({
+            url: '/suporte/select2ChamadoNewRecuperaTemplate/' + categoria,
+            method: 'get',
+            success: function(data) {
+                $('textarea[name=solicitacao_inicial]').text(JSON.parse(data));
+            }
+        });
+    });
+
+    function loadFile(filename) {
+        // Create a script tag, set its source
+        var scriptTag = document.createElement("script"),
+            filePath = filename;
+
+        // And listen to it
+        scriptTag.onload = function(loadEvent) {
+            // This function is an event handler of the script tag
+            console.log('script carregado.');
+        }
+
+        // Make sure this file actually loads instead of a cached version
+        // Add a timestamp onto the URL (i.e. file.js?bust=12345678)
+        var cacheBuster = "";
+
+        cacheBuster = "?bust=" + new Date().getTime();
+
+        // Set the type of file and where it can be found
+        scriptTag.type = "text/javascript";
+        scriptTag.src = filePath + cacheBuster;
+
+        // Finally add it to the <head>
+        document.getElementsByTagName("head")[0].appendChild(scriptTag);
+    }
 </script>
