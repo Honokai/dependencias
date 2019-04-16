@@ -97,4 +97,28 @@
     function abrirIFrame(rota) {
         document.getElementById("js_iframe").src = rota;
     }
+
+    /** ************************************************************************************** */
+    /** SELECT2 EM IMPLEMENTAÇÃO */
+    $('.myselect').select2();
+
+    $('.categorias').select2({
+        placeholder: 'Pesquisar, ex.: Formulario, Compra, Porta, Pipeta, Computador ou etc.',
+        ajax: {
+            url: '/suporte/select2ChamadoNew',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            id: item.categoria,
+                            text: item.categoria,
+                        }
+                    })
+                };
+            },
+            cache: false
+        }
+    });
 </script>
