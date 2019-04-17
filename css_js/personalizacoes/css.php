@@ -25,7 +25,11 @@
     .text-bold {
         font-weight: bold;
     }
-
+/*
+    input[type='file'] {
+        display: none;
+    }
+*/
     /*.table-striped tbody, .table-hover tbody {
     background-color: #DCDCDC;
     }*/
