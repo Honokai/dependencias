@@ -65,7 +65,8 @@ else
                         <font color="#A4A4A4">SUPORTE</font>
                     </div>
                     <div>
-                        QUALIDADE <br> TI <br> MANUTENÇÃO <br> ADMINISTRATIVO <br> CALIBRAÇÃO
+                        DASHBOARD <br/>
+                        SUPORTE
                     </div>
                 </div>
                 <div id="DivMenuSistemas">
@@ -188,8 +189,7 @@ else
                                         <font color="#A4A4A4">ÁREA ADMINISTRATIVA</font>
                                     </div>
                                     <div>
-                                        <a href="/suporte/categoria/create">CATEGORIAS</a> <br>
-                                        <a href="/suporte/subcategoria/create">SUBCATEGORIAS E TEMPLATES </a>
+                                        <a href="/suporte/categoria/">CATEGORIAS</a>
                                     </div>
                                 </div>
                             ';
