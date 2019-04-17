@@ -1,3 +1,9 @@
+<?php
+if($_GET['push'] === 'dev/')
+    $ambiente = '/dev';
+else
+    $ambiente = '';
+?>
 <script type="text/javascript">
     function exibeMenuSistemas() {
         document.getElementById('menuSistemas').style.display = 'block';
@@ -46,15 +52,6 @@
 </script>
 
 <div id="fechar_allmenu" style="display:none;" class="fechar_allmenu" onmouseover="javascript:fecharAllMenu();"></div>
-
-<div id="timeout_logout" style="display:none;" class="timeout_logout">
-    <font size="5">
-        <br /><br /><br /><br /><br />
-        Sua sessão irá expirar em <span id="time">Carregando...</span><br />
-        Atualize a página para se manter conectado <br /><br />
-        <a href="#" onclick="location.reload()">Atualizar página</a> ● <a href="#" onclick="fecharTimeout()">Fechar mensagem</a>
-    </font>
-</div>
 
 <div>
     <header>
@@ -171,7 +168,7 @@
                                         <font color="#A4A4A4">SUPORTE</font>
                                     </div>
                                     <div>
-                                        <a href="/suporte/chamado/create" onclick=abrirIFrame("/suporte/chamado/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a><br><br>
+                                        <a href="/suporte/chamado/create" onclick=abrirIFrame("/suporte/chamado/create") id="rota" data-target="#modal" data-toggle="modal">ABRIR CHAMADO</a><br><br>
                                     </div>
                                     <div style="background-color:#E6E6E6">
                                         <font color="#A4A4A4">VISUALIZAR CHAMADOS</font>
@@ -191,7 +188,8 @@
                                         <font color="#A4A4A4">ÁREA ADMINISTRATIVA</font>
                                     </div>
                                     <div>
-                                        <a href="/suporte/categoria" onclick=abrirIFrame("/suporte/categoria") id="rota" data-target="#modal" data-toggle="modal">CATEGORIAS / SUBCATEGORIA</a><br><br>
+                                        <a href="/suporte/categoria/create">CATEGORIAS</a> <br>
+                                        <a href="/suporte/subcategoria/create">SUBCATEGORIAS E TEMPLATES </a>
                                     </div>
                                 </div>
                             ';
@@ -205,7 +203,7 @@
                         <a class="nav-link" href="#" onmouseover="javascript:exibeMenuUsuario();">USER</a>
                         <div id="menuUsuario" style="display:none;" class="DivMenuUser">
                             <div>
-                                <a href="/dependencias/paginas/logout.php">Sair do sistema</a>
+                                <a href="/dependencias/paginas/logout.php?env=$ambiente">Sair do sistema</a>
                             </div>
                         </div>
                     </li>

@@ -6,8 +6,7 @@
 
     /* (todos os sistemas) Define tamanho e posição do modal*/
     .modal .modal-content {
-        right: initial !important;
-        width: 1000px;
+        /*width: 1000px;*/
     }
 
     /* (todos os sistemas) Bootstrap cor do hover das listas em zebra */
@@ -103,15 +102,13 @@
     }
 
     .timeout_logout {
+        z-index: 99999999;
         width: 100%;
-        height: 150px;
+        height: 100%;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.9);
         color: white;
         position: fixed;
-        top: 50%;
-        /* posiciona na metade da tela */
-        margin-top: -25px;
-        /* e retrocede metade da altura */
+        top: 0px;
     }
 </style>
