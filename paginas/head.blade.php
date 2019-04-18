@@ -15,8 +15,7 @@ $push = $_GET['push'];
     <link rel="stylesheet" type="text/css" href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/bootstrap/4.2.1/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/personalizacoes/css.php">
     <link rel="stylesheet" href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/fontawesome/5.5.0/fontawesome.css">
-    <!-- <link rel="stylesheet" href="http://10.10.0.14/dependencias/css_js/fontawesome/5.5.0/solid.css"> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/popper/1.14.7/popper.js"></script>
     <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/ajax/3.3.1/jquery.js"></script>
     <link href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/select2/4.0.5/select2.min.css" rel="stylesheet" />
