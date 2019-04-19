@@ -46,7 +46,7 @@
         }
     }
 
-    // Contador para abrir div informando timout de sessão (em milessegundo, 1h:55min)
+    /*// Contador para abrir div informando timout de sessão (em milessegundo, 1h:55min)
     onload = setTimeout(function() {
         document.getElementById('timeout_logout').style.display = 'block';
     }, 6900000);
@@ -82,7 +82,7 @@
     // Contador, Fecha div de timeout
     function fecharTimeout() {
         document.getElementById('timeout_logout').style.display = 'none';
-    }
+    }*/
 
     // (suporte.chamadoshow) textarea responder aumentar tamanho de acordo com linhas do texto 
     $("textarea").bind("input", function(e) {
@@ -98,14 +98,11 @@
         document.getElementById("js_iframe").src = rota;
     }
 
-    /** ************************************************************************************** */
-    /** SELECT2 EM IMPLEMENTAÇÃO */
-    $('.myselect').select2();
-
+    // (suporte.create) Select2
     $('.categorias').select2({
         placeholder: 'Pesquisar, ex.: Formulario, Compra, Porta, Pipeta, Computador ou etc.',
         ajax: {
-            url: '/suporte/select2ChamadoNew',
+            url: '/suporte/select2ChamadoNewCategoria',
             dataType: 'json',
             delay: 250,
             processResults: function(data) {
@@ -113,7 +110,27 @@
                     results: $.map(data, function(item) {
                         return {
                             id: item.id,
-                            text: item.categoria,
+                            text: item.categoria + ' - ' + item.sub_categoria,
+                        }
+                    })
+                };
+            },
+            cache: false
+        }
+    });
+
+    $('.computador').select2({
+        placeholder: 'Pesquisar, ex.: Formulario, Compra, Porta, Pipeta, Computador ou etc.',
+        ajax: {
+            url: '/suporte/select2ChamadoNewComputador',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            id: item.id,
+                            text: item.descricao,
                         }
                     })
                 };
@@ -130,11 +147,11 @@
             'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
         }
     });
-    $('.categorias').on("change", function (e) { 
-        var categoria =  $(this).val();        
+    $('.categorias').on("change", function(e) {
+        var subcategoria = $(this).val();
         //Carrega setores da categoria
         $.ajax({
-            url: '/suporte/select2ChamadoNewRecuperaSetor/' + categoria,
+            url: '/suporte/select2ChamadoNewRecuperaSetor/' + subcategoria,
             method: 'get',
             success: function(data) {
                 $('input[name=setor]').val(data);
@@ -142,10 +159,22 @@
         });
         //Carrega template da categoria
         $.ajax({
-            url: '/suporte/select2ChamadoNewRecuperaTemplate/' + categoria,
+            url: '/suporte/select2ChamadoNewRecuperaTemplate/' + subcategoria,
             method: 'get',
             success: function(data) {
                 $('textarea[name=solicitacao_inicial]').text(JSON.parse(data));
+            }
+        });
+    });
+
+    $('.computador').on("change", function(e) {
+        var computador = $(this).val();
+        //Carrega localização do computador
+        $.ajax({
+            url: '/suporte/select2ChamadoNewRecuperaLocalizacao/' + computador,
+            method: 'get',
+            success: function(data) {
+                $('input[name=localizacao]').val(data);
             }
         });
     });
@@ -158,7 +187,7 @@
         // And listen to it
         scriptTag.onload = function(loadEvent) {
             // This function is an event handler of the script tag
-            console.log('script carregado.');
+            // console.log('script carregado.');
         }
 
         // Make sure this file actually loads instead of a cached version

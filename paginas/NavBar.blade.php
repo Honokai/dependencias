@@ -65,7 +65,8 @@ else
                         <font color="#A4A4A4">SUPORTE</font>
                     </div>
                     <div>
-                        QUALIDADE <br> TI <br> MANUTENÇÃO <br> ADMINISTRATIVO <br> CALIBRAÇÃO
+                        DASHBOARD <br/>
+                        SUPORTE
                     </div>
                 </div>
                 <div id="DivMenuSistemas">
