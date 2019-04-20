@@ -52,7 +52,7 @@ $push = $_GET['push'];
     }
 
     // (suporte.create) Recarrega a página após um post dentro de modal
-    function chama(link) {
+    function recarregarPagina(link) {
         window.location.href = link;
     }
 
