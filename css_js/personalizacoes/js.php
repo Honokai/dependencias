@@ -51,6 +51,11 @@ $push = $_GET['push'];
         }
     }
 
+    // (suporte.create) Recarrega a página após um post dentro de modal
+    function recarregarPagina(link) {
+        window.location.href = link;
+    }
+
     // Contador para abrir div informando timout de sessão (em milessegundo, 1h:55min)
     onload = setTimeout(function() {
         document.getElementById('timeout_logout').style.display = 'block';
