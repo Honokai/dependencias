@@ -175,13 +175,19 @@ else
                                         <font color="#A4A4A4">VISUALIZAR CHAMADOS</font>
                                     </div>
                                     <div>
-                                        <a href="/suporte/chamado/CALIBRACAO">CALIBRAÇÃO</a><br>
+                                <!--    <a href="/suporte/chamado/CALIBRACAO">CALIBRAÇÃO</a><br>
                                         <a href="/suporte/chamado/COMPRAS">COMPRAS</a><br>
                                         <a href="/suporte/chamado/MANUTENCAO">MANUTENÇÃO</a><br>
                                         <a href="/suporte/chamado/QUALIDADE">QUALIDADE</a><br>
                                         <a href="/suporte/chamado/SECRETARIA">SECRETARIA</a><br>
-                                        <a href="/suporte/chamado/SPET">SPET</a><br>
-                                        <a href="/suporte/chamado/TI">TI</a>
+                                        <a href="/suporte/chamado/SPET">SPET</a><br>    -->
+                                        CALIBRAÇÃO<br>
+                                        COMPRAS<br>
+                                        MANUTENÇÃO<br>
+                                        QUALIDADE<br>
+                                        SECRETARIA<br>
+                                        SPET<br>
+                                        <a href="/suporte/chamado/31">TI</a>
                                     </div>
                                 </div>
                                 <div id="DivMenuPrincipal">
