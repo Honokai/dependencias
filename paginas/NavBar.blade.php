@@ -169,7 +169,7 @@ else
                                         <font color="#A4A4A4">SUPORTE</font>
                                     </div>
                                     <div>
-                                        <a href="/suporte/chamado/create" onclick=abrirIFrame("/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a><br><br>
+                                        <a href="/suporte/chamados/create" onclick=abrirIFrame("/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a><br><br>
                                     </div>
                                     <div style="background-color:#E6E6E6">
                                         <font color="#A4A4A4">VISUALIZAR CHAMADOS</font>
