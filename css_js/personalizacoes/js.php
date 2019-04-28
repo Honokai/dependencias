@@ -51,7 +51,7 @@ $push = $_GET['push'];
         }
     }
 
-    // (suporte.create) Recarrega a página após um post dentro de modal
+    // (suporte.create, suporte.categoria.new) Recarrega a página após um post dentro de modal
     function recarregarPagina(link) {
         window.location.href = link;
     }
