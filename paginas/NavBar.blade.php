@@ -68,21 +68,21 @@ else
             </div>
             <div id="menuSistemas" style="display:none;" class="groupMenuSistemas">
                 <div id="DivMenuSistemas">
-                    <a href="/almoxarife"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;" style="background: red;"><img src="/dependencias/images/sistemas/adm.png" width="60" height="60"></div>DASHBOARD</a><br/>
-                    <a href="/almoxarife"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;"><img src="/dependencias/images/sistemas/alm.png" width="60" height="60"></div>ALMOLAB</a><br/>
-                    <a href="/almoxarife"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;" style="background: purple"><img src="/dependencias/images/sistemas/bibi.png" width="60" height="60"></div>BIBLIVRE</a><br/>
-                    <a href="/almoxarife"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;" style="background: green"><img src="/dependencias/images/sistemas/fc.png" width="60" height="60"></div>FICHA C.</a><br/>
+                    <div id="divteste1" onmouseout=" this.style.opacity=0.5;" style="background: gray;"><img src="/dependencias/images/sistemas/adm.png" width="60" height="60"></div>DASHBOARD<br/>
+                    <div id="divteste1" style="background: gray;" onmouseout=" this.style.opacity=0.5;"><img src="/dependencias/images/sistemas/alm.png" width="60" height="60"></div>ALMOLAB><br/>
+                    <a href="http://10.10.0.25/Biblivre5/" target="blank"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;" style="background: purple"><img src="/dependencias/images/sistemas/bibi.png" width="60" height="60"></div>BIBLIVRE</a><br/>
+                    <div id="divteste1" style="background: gray;" onmouseout=" this.style.opacity=0.5;" style="background: green"><img src="/dependencias/images/sistemas/fc.png" width="60" height="60"></div>FICHA C.<br/>
                 </div>
                 <div id="DivMenuSistemas" align="center">
-                    <a href="/almoxarife"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;" style="background: red"><img src="/dependencias/images/sistemas/ti.png" width="60" height="60"></div>SUPORTE</a><br/>
+                    <a href="/suporte"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;" style="background: red"><img src="/dependencias/images/sistemas/ti.png" width="60" height="60"></div>SUPORTE</a><br/>
                     <a href="/almoxarife"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;"><img src="/dependencias/images/sistemas/almo.png" width="60" height="60"></div>ALMOXARIFE</a><br/>
-                    <a href="/almoxarife"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;" style="background: orange"><img src="/dependencias/images/sistemas/ga.png" width="60" height="60"></div>SECRETARIA</a><br/>
-                    <a href="/almoxarife"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;" style="background: green"><img src="/dependencias/images/sistemas/ft.png" width="60" height="60"></div>FTP</a><br/>
+                    <div id="divteste1" style="background: gray;" onmouseout=" this.style.opacity=0.5;" style="background: orange"><img src="/dependencias/images/sistemas/ga.png" width="60" height="60"></div>SECRETARIA<br/>
+                    <a href="/ftp"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;" style="background: green"><img src="/dependencias/images/sistemas/ft.png" width="60" height="60"></div>FTP</a><br/>
                 </div>
                 <div id="DivMenuSistemas" align="center">
-                    <a href="/almoxarife"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;"><img src="/dependencias/images/sistemas/bs.png" width="60" height="60"></div>SOLUÇÃO<br/>
-                    <a href="/almoxarife"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;" style="background: pink"><img src="/dependencias/images/sistemas/lbcd.png" width="60" height="60"></div>LABDOP</a><br/>
-                    <a href="/almoxarife"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;" style="background: orange"><img src="/dependencias/images/sistemas/gt.png" width="60" height="60"></div>TI</a><br/>
+                    <div id="divteste1" style="background: gray;" onmouseout=" this.style.opacity=0.5;"><img src="/dependencias/images/sistemas/bs.png" width="60" height="60"></div>SOLUÇÃO<br/>
+                    <a href="http://10.10.0.6/labdop/" target="blank"><div id="divteste1" onMouseOver="this.style.opacity=3;" onmouseout=" this.style.opacity=0.5;" style="background: pink"><img src="/dependencias/images/sistemas/lbcd.png" width="60" height="60"></div>LABDOP</a><br/>
+                    <div id="divteste1" style="background: gray;" onmouseout=" this.style.opacity=0.5;" style="background: orange"><img src="/dependencias/images/sistemas/gt.png" width="60" height="60"></div>TI<br/>
                 </div>
             </div>
 
@@ -164,39 +164,75 @@ else
                                     break;
                                 case "suporte":
                                     echo '
-                                <div id="DivMenuPrincipal">
-                                    <div style="background-color:#E6E6E6">
-                                        <font color="#A4A4A4">SUPORTE</font>
-                                    </div>
-                                    <div>
-                                        <a href="/suporte/chamados/create" onclick=abrirIFrame("/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a><br><br>
-                                    </div>
-                                    <div style="background-color:#E6E6E6">
-                                        <font color="#A4A4A4">VISUALIZAR CHAMADOS</font>
-                                    </div>
-                                    <div>
-                                <!--    <a href="/suporte/chamado/CALIBRACAO">CALIBRAÇÃO</a><br>
-                                        <a href="/suporte/chamado/COMPRAS">COMPRAS</a><br>
-                                        <a href="/suporte/chamado/MANUTENCAO">MANUTENÇÃO</a><br>
-                                        <a href="/suporte/chamado/QUALIDADE">QUALIDADE</a><br>
-                                        <a href="/suporte/chamado/SECRETARIA">SECRETARIA</a><br>
-                                        <a href="/suporte/chamado/SPET">SPET</a><br>    -->
-                                        CALIBRAÇÃO<br>
-                                        COMPRAS<br>
-                                        MANUTENÇÃO<br>
-                                        QUALIDADE<br>
-                                        SECRETARIA<br>
-                                        SPET<br>
-                                        <a href="/suporte/chamado/31">TI</a>
-                                    </div>
-                                </div>
-                                <div id="DivMenuPrincipal">
-                                    <div style="background-color:#E6E6E6">
-                                        <font color="#A4A4A4">ÁREA ADMINISTRATIVA</font>
-                                    </div>
-                                    <div>
-                                        <a href="/suporte/categorias/">CATEGORIAS</a>
-                                    </div>
+                                <div style="margin: 20px">
+                                    <table class="table table-sm table-borderless table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    SUPORTE
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>
+                                                <a href="/suporte/chamados/create" onclick=abrirIFrame("/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
+                                            </td>
+                                        </tr>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    VISUALIZAR CHAMADOS
+                                                </th>
+                                            </tr>  
+                                        </thead>  
+                                        <tr>
+                                            <td>
+                                                CALIBRAÇÂO
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                COMPRAS
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                MANUTENÇÃO
+                                            </td>
+                                        </tr>
+                                        <tr>    
+                                            <td>
+                                                QUALIDADE
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                SECRETARIA
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                SPET
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/suporte/chamado/31">TI</a>
+                                            </td>
+                                        </tr>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    AREA ADMINISTRATIVA
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>
+                                                <a href="/suporte/categorias/">CATEGORIAS</a>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
                             ';
                             }
