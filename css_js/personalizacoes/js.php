@@ -120,7 +120,7 @@ $push = $_GET['push'];
                     results: $.map(data, function(item) {
                         return {
                             id: item.id,
-                            text: item.categoria + ' - ' + item.sub_categoria,
+                            text: item.categorias_nome + ' - ' + item.nome,
                         }
                     })
                 };
@@ -141,26 +141,6 @@ $push = $_GET['push'];
                         return {
                             id: item.id,
                             text: item.descricao,
-                        }
-                    })
-                };
-            },
-            cache: false
-        }
-    });
-
-    $('.material').select2({
-        placeholder: 'Pesquisar, ex.: Mouse, Alicate, Pipeta.',
-        ajax: {
-            url: '/suporte/select2ChamadoShowMaterial',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            id: item.id,
-                            text: item.identificacao + ' (Estoque: ' + item.atual + ')',
                         }
                     })
                 };
