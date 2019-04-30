@@ -20,25 +20,30 @@
         cursor: pointer;
     }
 
-    /* (suporte.chamadolist) Texto negrito */
-    .text-bold {
-        font-weight: bold;
+    /*CIRCUNFERENCIA BACKGROUND LOGO*/
+    #divteste1 {
+            border-radius: 50px;
+            width: 60px;
+            height: 60px;
+            background: #1b80a5;
+            margin:10px;
+            opacity:0.5;
     }
-/*
-    input[type='file'] {
-        display: none;
+    #divteste2 {
+            border-radius: 50px;
+            width: 30px;
+            height: 30px;
+            background: #1b80a5;
+            opacity:0.5;
     }
-*/
-    /*.table-striped tbody, .table-hover tbody {
-    background-color: #DCDCDC;
-    }*/
+    /**/
 
     /* Super dropdown menu dos Sistemas */
     #DivMenuSistemas {
         position: relative;
-        width: 200px;
+        width: 130px;
         float: left;
-        padding: 15px;
+        padding: 35px;
     }
 
     .groupMenuSistemas {
@@ -96,6 +101,7 @@
         top: 57px;
         width: 100%;
         height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
         position: fixed;
         zoom: 1;
         /* For IE 6/7 (trigger hasLayout) */
