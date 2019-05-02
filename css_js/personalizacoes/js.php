@@ -111,7 +111,7 @@ $push = $_GET['push'];
 
     // (suporte.create) Select2
     $('.categorias').select2({
-        placeholder: 'Pesquisar, ex.: Formulario, Compra, Porta, Pipeta, Computador ou etc.',
+        placeholder: 'Categoria',
         ajax: {
             url: '/suporte/select2ChamadoNewCategoria',
             dataType: 'json',
@@ -131,7 +131,7 @@ $push = $_GET['push'];
     });
 
     $('.computador').select2({
-        placeholder: 'Pesquisar, ex.: Formulario, Compra, Porta, Pipeta, Computador ou etc.',
+        placeholder: 'Computador',
         ajax: {
             url: '/suporte/select2ChamadoNewComputador',
             dataType: 'json',
