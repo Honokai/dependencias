@@ -5,8 +5,8 @@
     }
 
     /* (todos os sistemas) Define tamanho e posição do modal*/
-    .modal .modal-content {
-        /*width: 1000px;*/
+    .modal .modal-dialog {
+        max-width: 1100px;
     }
 
     /* (todos os sistemas) Bootstrap cor do hover das listas em zebra */
@@ -24,7 +24,11 @@
     .text-bold {
         font-weight: bold;
     }
-
+/*
+    input[type='file'] {
+        display: none;
+    }
+*/
     /*.table-striped tbody, .table-hover tbody {
     background-color: #DCDCDC;
     }*/

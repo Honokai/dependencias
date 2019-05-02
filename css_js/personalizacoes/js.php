@@ -1,3 +1,8 @@
+<?php
+$url = $_GET['url'];
+
+$push = $_GET['push'];
+?>
 <script type="text/javascript">
     // Abre e Fecha super menus 
     function exibeMenuSistemas() {
@@ -46,7 +51,12 @@
         }
     }
 
-    /*// Contador para abrir div informando timout de sessão (em milessegundo, 1h:55min)
+    // (suporte.create) Recarrega a página após um post dentro de modal
+    function recarregarPagina(link) {
+        window.location.href = link;
+    }
+
+    // Contador para abrir div informando timout de sessão (em milessegundo, 1h:55min)
     onload = setTimeout(function() {
         document.getElementById('timeout_logout').style.display = 'block';
     }, 6900000);
@@ -82,7 +92,7 @@
     // Contador, Fecha div de timeout
     function fecharTimeout() {
         document.getElementById('timeout_logout').style.display = 'none';
-    }*/
+    }
 
     // (suporte.chamadoshow) textarea responder aumentar tamanho de acordo com linhas do texto 
     $("textarea").bind("input", function(e) {
@@ -139,9 +149,29 @@
         }
     });
 
+    $('.material').select2({
+        placeholder: 'Pesquisar, ex.: Mouse, Alicate, Pipeta.',
+        ajax: {
+            url: '/suporte/select2ChamadoShowMaterial',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            id: item.id,
+                            text: item.identificacao + ' (Estoque: ' + item.atual + ')',
+                        }
+                    })
+                };
+            },
+            cache: false
+        }
+    });
+
     //TODO:Ordem em que o jQuery foi carregado no sistema está incorreta.
     //Carregando o jQuery depois de app.js, que é o certo.
-    loadFile('//code.jquery.com/jquery-3.4.0.min.js');
+    loadFile('<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/ajax/3.4.0/jquery.js');
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
