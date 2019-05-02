@@ -4,55 +4,21 @@ if($_GET['push'] === 'dev/')
 else
     $ambiente = '';
 ?>
-<script type="text/javascript">
-    function exibeMenuSistemas() {
-        document.getElementById('menuSistemas').style.display = 'block';
-        document.getElementById('fechar_allmenu').style.display = 'block';
-        document.getElementById('menuPrincipal').style.display = 'none';
-        document.getElementById('menuUsuario').style.display = 'none';
-    }
 
-    function exibeMenuPrincipal() {
-        document.getElementById('menuPrincipal').style.display = 'block';
-        document.getElementById('fechar_allmenu').style.display = 'block';
-        document.getElementById('menuUsuario').style.display = 'none';
-        document.getElementById('menuSistemas').style.display = 'none';
-    }
-
-    function exibeMenuUsuario() {
-        document.getElementById('menuUsuario').style.display = 'block';
-        document.getElementById('fechar_allmenu').style.display = 'block';
-        document.getElementById('menuSistemas').style.display = 'none';
-        document.getElementById('menuPrincipal').style.display = 'none';
-    }
-
-    function fecharAllMenu() {
-        document.getElementById('fechar_allmenu').style.display = 'none';
-        document.getElementById('menuPrincipal').style.display = 'none';
-        document.getElementById('menuSistemas').style.display = 'none';
-        document.getElementById('menuUsuario').style.display = 'none';
-    }
-
-    function buscar() {
-        sistema = '<?php echo $_GET['sistema'] ?>';
-        pagina = '<?php echo $_GET['pagina'] ?>';
-        search = document.getElementById('search').value.trim();
-        if (search == '') {
-            <?php setcookie('buscaVazia', 1, time() + 3600); ?>;
-            window.location = window.location.origin + '/' + sistema + '/' + pagina;
-        } else
-            window.location = window.location.origin + '/' + sistema + '/' + pagina + '/search/' + search;
-    }
-
-    function verificaSubmit(event) {
-        if (event.key === "Enter" || event.keyCode == 13) {
-            buscar();
-        }
-    }
-</script>
-
+<!-- Div fecha todos os menus -->
 <div id="fechar_allmenu" style="display:none;" class="fechar_allmenu" onmouseover="javascript:fecharAllMenu();"></div>
 
+<!-- Div info timeout -->
+<div id="timeout_logout" style="display:none;" class="timeout_logout">
+    <font size="5">
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+        Sua sessão irá expirar em <span id="time">Carregando...</span><br />
+        Atualize a página para se manter conectado <br /><br />
+        <a href="#" onclick="location.reload()">Atualizar página</a> ● <a href="#" onclick="fecharTimeout()">Fechar e continuar assim mesmo</a>
+    </font>
+</div>
+
+<!-- Navbar -->
 <div>
     <header>
         <nav class="navbar navbar-expand navbar-light fixed-top" style="border-bottom: 1px;
