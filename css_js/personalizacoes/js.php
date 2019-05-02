@@ -4,7 +4,7 @@ $url = $_GET['url'];
 $push = $_GET['push'];
 ?>
 <script type="text/javascript">
-    // Abre e Fecha super menus 
+    // (Menu) Abre e Fecha super menus 
     function exibeMenuSistemas() {
         document.getElementById('menuSistemas').style.display = 'block';
         document.getElementById('fechar_allmenu').style.display = 'block';
@@ -33,35 +33,31 @@ $push = $_GET['push'];
         document.getElementById('menuUsuario').style.display = 'none';
     }
 
-    // Busca 
+    // (Busca) Buscar identificando o sistema em que se está 
     function buscar() {
         sistema = '<?php echo $_GET['sistema'] ?>';
         pagina = '<?php echo $_GET['pagina'] ?>';
         search = document.getElementById('search').value.trim();
-        if (search == '')
+        if (search == '') {
+            <?php setcookie('buscaVazia', 1, time() + 3600); ?>;
             window.location = window.location.origin + '/' + sistema + '/' + pagina;
-        else
+        } else
             window.location = window.location.origin + '/' + sistema + '/' + pagina + '/search/' + search;
     }
 
-    // Busca pressionando enter no teclado
+    // (Busca) Busca ser realizado quando botão ENTER do teclado ser pressionado
     function verificaSubmit(event) {
         if (event.key === "Enter" || event.keyCode == 13) {
             buscar();
         }
     }
 
-    // (suporte.create) Recarrega a página após um post dentro de modal
-    function recarregarPagina(link) {
-        window.location.href = link;
-    }
-
-    // Contador para abrir div informando timout de sessão (em milessegundo, 1h:55min)
+    // (Contador) Abrir div informando timout de sessão (em milessegundo, 1h:55min)
     onload = setTimeout(function() {
         document.getElementById('timeout_logout').style.display = 'block';
     }, 6900000);
 
-    // Contador encaminha para logoff (em segundo, 2h)
+    // (Contador) Encaminha para logoff (em segundo, 2h)
     var contador = '7200';
 
     function startTimer(duration, display) {
@@ -82,16 +78,21 @@ $push = $_GET['push'];
         }, 1000);
     }
 
-    // Contador exibe na tela tempo restante antes de timeout de sessão (5 min antes do timeout)
+    // (Contador) Exibe na tela tempo restante antes de timeout de sessão (5 min antes do timeout)
     window.onload = function() {
         var count = parseInt(contador),
             display = document.querySelector('#time');
         startTimer(count, display);
     }
 
-    // Contador, Fecha div de timeout
+    // (Contador) Fecha div de timeout
     function fecharTimeout() {
         document.getElementById('timeout_logout').style.display = 'none';
+    }
+
+    // (suporte.create, suporte.categoria.new) Recarrega a página após um post dentro de modal
+    function recarregarPagina(link) {
+        window.location.href = link;
     }
 
     // (suporte.chamadoshow) textarea responder aumentar tamanho de acordo com linhas do texto 
@@ -110,7 +111,7 @@ $push = $_GET['push'];
 
     // (suporte.create) Select2
     $('.categorias').select2({
-        placeholder: 'Pesquisar, ex.: Formulario, Compra, Porta, Pipeta, Computador ou etc.',
+        placeholder: 'Categoria',
         ajax: {
             url: '/suporte/select2ChamadoNewCategoria',
             dataType: 'json',
@@ -130,7 +131,7 @@ $push = $_GET['push'];
     });
 
     $('.computador').select2({
-        placeholder: 'Pesquisar, ex.: Formulario, Compra, Porta, Pipeta, Computador ou etc.',
+        placeholder: 'Computador',
         ajax: {
             url: '/suporte/select2ChamadoNewComputador',
             dataType: 'json',

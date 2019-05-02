@@ -20,35 +20,25 @@
         cursor: pointer;
     }
 
-    /* (suporte.chamadolist) Texto negrito */
-    .text-bold {
-        font-weight: bold;
+    /*Logo dos sistemas no menu*/
+    #divLogoSistemas {
+        border-radius: 10px;
+        width: 60px;
+        height: 60px;
+        background: #1b80a5;
+        margin:10px;
     }
-/*
-    input[type='file'] {
-        display: none;
-    }
-*/
-    /*.table-striped tbody, .table-hover tbody {
-    background-color: #DCDCDC;
-    }*/
 
     /* Super dropdown menu dos Sistemas */
-    #DivMenuSistemas {
-        position: relative;
-        width: 200px;
-        float: left;
-        padding: 15px;
-    }
-
     .groupMenuSistemas {
         position: absolute;
         zoom: 1;
+        padding: 25px;
         /* For IE 6/7 (trigger hasLayout) */
         z-index: 9999;
         top: 48px;
-        left: 20px;
-        background-color: #FFFFFF;
+        right: 70px;
+        background-color: #f5f5f5;
         border: 1px solid #D8D8D8;
         border-radius: 5px;
         -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.45);
@@ -68,8 +58,9 @@
         zoom: 1;
         /* For IE 6/7 (trigger hasLayout) */
         z-index: 9999;
-        right: 70px;
-        background-color: #FFFFFF;
+        top: 48px;
+        left: 20px;
+        background-color: #f5f5f5;
         border: 1px solid #D8D8D8;
         border-radius: 5px;
         -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.45);
@@ -84,7 +75,7 @@
         z-index: 9999;
         right: 20px;
         padding: 15px;
-        background-color: #FFFFFF;
+        background-color: #f5f5f5;
         border: 1px solid #D8D8D8;
         border-radius: 5px;
         -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.45);
@@ -96,6 +87,7 @@
         top: 57px;
         width: 100%;
         height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
         position: fixed;
         zoom: 1;
         /* For IE 6/7 (trigger hasLayout) */
