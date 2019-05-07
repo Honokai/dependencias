@@ -1,4 +1,4 @@
-<?php
+fit <?php
 if($_GET['push'] === 'dev/')
     $ambiente = '/dev';
 else
@@ -142,7 +142,7 @@ else
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamado/31">TI</a>
+                                    <a href="/suporte/chamados/31">TI</a>
                                 </td>
                             </tr>
                             <thead>

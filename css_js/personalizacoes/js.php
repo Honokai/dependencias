@@ -150,26 +150,6 @@ $push = $_GET['push'];
         }
     });
 
-    $('.material').select2({
-        placeholder: 'Pesquisar, ex.: Mouse, Alicate, Pipeta.',
-        ajax: {
-            url: '/suporte/select2ChamadoShowMaterial',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            id: item.id,
-                            text: item.identificacao + ' (Estoque: ' + item.atual + ')',
-                        }
-                    })
-                };
-            },
-            cache: false
-        }
-    });
-
     //TODO:Ordem em que o jQuery foi carregado no sistema está incorreta.
     //Carregando o jQuery depois de app.js, que é o certo.
     loadFile('<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/ajax/3.4.0/jquery.js');
