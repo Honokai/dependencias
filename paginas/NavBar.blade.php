@@ -12,7 +12,7 @@ else
 <div id="timeout_logout" style="display:none;" class="timeout_logout">
     <font size="5">
         <br/><br/><br/><br/><br/><br/><br/><br/>
-        Sua sessão irá expirar em breve<br />
+        Sua sessão irá expirar em breve.<br />
         Atualize a página para se manter conectado <br /><br />
         <a href="#" onclick="location.reload()">Atualizar página</a> ● <a href="#" onclick="fecharTimeout()">Fechar e continuar assim mesmo</a>
     </font>
