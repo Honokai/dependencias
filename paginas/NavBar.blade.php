@@ -12,7 +12,7 @@ else
 <div id="timeout_logout" style="display:none;" class="timeout_logout">
     <font size="5">
         <br/><br/><br/><br/><br/><br/><br/><br/>
-        Sua sessão irá expirar em <span id="time">Carregando...</span><br />
+        Sua sessão irá expirar em breve<br />
         Atualize a página para se manter conectado <br /><br />
         <a href="#" onclick="location.reload()">Atualizar página</a> ● <a href="#" onclick="fecharTimeout()">Fechar e continuar assim mesmo</a>
     </font>
@@ -182,14 +182,13 @@ else
 
             <div id="navbarCollapse" class="navbar-collapse">
                 <ul class="navbar-nav ml-auto">
+                    <!-- Menu todos os sistemas -->
                     <li class="nav-item">
-                        <!-- Menu todos os sistemas -->
                         <div style="margin: 4px">
                             <a class="nav-link" href="#" onmouseover="javascript:exibeMenuSistemas();">
                                 <img src="/dependencias/images/sistemas/sistemas.png" width="18" height="18">
                             </a>
                         </div>
-                        
                         <div id="menuSistemas" style="display:none;" class="groupMenuSistemas">
                             <br/>
                             <table class="table table-sm table-borderless">
@@ -238,22 +237,31 @@ else
                                     </td>
                                 </tr>    
                             </table>
-                        <!-- Fim Menu todos os sistemas -->                        
+                        </div>              
                     </li>
+                    <!-- Fim Menu todos os sistemas --> 
+                    <!-- Menu User -->
                     <li class="nav-item">
-                        <!-- Menu User -->
                         <div style="margin: 4px">
                             <a class="nav-link" href="#" onmouseover="javascript:exibeMenuUsuario();">
                                 <img src="/dependencias/images/sistemas/user.png" width="18" height="18">
                             </a>
                         </div>
                         <div id="menuUsuario" style="display:none;" class="DivMenuUser">
-                            <div>
-                                <a href="/dependencias/paginas/logout.php?env=$ambiente">Sair do sistema</a>
+                            <div align="center">
+                                <?php print_r($_COOKIE); ?>
+                                <br/><a href="/dependencias/paginas/logout.php?env=$ambiente">Sair do sistema</a>
                             </div>
                         </div>
-                        <!-- Fim Menu User -->
                     </li>
+                    <!-- Fim Menu User -->
+                    <!-- Time logoff -->
+                    <li class="nav-item">
+                        <div style="margin-top: 14px">
+                            <span id="time">load</span>
+                        </div>
+                    </li>
+                    <!-- Fim Time logoff -->
                 </ul>
             </div>
         </nav>

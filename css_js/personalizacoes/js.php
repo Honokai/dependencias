@@ -70,7 +70,7 @@ $push = $_GET['push'];
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
 
-            display.textContent = minutes + "m" + ":" + seconds + "s";
+            display.textContent = minutes + ":" + seconds;
 
             if (--timer < 0) {
                 window.location.href = "http://10.10.0.14/dependencias/paginas/logout.php";
@@ -121,7 +121,7 @@ $push = $_GET['push'];
                     results: $.map(data, function(item) {
                         return {
                             id: item.id,
-                            text: item.categoria + ' - ' + item.sub_categoria,
+                            text: item.categorias_nome + ' - ' + item.nome,
                         }
                     })
                 };

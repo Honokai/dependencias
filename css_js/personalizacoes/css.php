@@ -6,7 +6,7 @@
 
     /* (todos os sistemas) Define tamanho e posição do modal*/
     .modal .modal-dialog {
-        max-width: 1000px;
+        max-width: 940px;
     }
 
     /* (todos os sistemas) Bootstrap cor do hover das listas em zebra */
