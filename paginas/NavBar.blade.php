@@ -1,4 +1,4 @@
-fit <?php
+<?php
 if($_GET['push'] === 'dev/')
     $ambiente = '/dev';
 else
