@@ -195,7 +195,7 @@ else
                             <table class="table table-sm table-borderless">
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <div id="divLogoSistemas" style="background: lightgray;"><img src="/dependencias/images/sistemas/adm.png" width="60" height="60"></div>DASHBOARD
+                                        <a href="/login/dashboard"><div id="divLogoSistemas" style="background: gray;"><img src="/dependencias/images/sistemas/adm.png" width="60" height="60"></div>DASHBOARD</a>
                                     </td>
                                     <td width="33,3%" align="center">
                                         <a href="/suporte"><div id="divLogoSistemas" style="background: red"><img src="/dependencias/images/sistemas/ti.png" width="60" height="60"></div>SUPORTE</a>
