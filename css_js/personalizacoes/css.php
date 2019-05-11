@@ -25,7 +25,6 @@
         border-radius: 10px;
         width: 60px;
         height: 60px;
-        background: #1b80a5;
         margin:10px;
     }
 
