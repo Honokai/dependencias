@@ -194,7 +194,7 @@ else
                             <table class="table table-sm table-borderless">
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <a href="/login"><div id="divLogoSistemas" style="background: orange;"><img src="/dependencias/images/sistemas/adm.png" width="60" height="60"></div>DASHBOARD</a>
+                                        <a href="/login/dashboard"><div id="divLogoSistemas" style="background: gray;"><img src="/dependencias/images/sistemas/adm.png" width="60" height="60"></div>DASHBOARD</a>
                                     </td>
                                     <td width="33,3%" align="center">
                                         <a href="/suporte"><div id="divLogoSistemas" style="background: red"><img src="/dependencias/images/sistemas/ti.png" width="60" height="60"></div>SUPORTE</a>
@@ -208,15 +208,15 @@ else
                                         <div id="divLogoSistemas" style="background: lightgray;"><img src="/dependencias/images/sistemas/alm.png" width="60" height="60"></div>ALMOLAB
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="/almoxarife"><div id="divLogoSistemas" style="background: #1b80a5;"><img src="/dependencias/images/sistemas/almo.png" width="60" height="60"></div>ALMOXARIFE</a>
+                                        <a href="/almoxarife"><div id="divLogoSistemas"><img src="/dependencias/images/sistemas/almo.png" width="60" height="60"></div>ALMOXARIFE</a>
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="/ftp"><div id="divLogoSistemas" style="background: green"><img src="/dependencias/images/sistemas/ft.png" width="60" height="60"></div>FTP</a>
+                                        <a href="http://10.10.0.6/labdop/" target="blank"><div id="divLogoSistemas" style="background: lightpink"><img src="/dependencias/images/sistemas/lbcd.png" width="60" height="60"></div>LABDOP</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: green"><img src="/dependencias/images/sistemas/fc.png" width="60" height="60"></div>FICHA C.
+                                        <a href="http://10.10.0.25/Biblivre5/" target="blank"><div id="divLogoSistemas" style="background: purple"><img src="/dependencias/images/sistemas/bibi.png" width="60" height="60"></div>BIBLIVRE</a>
                                     </td>
                                     <td width="33,3%" align="center">
                                         <div id="divLogoSistemas" style="background: lightgray;" style="background: orange"><img src="/dependencias/images/sistemas/ga.png" width="60" height="60"></div>SECRETARIA
@@ -227,13 +227,13 @@ else
                                 </tr>
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <a href="http://10.10.0.25/Biblivre5/" target="blank"><div id="divLogoSistemas" style="background: purple"><img src="/dependencias/images/sistemas/bibi.png" width="60" height="60"></div>BIBLIVRE</a>
+                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: green"><img src="/dependencias/images/sistemas/fc.png" width="60" height="60"></div>FICHA C.
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="http://10.10.0.6/labdop/" target="blank"><div id="divLogoSistemas" style="background: lightpink"><img src="/dependencias/images/sistemas/lbcd.png" width="60" height="60"></div>LABDOP</a>
+                                        <a href="/ftp"><div id="divLogoSistemas" style="background: green"><img src="/dependencias/images/sistemas/ft.png" width="60" height="60"></div>FTP</a>
                                     </td>
                                     <td width="33,3%" align="center">
-                                            <div id="divLogoSistemas" style="background: lightgray"><img src="/dependencias/images/sistemas/sm_pb.png" width="60" height="60"></div>SM WEB</a>
+
                                     </td>
                                 </tr>    
                             </table>
@@ -249,7 +249,6 @@ else
                         </div>
                         <div id="menuUsuario" style="display:none;" class="DivMenuUser">
                             <div align="center">
-                                <?php print_r($_COOKIE); ?>
                                 <br/><a href="/dependencias/paginas/logout.php?env=$ambiente">Sair do sistema</a>
                             </div>
                         </div>

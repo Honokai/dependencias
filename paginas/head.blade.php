@@ -1,7 +1,6 @@
 <?php
-$url = $_GET['url'];
-
-$push = $_GET['push'];
+    $url = $_GET['url'];
+    $push = $_GET['push'];
 ?>
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
