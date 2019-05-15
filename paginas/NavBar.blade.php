@@ -112,37 +112,37 @@ else
                             </thead>  
                             <tr>
                                 <td>
-                                    CALIBRAÇÂO
+                                    <a href="/suporte/chamado/Calibração">CALIBRAÇÂO</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    COMPRAS
+                                    <a href="/suporte/chamado/Compras">COMPRAS</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    MANUTENÇÃO
+                                    <a href="/suporte/chamado/Manutencao">MANUTENÇÃO</a>
                                 </td>
                             </tr>
                             <tr>    
                                 <td>
-                                    QUALIDADE
+                                    <a href="/suporte/chamado/Qualidade">QUALIDADE</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    SECRETARIA
+                                    <a href="/suporte/chamado/Secretaria">SECRETARIA</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    SPET
+                                    <a href="/suporte/chamado/SPET">SPET</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamados/31">TI</a>
+                                    <a href="/suporte/chamado/TI">TI</a>
                                 </td>
                             </tr>
                             <thead>
