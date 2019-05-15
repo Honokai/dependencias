@@ -55,10 +55,10 @@ $push = $_GET['push'];
     // (Contador) Abrir div informando timout de sessão (em milessegundo, 1h:55min)
     onload = setTimeout(function() {
         document.getElementById('timeout_logout').style.display = 'block';
-    }, 6900000);
+    }, 6600000);
 
     // (Contador) Encaminha para logoff (em segundo, 2h)
-    var contador = '7200';
+    var contador = '7000';
 
     function startTimer(duration, display) {
         var timer = duration,
@@ -73,7 +73,7 @@ $push = $_GET['push'];
             display.textContent = minutes + ":" + seconds;
 
             if (--timer < 0) {
-                window.location.href = "http://10.10.0.14/dependencias/paginas/logout.php";
+                window.location.href = "<?php echo $url; ?>/<?php echo $push; ?>/dependencias/paginas/logout.php";
             }
         }, 1000);
     }
@@ -109,47 +109,7 @@ $push = $_GET['push'];
         document.getElementById("js_iframe").src = rota;
     }
 
-    // (suporte.create) Select2
-    $('.categorias').select2({
-        placeholder: 'Categoria',
-        ajax: {
-            url: '/suporte/select2ChamadoNewCategoria',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            id: item.id,
-                            text: item.categorias_nome + ' - ' + item.nome,
-                        }
-                    })
-                };
-            },
-            cache: false
-        }
-    });
-
-    $('.computador').select2({
-        placeholder: 'Computador',
-        ajax: {
-            url: '/suporte/select2ChamadoNewComputador',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            id: item.id,
-                            text: item.descricao,
-                        }
-                    })
-                };
-            },
-            cache: false
-        }
-    });
-
+    // (Select2 - suporte.new) Funções aceleram o carregamento durante as buscas do Select2
     //TODO:Ordem em que o jQuery foi carregado no sistema está incorreta.
     //Carregando o jQuery depois de app.js, que é o certo.
     loadFile('<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/ajax/3.4.0/jquery.js');
@@ -158,38 +118,8 @@ $push = $_GET['push'];
             'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
         }
     });
-    $('.categorias').on("change", function(e) {
-        var subcategoria = $(this).val();
-        //Carrega setores da categoria
-        $.ajax({
-            url: '/suporte/select2ChamadoNewRecuperaSetor/' + subcategoria,
-            method: 'get',
-            success: function(data) {
-                $('input[name=setor]').val(data);
-            }
-        });
-        //Carrega template da categoria
-        $.ajax({
-            url: '/suporte/select2ChamadoNewRecuperaTemplate/' + subcategoria,
-            method: 'get',
-            success: function(data) {
-                $('textarea[name=solicitacao_inicial]').text(JSON.parse(data));
-            }
-        });
-    });
 
-    $('.computador').on("change", function(e) {
-        var computador = $(this).val();
-        //Carrega localização do computador
-        $.ajax({
-            url: '/suporte/select2ChamadoNewRecuperaLocalizacao/' + computador,
-            method: 'get',
-            success: function(data) {
-                $('input[name=localizacao]').val(data);
-            }
-        });
-    });
-
+    // (Select2 idem acima)
     function loadFile(filename) {
         // Create a script tag, set its source
         var scriptTag = document.createElement("script"),
@@ -213,5 +143,5 @@ $push = $_GET['push'];
 
         // Finally add it to the <head>
         document.getElementsByTagName("head")[0].appendChild(scriptTag);
-    }
+    }    
 </script>
