@@ -100,6 +100,11 @@ else
                             </thead>
                             <tr>
                                 <td>
+                                    <a href="/suporte/chamado/geral">PÁGINA PRINCIPAL</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <a href="/suporte/chamados/create" onclick=abrirIFrame("/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
                                 </td>
                             </tr>
@@ -109,40 +114,45 @@ else
                                         VISUALIZAR CHAMADOS
                                     </th>
                                 </tr>  
-                            </thead>  
+                            </thead> 
                             <tr>
                                 <td>
-                                    CALIBRAÇÂO
+                                    <a href="/suporte/chamado/Bioinformática">BIOINFORMÁTICA</a>
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    <a href="/suporte/chamado/Calibração">CALIBRAÇÃO</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    COMPRAS
+                                    <a href="/suporte/chamado/Compras">COMPRAS</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    MANUTENÇÃO
+                                    <a href="/suporte/chamado/Manutencao">MANUTENÇÃO</a>
                                 </td>
                             </tr>
                             <tr>    
                                 <td>
-                                    QUALIDADE
+                                    <a href="/suporte/chamado/Qualidade">QUALIDADE</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    SECRETARIA
+                                    <a href="/suporte/chamado/Secretaria">SECRETARIA</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    SPET
+                                    <a href="/suporte/chamado/SPET">SPET</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamados/31">TI</a>
+                                    <a href="/suporte/chamado/TI">TI</a>
                                 </td>
                             </tr>
                             <thead>
