@@ -25,7 +25,7 @@
         border-radius: 10px;
         width: 60px;
         height: 60px;
-        margin:10px;
+        margin: 10px;
     }
 
     /* Super dropdown menu dos Sistemas */
