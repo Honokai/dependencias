@@ -109,10 +109,15 @@ else
                                         VISUALIZAR CHAMADOS
                                     </th>
                                 </tr>  
-                            </thead>  
+                            </thead> 
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamado/Calibração">CALIBRAÇÂO</a>
+                                    <a href="/suporte/chamado/Bioinformática">BIOINFORMÁTICA</a>
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    <a href="/suporte/chamado/Calibração">CALIBRAÇÃO</a>
                                 </td>
                             </tr>
                             <tr>
