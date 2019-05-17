@@ -100,6 +100,11 @@ else
                             </thead>
                             <tr>
                                 <td>
+                                    <a href="/suporte/chamado/geral">PÁGINA PRINCIPAL</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <a href="/suporte/chamados/create" onclick=abrirIFrame("/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
                                 </td>
                             </tr>
