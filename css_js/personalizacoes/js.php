@@ -40,7 +40,8 @@ $push = $_GET['push'];
         search = document.getElementById('search').value.trim();
         if (search == '') {
             <?php setcookie('buscaVazia', 1, time() + 3600); ?>;
-            window.location = window.location.origin + '/' + sistema + '/' + pagina;
+            // window.location = window.location.origin + '/' + sistema + '/' + pagina;
+            location.reload();
         } else
             window.location = window.location.origin + '/' + sistema + '/' + pagina + '/search/' + search;
     }

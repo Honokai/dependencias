@@ -100,6 +100,11 @@ else
                             </thead>
                             <tr>
                                 <td>
+                                    <a href="/suporte/chamado/geral">PÁGINA PRINCIPAL</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <a href="/suporte/chamados/create" onclick=abrirIFrame("/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
                                 </td>
                             </tr>
@@ -109,10 +114,15 @@ else
                                         VISUALIZAR CHAMADOS
                                     </th>
                                 </tr>  
-                            </thead>  
+                            </thead> 
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamado/Calibração">CALIBRAÇÂO</a>
+                                    <a href="/suporte/chamado/Bioinformática">BIOINFORMÁTICA</a>
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    <a href="/suporte/chamado/Calibração">CALIBRAÇÃO</a>
                                 </td>
                             </tr>
                             <tr>
