@@ -259,7 +259,7 @@ else
                         </div>
                         <div id="menuUsuario" style="display:none;" class="DivMenuUser">
                             <div align="center">
-                                {{ dd($_COOKIE) }}
+                                <iframe src="/dependencias/paginas/MenuUser.php" scrolling="auto" width="100%" height="50px" frameborder="0"></iframe>
                                 <br/><a href="/dependencias/paginas/logout.php?env=$ambiente">Sair do sistema</a>
                             </div>
                         </div>
