@@ -298,3 +298,19 @@ else
         </div>
     </div>
 </div>
+
+<!-- Modal chamado new, link na navbar -->
+<div id="modal" class="modal fade bd-modal-medium" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-medium">
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" onclick="location.reload()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <!-- iframe abre com os parâmetros segundo função js 'abrirIFrame' -->
+                <iframe id="js_iframe" scrolling="auto" src="" width="100%" height="590px" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
