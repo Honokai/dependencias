@@ -52,6 +52,30 @@ else
                         </div>
                     </div>
                 ';
+                    case "login":
+                        echo '
+                    <div style="margin: 20px">
+                        <table class="table table-sm table-borderless table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        DASHBOARD
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    <a href="/login">MINHA DASHBOARD</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="/suporte/chamados/create" onclick=abrirIFrame("/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                ';
                         break;
                     case "almoxarife":
                         echo '
@@ -94,7 +118,7 @@ else
                             <thead>
                                 <tr>
                                     <th>
-                                        SUPORTE
+                                        SUPORTE <a href="#"><span class="badge badge-info">?</span></a>
                                     </th>
                                 </tr>
                             </thead>
