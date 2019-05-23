@@ -11,7 +11,7 @@ else
 <!-- Div info timeout -->
 <div id="timeout_logout" style="display:none;" class="timeout_logout">
     <font size="5">
-        <br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
         Sua sessão irá expirar em breve.<br />
         Atualize a página para se manter conectado <br /><br />
         <a href="#" onclick="location.reload()">Atualizar página</a> ● <a href="#" onclick="fecharTimeout()">Fechar e continuar assim mesmo</a>
@@ -294,6 +294,22 @@ else
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal chamado new, link na navbar -->
+<div id="modal" class="modal fade bd-modal-medium" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-medium">
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" onclick="location.reload()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <!-- iframe abre com os parâmetros segundo função js 'abrirIFrame' -->
+                <iframe id="js_iframe" scrolling="auto" src="" width="100%" height="590px" frameborder="0"></iframe>
             </div>
         </div>
     </div>
