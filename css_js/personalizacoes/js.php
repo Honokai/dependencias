@@ -74,7 +74,7 @@ $push = $_GET['push'];
             display.textContent = minutes + ":" + seconds;
 
             if (--timer < 0) {
-                window.location.href = "<?php echo $url; ?>/<?php echo $push; ?>/dependencias/paginas/logout.php";
+                window.location.href = "<?php echo $url; ?>/<?php echo $push; ?>/dependencias/paginas/logout?logout=timeout.php";
             }
         }, 1000);
     }
