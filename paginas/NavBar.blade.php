@@ -129,7 +129,7 @@ else
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="'.$ambiente.'/suporte/chamados/create" onclick=abrirIFrame("/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
+                                    <a href="'.$ambiente.'/suporte/chamados/create" onclick=abrirIFrame("'.$ambiente.'/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
                                 </td>
                             </tr>
                             <thead>
