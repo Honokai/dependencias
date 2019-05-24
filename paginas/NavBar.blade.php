@@ -52,6 +52,30 @@ else
                         </div>
                     </div>
                 ';
+                    case "login":
+                        echo '
+                    <div style="margin: 20px">
+                        <table class="table table-sm table-borderless table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        DASHBOARD
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    <a href="/login">MINHA DASHBOARD</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="/suporte/chamados/create" onclick=abrirIFrame("/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                ';
                         break;
                     case "almoxarife":
                         echo '
@@ -94,7 +118,7 @@ else
                             <thead>
                                 <tr>
                                     <th>
-                                        SUPORTE
+                                        SUPORTE <a href="#"><span class="badge badge-info">?</span></a>
                                     </th>
                                 </tr>
                             </thead>
@@ -177,7 +201,7 @@ else
 
             <!-- Busca -->
             <div class="input-group" style="width:60%;">
-                <input type="text" size="60%" class="form-control ml-4" id="search" name="search" onkeyup="javascript:verificaSubmit(event);" placeholder="Pesquisar" style="border-color: #FFFFFF;-webkit-box-shadow: none; box-shadow: none;">
+                <input type="text" size="60%" class="form-control ml-4" id="search" name="search" onkeyup="javascript:verificaSubmit(event);" placeholder="Pesquisar" style="border-color: #FFFFFF;-webkit-box-shadow: none; box-shadow: none; background-color: #e9e9e9">
                 <div class="input-append">
                     <button class="btn btn-link" type="button" onclick="javascript:buscar();" style="background-color: #FFFFFF;">
                         <i class="fas fa-search"></i>
