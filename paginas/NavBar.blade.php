@@ -47,8 +47,8 @@ else
                         </font>
                         </div>
                         <div>
-                            <a href="/ftp/usada">USADA</a> <br>
-                            <a href="/ftp/idtm">IDTM</a> <br> <br>
+                            <a href="/'.$ambiente.'/ftp/usada">USADA</a> <br>
+                            <a href="/'.$ambiente.'/ftp/idtm">IDTM</a> <br> <br>
                         </div>
                     </div>
                 ';
@@ -65,12 +65,12 @@ else
                             </thead>
                             <tr>
                                 <td>
-                                    <a href="/login">MINHA DASHBOARD</a>
+                                    <a href="/'.$ambiente.'/login">MINHA DASHBOARD</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamados/create" onclick=abrirIFrame("/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
+                                    <a href="/'.$ambiente.'/suporte/chamados/create" onclick=abrirIFrame("/'.$ambiente.'/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
                                 </td>
                             </tr>
                         </table>
@@ -87,16 +87,16 @@ else
                             </font>
                         </div>
                         <div>
-                            <a href="/almoxarife/material/">MATERIAIS</a> <br>
-                            <a href="/almoxarife/entrada-padrao">ENTRADA DE PADRÕES</a> <br> <br>
+                            <a href="/'.$ambiente.'/almoxarife/material/">MATERIAIS</a> <br>
+                            <a href="/'.$ambiente.'/almoxarife/entrada-padrao">ENTRADA DE PADRÕES</a> <br> <br>
                         </div>
                         <div style="background-color:#E6E6E6">
                             <font color="#A4A4A4">ESTOQUE GERAL</font>
                         </div>
                         <div>
-                            <a href="/almoxarife/material_all">MATERIAIS</a><br>
-                            <a href="/almoxarife/entrada-padrao_all">ENTRADA DE PADRÕES</a><br> 
-                            <a href="/almoxarife/padrao">PADRÕES</a><br><br>
+                            <a href="/'.$ambiente.'/almoxarife/material_all">MATERIAIS</a><br>
+                            <a href="/'.$ambiente.'/almoxarife/entrada-padrao_all">ENTRADA DE PADRÕES</a><br> 
+                            <a href="/'.$ambiente.'/almoxarife/padrao">PADRÕES</a><br><br>
                         </div>
                     </div>
                     <div id="DivMenuPrincipal">
@@ -104,9 +104,9 @@ else
                             <font color="#A4A4A4">ÁREA ADMINISTRATIVA</font>
                         </div>
                         <div>
-                            <a href="/almoxarife/log-material">EDITAR DE SAÍDAS DE MATERIAL</a> <br>
-                            <a href="/almoxarife/log-padrao">EDITAR DE SAÍDAS DE PADRAO</a> <br>
-                            <a href="/almoxarife/localizacao">EDITAR LOCALIZAÇÕES</a>
+                            <a href="/'.$ambiente.'/almoxarife/log-material">EDITAR DE SAÍDAS DE MATERIAL</a> <br>
+                            <a href="/'.$ambiente.'/almoxarife/log-padrao">EDITAR DE SAÍDAS DE PADRAO</a> <br>
+                            <a href="/'.$ambiente.'/almoxarife/localizacao">EDITAR LOCALIZAÇÕES</a>
                         </div>
                     </div>
                 ';
@@ -124,12 +124,12 @@ else
                             </thead>
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamado/geral">PÁGINA PRINCIPAL</a>
+                                    <a href="/'.$ambiente.'/suporte/chamado/geral">PÁGINA PRINCIPAL</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamados/create" onclick=abrirIFrame("/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
+                                    <a href="/'.$ambiente.'/suporte/chamados/create" onclick=abrirIFrame("/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
                                 </td>
                             </tr>
                             <thead>
@@ -141,42 +141,42 @@ else
                             </thead> 
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamado/Bioinformática">BIOINFORMÁTICA</a>
+                                    <a href="/'.$ambiente.'/suporte/chamado/Bioinformática">BIOINFORMÁTICA</a>
                                 </td>
                             </tr> 
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamado/Calibração">CALIBRAÇÃO</a>
+                                    <a href="/'.$ambiente.'/suporte/chamado/Calibração">CALIBRAÇÃO</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamado/Compras">COMPRAS</a>
+                                    <a href="/'.$ambiente.'/suporte/chamado/Compras">COMPRAS</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamado/Manutencao">MANUTENÇÃO</a>
+                                    <a href="/'.$ambiente.'/suporte/chamado/Manutencao">MANUTENÇÃO</a>
                                 </td>
                             </tr>
                             <tr>    
                                 <td>
-                                    <a href="/suporte/chamado/Qualidade">QUALIDADE</a>
+                                    <a href="/'.$ambiente.'/suporte/chamado/Qualidade">QUALIDADE</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamado/Secretaria">SECRETARIA</a>
+                                    <a href="/'.$ambiente.'/suporte/chamado/Secretaria">SECRETARIA</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamado/SPET">SPET</a>
+                                    <a href="/'.$ambiente.'/suporte/chamado/SPET">SPET</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="/suporte/chamado/TI">TI</a>
+                                    <a href="/'.$ambiente.'/suporte/chamado/TI">TI</a>
                                 </td>
                             </tr>
                             <thead>
@@ -188,7 +188,7 @@ else
                             </thead>
                             <tr>
                                 <td>
-                                    <a href="/suporte/categorias/">CATEGORIAS</a>
+                                    <a href="/'.$ambiente.'/suporte/categorias/">CATEGORIAS</a>
                                 </td>
                             </tr>
                         </table>
