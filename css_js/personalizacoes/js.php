@@ -1,7 +1,6 @@
 <?php
-$url = $_GET['url'];
-
-$push = $_GET['push'];
+    $url = $_GET['url'];
+    $push = $_GET['push'];
 ?>
 <script type="text/javascript">
     // (Menu) Abre e Fecha super menus 
@@ -74,7 +73,7 @@ $push = $_GET['push'];
             display.textContent = minutes + ":" + seconds;
 
             if (--timer < 0) {
-                window.location.href = "<?php echo $url; ?>/<?php echo $push; ?>/dependencias/paginas/logout?logout=timeout.php";
+                window.location.href = "<?php echo $url.$push; ?>/dependencias/paginas/logout.php";
             }
         }, 1000);
     }

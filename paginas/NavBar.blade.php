@@ -284,7 +284,7 @@ else
                         <div id="menuUsuario" style="display:none;" class="DivMenuUser">
                             <div align="center">
                                 <iframe src="<?php echo $ambiente ?>/dependencias/paginas/MenuUser.php" scrolling="auto" width="100%" height="50px" frameborder="0"></iframe>
-                                <br/><a href="<?php echo $ambiente ?>/dependencias/paginas/logout.php?env=$ambiente">Sair do sistema</a>
+                                <br/><a href="<?php echo $ambiente ?>/dependencias/paginas/logout.php?env=<?php echo $ambiente ?>">Sair do sistema</a>
                             </div>
                         </div>
                     </li>

@@ -7,11 +7,6 @@ if (!empty($_COOKIE)) {
     }
 }
 
-// Condição se logoff vier de timeout, encaminha para página diferente de login, devido a erro de cookie do laravel que se expira
-if($_GET['logout'] == 'timeout'){
-    header("Location: $env/dependencias/paginas/logoutview.php");
-}else{
-    header("Location: $env/login");
-}
+header("Location: /login");
 
 exit();
