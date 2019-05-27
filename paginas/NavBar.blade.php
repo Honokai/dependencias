@@ -39,19 +39,29 @@ else
                 switch ($_GET['sistema']) {
                     case "ftp":
                         echo '
-                    <div id="DivMenuPrincipal">
-                        <div style="background-color:#E6E6E6">
-                        <font color="#A4A4A4">FTP
-                            <!-- Link para modal explicando as funcionalidades dos links do almoxarife -->
-                            <a href data-toggle="modal" data-target="#modalMenuAlmoxarife"></a>
-                        </font>
-                        </div>
-                        <div>
-                            <a href="'.$ambiente.'/ftp/usada">USADA</a> <br>
-                            <a href="'.$ambiente.'/ftp/idtm">IDTM</a> <br> <br>
-                        </div>
+                        <div style="margin: 20px">
+                        <table class="table table-sm table-borderless table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        FTP
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    <a href="'.$ambiente.'/ftp/usada">USADA</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="'.$ambiente.'/ftp/idtm">IDTM</a>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 ';
+                    break;
                     case "login":
                         echo '
                     <div style="margin: 20px">
