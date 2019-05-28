@@ -39,8 +39,8 @@ else
                 switch ($_GET['sistema']) {
                     case "ftp":
                         echo '
-                        <div style="margin: 20px">
-                        <table class="table table-sm table-borderless table-hover">
+                    <div style="margin: 20px">
+                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
                             <thead>
                                 <tr>
                                     <th>
@@ -65,7 +65,7 @@ else
                     case "login":
                         echo '
                     <div style="margin: 20px">
-                        <table class="table table-sm table-borderless table-hover">
+                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
                             <thead>
                                 <tr>
                                     <th>
@@ -73,14 +73,14 @@ else
                                     </th>
                                 </tr>
                             </thead>
-                            <tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/login");>
                                 <td>
-                                    <a href="'.$ambiente.'/login">MINHA DASHBOARD</a>
+                                    <a href="#">MINHA DASHBOARD</a>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onclick=abrirIFrame("'.$ambiente.'/suporte/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
                                 <td>
-                                    <a href="'.$ambiente.'/suporte/chamados/create" onclick=abrirIFrame("'.$ambiente.'/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
+                                    <a href="#">NOVO CHAMADO</a>
                                 </td>
                             </tr>
                         </table>
@@ -89,42 +89,82 @@ else
                         break;
                     case "almoxarife":
                         echo '
-                    <div id="DivMenuPrincipal">
-                        <div style="background-color:#E6E6E6">
-                            <font color="#A4A4A4">MEU ESTOQUE
-                                <!-- Link para modal explicando as funcionalidades dos links do almoxarife -->
-                                <a href="#" data-toggle="modal" data-target="#modalMenuAlmoxarife">(?)</a>
-                            </font>
-                        </div>
-                        <div>
-                            <a href="'.$ambiente.'/almoxarife/material/">MATERIAIS</a> <br>
-                            <a href="'.$ambiente.'/almoxarife/entrada-padrao">ENTRADA DE PADRÕES</a> <br> <br>
-                        </div>
-                        <div style="background-color:#E6E6E6">
-                            <font color="#A4A4A4">ESTOQUE GERAL</font>
-                        </div>
-                        <div>
-                            <a href="'.$ambiente.'/almoxarife/material_all">MATERIAIS</a><br>
-                            <a href="'.$ambiente.'/almoxarife/entrada-padrao_all">ENTRADA DE PADRÕES</a><br> 
-                            <a href="'.$ambiente.'/almoxarife/padrao">PADRÕES</a><br><br>
-                        </div>
-                    </div>
-                    <div id="DivMenuPrincipal">
-                        <div style="background-color:#E6E6E6">
-                            <font color="#A4A4A4">ÁREA ADMINISTRATIVA</font>
-                        </div>
-                        <div>
-                            <a href="'.$ambiente.'/almoxarife/log-material">EDITAR DE SAÍDAS DE MATERIAL</a> <br>
-                            <a href="'.$ambiente.'/almoxarife/log-padrao">EDITAR DE SAÍDAS DE PADRAO</a> <br>
-                            <a href="'.$ambiente.'/almoxarife/localizacao">EDITAR LOCALIZAÇÕES</a>
-                        </div>
+                    <div style="margin: 20px">
+                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        ALMOXARIFE <a href="#" data-toggle="modal" data-target="#modalMenuAlmoxarife"><span class="badge badge-info">?</span></a>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        MEU ESTOQUE
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/material/");>
+                                <td>
+                                    <a href="#">MATERIAIS</a>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/entrada-padrao");>
+                                <td>
+                                    <a href="#">ENTRADA DE PADRÕES</a>
+                                </td>
+                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        ESTOQUE GERAL
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/material_all");>
+                                <td>
+                                    <a href="#">MATERIAIS</a>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/entrada-padrao_all");>
+                                <td>
+                                    <a href="#">ENTRADA DE PADRÕES</a>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/padrao");>
+                                <td>
+                                    <a href="#">PADRÕES</a>
+                                </td>
+                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        ÁREA ADMINISTRATIVA
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/log-material");>
+                                <td>
+                                    <a href="#">EDITAR DE SAÍDAS DE MATERIAL</a>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/log-padrao");>
+                                <td>
+                                    <a href="#">EDITAR DE SAÍDAS DE PADRAO</a>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/localizacao");>
+                                <td>
+                                    <a href="#">EDITAR LOCALIZAÇÕES</a>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 ';
                         break;
                     case "suporte":
                         echo '
                     <div style="margin: 20px">
-                        <table class="table table-sm table-borderless table-hover">
+                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
                             <thead>
                                 <tr>
                                     <th>
@@ -132,14 +172,14 @@ else
                                     </th>
                                 </tr>
                             </thead>
-                            <tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/geral");>
                                 <td>
-                                    <a href="'.$ambiente.'/suporte/chamado/geral">PÁGINA PRINCIPAL</a>
+                                    <a href="#">PÁGINA PRINCIPAL</a>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onclick=abrirIFrame("'.$ambiente.'/suporte/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
                                 <td>
-                                    <a href="'.$ambiente.'/suporte/chamados/create" onclick=abrirIFrame("'.$ambiente.'/suporte/chamados/create") id="rota" data-target="#modal" data-toggle="modal">NOVO CHAMADO</a>
+                                    <a href="#">NOVO CHAMADO</a>
                                 </td>
                             </tr>
                             <thead>
@@ -149,44 +189,44 @@ else
                                     </th>
                                 </tr>  
                             </thead> 
-                            <tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Bioinformática");>
                                 <td>
-                                    <a href="'.$ambiente.'/suporte/chamado/Bioinformática">BIOINFORMÁTICA</a>
+                                    <a href="#">BIOINFORMÁTICA</a>
                                 </td>
                             </tr> 
-                            <tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Calibração");>
                                 <td>
-                                    <a href="'.$ambiente.'/suporte/chamado/Calibração">CALIBRAÇÃO</a>
+                                    <a href="#">CALIBRAÇÃO</a>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Compras");>
                                 <td>
-                                    <a href="'.$ambiente.'/suporte/chamado/Compras">COMPRAS</a>
+                                    <a href="#">COMPRAS</a>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Manutencao");>
                                 <td>
-                                    <a href="'.$ambiente.'/suporte/chamado/Manutencao">MANUTENÇÃO</a>
+                                    <a href="#">MANUTENÇÃO</a>
                                 </td>
                             </tr>
-                            <tr>    
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Qualidade");>    
                                 <td>
-                                    <a href="'.$ambiente.'/suporte/chamado/Qualidade">QUALIDADE</a>
+                                    <a href="#">QUALIDADE</a>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Secretaria");>
                                 <td>
-                                    <a href="'.$ambiente.'/suporte/chamado/Secretaria">SECRETARIA</a>
+                                    <a href="#">SECRETARIA</a>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/SPET");>
                                 <td>
-                                    <a href="'.$ambiente.'/suporte/chamado/SPET">SPET</a>
+                                    <a href="#">SPET</a>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/TI");>
                                 <td>
-                                    <a href="'.$ambiente.'/suporte/chamado/TI">TI</a>
+                                    <a href="#">TI</a>
                                 </td>
                             </tr>
                             <thead>
@@ -196,9 +236,9 @@ else
                                     </th>
                                 </tr>
                             </thead>
-                            <tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/categorias/");>
                                 <td>
-                                    <a href="'.$ambiente.'/suporte/categorias/">CATEGORIAS</a>
+                                    <a href="#">CATEGORIAS</a>
                                 </td>
                             </tr>
                         </table>

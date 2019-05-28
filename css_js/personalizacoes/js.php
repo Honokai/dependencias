@@ -91,7 +91,7 @@
     }
 
     // (suporte.create, suporte.categoria.new) Recarrega a página após um post dentro de modal
-    function recarregarPagina(link) {
+    function carregarPagina(link) {
         window.location.href = link;
     }
 

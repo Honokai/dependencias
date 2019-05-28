@@ -20,6 +20,11 @@
         cursor: pointer;
     }
 
+    /* (todos os sistemas) Estiliza os links */
+    a:link, a:visited, a:hover, a:active {
+        text-decoration: none;
+    }
+
     /*Logo dos sistemas no menu*/
     #divLogoSistemas {
         border-radius: 10px;
