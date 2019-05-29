@@ -69,18 +69,18 @@ else
                             <thead>
                                 <tr>
                                     <th>
-                                        DASHBOARD
+                                        <font color="#565656">DASHBOARD</font>
                                     </th>
                                 </tr>
                             </thead>
                             <tr onClick=carregarPagina("'.$ambiente.'/login");>
                                 <td>
-                                    <a href="#">MINHA DASHBOARD</a>
+                                    <font color="gray">MINHA DASHBOARD</font>
                                 </td>
                             </tr>
                             <tr onclick=abrirIFrame("'.$ambiente.'/suporte/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
                                 <td>
-                                    <a href="#">NOVO CHAMADO</a>
+                                    <font color="gray">NOVO CHAMADO</font>
                                 </td>
                             </tr>
                         </table>
@@ -168,77 +168,77 @@ else
                             <thead>
                                 <tr>
                                     <th>
-                                        SUPORTE <a href="#"><span class="badge badge-info">?</span></a>
+                                        <font color="#565656">SUPORTE <a href="#"><span class="badge badge-info">?</span></font>
                                     </th>
                                 </tr>
                             </thead>
                             <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/geral");>
                                 <td>
-                                    <a href="#">PÁGINA PRINCIPAL</a>
+                                    <font color="gray">PÁGINA PRINCIPAL</font>
                                 </td>
                             </tr>
                             <tr onclick=abrirIFrame("'.$ambiente.'/suporte/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
                                 <td>
-                                    <a href="#">NOVO CHAMADO</a>
+                                    <font color="gray">NOVO CHAMADO</font>
                                 </td>
                             </tr>
                             <thead>
                                 <tr>
                                     <th>
-                                        VISUALIZAR CHAMADOS
+                                        <font color="#565656">VISUALIZAR CHAMADOS
                                     </th>
                                 </tr>  
                             </thead> 
                             <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Bioinformática");>
                                 <td>
-                                    <a href="#">BIOINFORMÁTICA</a>
+                                    <font color="gray">BIOINFORMÁTICA</font>
                                 </td>
                             </tr> 
                             <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Calibração");>
                                 <td>
-                                    <a href="#">CALIBRAÇÃO</a>
+                                    <font color="gray">CALIBRAÇÃO</font>
                                 </td>
                             </tr>
                             <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Compras");>
                                 <td>
-                                    <a href="#">COMPRAS</a>
+                                    <font color="gray">COMPRAS</font>
                                 </td>
                             </tr>
                             <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Manutencao");>
                                 <td>
-                                    <a href="#">MANUTENÇÃO</a>
+                                    <font color="gray">MANUTENÇÃO</font>
                                 </td>
                             </tr>
                             <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Qualidade");>    
                                 <td>
-                                    <a href="#">QUALIDADE</a>
+                                    <font color="gray">QUALIDADE</font>
                                 </td>
                             </tr>
                             <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Secretaria");>
                                 <td>
-                                    <a href="#">SECRETARIA</a>
+                                    <font color="gray">SECRETARIA</font>
                                 </td>
                             </tr>
                             <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/SPET");>
                                 <td>
-                                    <a href="#">SPET</a>
+                                    <font color="gray">SPET</font>
                                 </td>
                             </tr>
                             <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/TI");>
                                 <td>
-                                    <a href="#">TI</a>
+                                    <font color="gray">TI</font>
                                 </td>
                             </tr>
                             <thead>
                                 <tr>
                                     <th>
-                                        AREA ADMINISTRATIVA
+                                        <font color="#565656">AREA ADMINISTRATIVA</font>
                                     </th>
                                 </tr>
                             </thead>
                             <tr onClick=carregarPagina("'.$ambiente.'/suporte/categorias/");>
                                 <td>
-                                    <a href="#">CATEGORIAS</a>
+                                    <font color="gray">CATEGORIAS</font>
                                 </td>
                             </tr>
                         </table>
@@ -377,13 +377,9 @@ else
 <div id="modal" class="modal fade bd-modal-medium" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-medium">
         <div class="modal-content"> 
-            <div class="modal-header">
-                <h4 class="modal-title"></h4>
-                <button type="button" class="close" onclick="location.reload()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
             <div class="modal-body">
                 <!-- iframe abre com os parâmetros segundo função js 'abrirIFrame' -->
-                <iframe id="js_iframe" scrolling="auto" src="" width="100%" height="590px" frameborder="0"></iframe>
+                <iframe id="js_iframe" scrolling="auto" src="" width="100%" height="530px" frameborder="0"></iframe>
             </div>
         </div>
     </div>
