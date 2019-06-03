@@ -73,7 +73,7 @@
             display.textContent = minutes + ":" + seconds;
 
             if (--timer < 0) {
-                window.location.href = "<?php echo $url.$push; ?>/dependencias/paginas/logout.php";
+                window.location.href = "<?php echo $url.'/'.$push; ?>dependencias/paginas/logout.php";
             }
         }, 1000);
     }
@@ -96,7 +96,7 @@
     }
 
     // (suporte.chamadoshow) textarea responder aumentar tamanho de acordo com linhas do texto 
-    $("textarea").bind("input", function(e) {
+    $("textarea.responsive").bind("input", function(e) {
         while ($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth")) &&
             $(this).height() < 500
         ) {

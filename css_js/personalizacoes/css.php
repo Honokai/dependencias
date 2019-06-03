@@ -4,6 +4,11 @@
         font-size: 14px;
     }
 
+    #scroll-overflow {
+        height: 360px;
+        overflow-x: auto;
+    }
+
     /* (todos os sistemas) Define tamanho e posição do modal*/
     .modal .modal-dialog {
         max-width: 940px;
