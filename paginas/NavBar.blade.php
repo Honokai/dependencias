@@ -278,10 +278,10 @@ else
                             <table class="table table-sm table-borderless">
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $ambiente ?>/login"><div id="divLogoSistemas" style="background: orange;"><img src="<?php echo $ambiente ?>/dependencias/images/adm.png" width="60" height="60"></div>DASHBOARD</a>
+                                        <a href="<?php echo $ambiente ?>/login"><div id="divLogoSistemas" style="background: lightgray;"><img src="<?php echo $ambiente ?>/dependencias/images/adm.png" width="60" height="60"></div></a>DASHBOARD
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $ambiente ?>/suporte"><div id="divLogoSistemas" style="background: red"><img src="<?php echo $ambiente ?>/dependencias/images/ti.png" width="60" height="60"></div>SUPORTE</a>
+                                        <a href="<?php echo $ambiente ?>/suporte"><div id="divLogoSistemas" style="background: lightgray"><img src="<?php echo $ambiente ?>/dependencias/images/ti.png" width="60" height="60"></div></a>SUPORTE
                                     </td>
                                     <td width="33,3%" align="center">
                                         <div id="divLogoSistemas" style="background: lightgray;"><img src="<?php echo $ambiente ?>/dependencias/images/bs.png" width="60" height="60"></div>SOLUÇÃO
