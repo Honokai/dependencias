@@ -199,9 +199,9 @@ else
                                     <font color="gray">CALIBRAÇÃO</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Compras");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Suprimentos");>
                                 <td>
-                                    <font color="gray">COMPRAS</font>
+                                    <font color="gray">SUPRIMENTOS</font>
                                 </td>
                             </tr>
                             <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Manutencao");>
@@ -360,9 +360,9 @@ else
                     <b>ESTOQUE GERAL</b>
                     <br>Aqui você poderá visualizar / consultar o estoque de material e padrão de todos os setores. <br> <br>
                     <b>EDITAR SAÍDAS DE MATERIAL</b>
-                    <br>Aqui você poderá visualizar as baixas de material e padrão de todos os setores. <br />A opção de editar uma saída está disponível somente para o setor de compras.<br><br>
+                    <br>Aqui você poderá visualizar as baixas de material e padrão de todos os setores. <br />A opção de editar uma saída está disponível somente para o setor de Suprimentos.<br><br>
                     <b>ÁREA ADMINISTRATIVA</b>
-                    <br>Edições de baixas e criação de localização disponivel somente para o setor de compras. <br /> Pode cancelar baixas ou transferências de materiais ou padrões realizadas erroneamente pelos usuários. <br /> Também irá editar as localizações permitidas aos setores para armazenar seu estoque.
+                    <br>Edições de baixas e criação de localização disponivel somente para o setor de Suprimentos. <br /> Pode cancelar baixas ou transferências de materiais ou padrões realizadas erroneamente pelos usuários. <br /> Também irá editar as localizações permitidas aos setores para armazenar seu estoque.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
