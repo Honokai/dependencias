@@ -168,7 +168,7 @@ else
                             <thead>
                                 <tr>
                                     <th>
-                                        <font color="#565656">SUPORTE <a href="#"><span class="badge badge-info">?</span></font>
+                                        <font color="#565656">SUPORTE <a href="#"></font>
                                     </th>
                                 </tr>
                             </thead>
@@ -189,42 +189,42 @@ else
                                     </th>
                                 </tr>  
                             </thead> 
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Bioinformática");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/bioinformatica");>
                                 <td>
                                     <font color="gray">BIOINFORMÁTICA</font>
                                 </td>
                             </tr> 
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Calibração");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/calibração");>
                                 <td>
                                     <font color="gray">CALIBRAÇÃO</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Suprimentos");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/suprimentos");>
                                 <td>
                                     <font color="gray">SUPRIMENTOS</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Manutencao");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/manutencao");>
                                 <td>
                                     <font color="gray">MANUTENÇÃO</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Qualidade");>    
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/qualidade");>    
                                 <td>
                                     <font color="gray">QUALIDADE</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Secretaria");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/secretaria");>
                                 <td>
                                     <font color="gray">SECRETARIA</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/SPET");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/spet");>
                                 <td>
                                     <font color="gray">SPET</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/TI");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/ti");>
                                 <td>
                                     <font color="gray">TI</font>
                                 </td>
