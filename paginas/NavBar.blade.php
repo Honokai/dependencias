@@ -375,7 +375,12 @@ else
 <!-- Modal chamado new, link na navbar -->
 <div id="modal" class="modal fade bd-modal-medium" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-medium">
-        <div class="modal-content"> 
+        <div class="modal-content">
+            <div class="modal_header">
+                <button type="button" class="close" data_dismniss="modal" aria_label="Fechar" onClick="location.reload()">
+                    <span aria-hidden="true">&times;</spam>
+                </button>
+            </div>
             <div class="modal-body">
                 <!-- iframe abre com os parâmetros segundo função js 'abrirIFrame' -->
                 <iframe id="js_iframe" scrolling="auto" src="" width="100%" height="544px" frameborder="0"></iframe>
