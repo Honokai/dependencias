@@ -376,10 +376,8 @@ else
 <div id="modal" class="modal fade bd-modal-medium" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-medium">
         <div class="modal-content">
-            <div class="modal_header">
-                <button type="button" class="close" data_dismniss="modal" aria_label="Fechar" onClick="location.reload()">
-                    <font size="3"> fechar e atualizar </font> <span aria-hidden="true">&times;</spam>&nbsp;
-                </button>
+            <div style="text-align:right;" class="modal_header">
+                <font size="2" color="gray" style="cursor: pointer;" onClick="location.reload()"> fechar e atualizar <b><span aria-hidden="true">&times;</spam></b>&nbsp;</font>
             </div>
             <div class="modal-body">
                 <!-- iframe abre com os parâmetros segundo função js 'abrirIFrame' -->
