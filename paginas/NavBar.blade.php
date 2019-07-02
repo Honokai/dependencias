@@ -378,7 +378,7 @@ else
         <div class="modal-content">
             <div class="modal_header">
                 <button type="button" class="close" data_dismniss="modal" aria_label="Fechar" onClick="location.reload()">
-                    <span aria-hidden="true">&times;</spam>
+                    <font size="3"> fechar e atualizar </font> <span aria-hidden="true">&times;</spam>&nbsp;
                 </button>
             </div>
             <div class="modal-body">
