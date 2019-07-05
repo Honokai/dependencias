@@ -18,6 +18,7 @@
     <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/ajax/3.3.1/jquery.js"></script>
     <link href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/select2/4.0.5/select2.min.css" rel="stylesheet" />
     <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/select2/4.0.5/select2.min.js"></script>
+    <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/mask/1.14.10/jquery.mask.min.js"></script>
 
 </head>
 <body>
