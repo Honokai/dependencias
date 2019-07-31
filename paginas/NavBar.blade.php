@@ -168,7 +168,7 @@ else
                             <thead>
                                 <tr>
                                     <th>
-                                        <font color="#565656">SUPORTE <a href="#"><span class="badge badge-info">?</span></font>
+                                        <font color="#565656">SUPORTE <a href="#"></font>
                                     </th>
                                 </tr>
                             </thead>
@@ -189,42 +189,42 @@ else
                                     </th>
                                 </tr>  
                             </thead> 
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Bioinformática");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/bioinformatica");>
                                 <td>
                                     <font color="gray">BIOINFORMÁTICA</font>
                                 </td>
                             </tr> 
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Calibração");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/calibração");>
                                 <td>
                                     <font color="gray">CALIBRAÇÃO</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Suprimentos");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/suprimentos");>
                                 <td>
                                     <font color="gray">SUPRIMENTOS</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Manutencao");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/manutencao");>
                                 <td>
                                     <font color="gray">MANUTENÇÃO</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Qualidade");>    
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/qualidade");>    
                                 <td>
                                     <font color="gray">QUALIDADE</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/Secretaria");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/secretaria");>
                                 <td>
                                     <font color="gray">SECRETARIA</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/SPET");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/spet");>
                                 <td>
                                     <font color="gray">SPET</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/TI");>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/ti");>
                                 <td>
                                     <font color="gray">TI</font>
                                 </td>
@@ -248,6 +248,9 @@ else
                 ?>
             </div>
             <!-- Fim Menu Principal -->    
+
+            <!-- Informa o nome do sistema em que usuário está -->
+            <b><?php echo ucfirst($_GET['sistema']).' '.substr(strstr($_GET['pagina'], '/'), 1) ?></b>
 
             <!-- Busca -->
             <div class="input-group" style="width:60%;">
@@ -278,10 +281,10 @@ else
                             <table class="table table-sm table-borderless">
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $ambiente ?>/login"><div id="divLogoSistemas" style="background: lightgray;"><img src="<?php echo $ambiente ?>/dependencias/images/adm.png" width="60" height="60"></div></a>DASHBOARD
+                                        <a href="<?php echo $ambiente ?>/login"><div id="divLogoSistemas" style="background: orange;"><img src="<?php echo $ambiente ?>/dependencias/images/adm.png" width="60" height="60"></div>DASHBOARD</a>
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $ambiente ?>/suporte"><div id="divLogoSistemas" style="background: lightgray"><img src="<?php echo $ambiente ?>/dependencias/images/ti.png" width="60" height="60"></div></a>SUPORTE
+                                        <a href="<?php echo $ambiente ?>/suporte/chamado/geral"><div id="divLogoSistemas" style="background: red"><img src="<?php echo $ambiente ?>/dependencias/images/ti.png" width="60" height="60"></div>SUPORTE</a>
                                     </td>
                                     <td width="33,3%" align="center">
                                         <div id="divLogoSistemas" style="background: lightgray;"><img src="<?php echo $ambiente ?>/dependencias/images/bs.png" width="60" height="60"></div>SOLUÇÃO
@@ -375,7 +378,10 @@ else
 <!-- Modal chamado new, link na navbar -->
 <div id="modal" class="modal fade bd-modal-medium" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-medium">
-        <div class="modal-content"> 
+        <div class="modal-content">
+            <div style="text-align:right;" class="modal_header">
+                <font size="2" color="gray" style="cursor: pointer;" onClick="location.reload()"> fechar e atualizar <b><span aria-hidden="true">&times;</spam></b>&nbsp;</font>
+            </div>
             <div class="modal-body">
                 <!-- iframe abre com os parâmetros segundo função js 'abrirIFrame' -->
                 <iframe id="js_iframe" scrolling="auto" src="" width="100%" height="544px" frameborder="0"></iframe>
