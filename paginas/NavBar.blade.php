@@ -1,6 +1,6 @@
 <?php
-if($_GET['push'] === 'dev/')
-    $ambiente = '/dev';
+if($_GET['push'] === 'hml/')
+    $ambiente = '/hml';
 else
     $ambiente = '';
 ?>
