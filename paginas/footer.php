@@ -5,6 +5,7 @@
 
 <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/bootstrap/4.2.1/jquery-3.3.1.slim.min.js"></script>
 <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/bootstrap/4.2.3/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/mdb/4.8.10/js/mdb.min.js"></script>
 
 </body>
 </html>

@@ -380,7 +380,7 @@ else
     <div class="modal-dialog modal-medium">
         <div class="modal-content">
             <div style="text-align:right;" class="modal_header">
-                <font size="2" color="gray" style="cursor: pointer;" onClick="location.reload()"> fechar e atualizar <b><span aria-hidden="true">&times;</spam></b>&nbsp;</font>
+                <font size="2" color="gray" style="cursor: pointer;" onClick="location.reload()"> <a href=""> <i class="fas fa-sync-alt"></i> <i class="fas fa-times-circle"></i></a>&nbsp;</font>
             </div>
             <div class="modal-body">
                 <!-- iframe abre com os parâmetros segundo função js 'abrirIFrame' -->
