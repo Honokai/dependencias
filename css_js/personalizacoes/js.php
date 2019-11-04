@@ -42,7 +42,7 @@
             // window.location = window.location.origin + '/' + sistema + '/' + pagina;
             location.reload();
         } else
-            window.location = window.location.origin + '/' + sistema + '/' + pagina + '/search/' + search;
+            window.location = window.location.origin +/* '/' + sistema + */'/' + pagina + '/search/' + search;
     }
 
     // (Busca) Busca ser realizado quando botão ENTER do teclado ser pressionado
