@@ -79,11 +79,11 @@
     }
 
     // (Contador) Exibe na tela tempo restante antes de timeout de sessão (5 min antes do timeout)
-    window.onload = function() {
+    /* window.onload = function() {
         var count = parseInt(contador),
             display = document.querySelector('#time');
         startTimer(count, display);
-    }
+    } */
 
     // (Contador) Fecha div de timeout
     function fecharTimeout() {

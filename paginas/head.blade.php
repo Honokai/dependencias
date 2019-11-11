@@ -27,11 +27,9 @@
     <link rel="stylesheet" href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/fontawesome/5.11.2/css/all.css">
     <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/popper/1.14.7/popper.js"></script>
     <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/ajax/3.3.1/jquery.js"></script>
-    <link href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/select2/4.0.5/select2.min.css" rel="stylesheet" />
-    <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/select2/4.0.5/select2.min.js"></script>
+    <link href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/select2/4.0.11/select2.min.css" rel="stylesheet" />
+    <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/select2/4.0.11/select2.min.js"></script>
     <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/mask/1.14.10/jquery.mask.min.js"></script>
-    <!-- Material Design Bootstrap -->
-    <link href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/mdb/css/mdb.min.css" rel="stylesheet">
 
 </head>
 <body>

@@ -244,6 +244,31 @@ else
                         </table>
                     </div>
                 ';
+                        break;
+                    case "rh":
+                        echo '
+                    <div style="margin: 20px">
+                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <font color="#565656">COLABORADORES<a href="#"></font>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr onClick=carregarPagina("'.$ambiente.'/colaboradores");>
+                                <td>
+                                    <font color="gray">ATIVOS</font>
+                                </td>
+                            </tr>
+                            <tr onclick=carregarPagina("'.$ambiente.'/colaboradores/desligados");>
+                                <td>
+                                    <font color="gray">DESLIGADOS</font>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                ';
                 }
                 ?>
             </div>
@@ -314,10 +339,10 @@ else
                                 </tr>
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <a href="http://10.10.0.25/Biblivre5/" target="blank"><div id="divLogoSistemas" style="background: purple"><img src="<?php echo $ambiente ?>/dependencias/images/bibi.png" width="60" height="60"></div>BIBLIVRE</a>
+                                        <a href="https://10.10.0.25/Biblivre5/" target="blank"><div id="divLogoSistemas" style="background: purple"><img src="<?php echo $ambiente ?>/dependencias/images/bibi.png" width="60" height="60"></div>BIBLIVRE</a>
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="http://10.10.0.6/labdop/" target="blank"><div id="divLogoSistemas" style="background: lightpink"><img src="<?php echo $ambiente ?>/dependencias/images/lbcd.png" width="60" height="60"></div>LABDOP</a>
+                                        <a href="https://10.10.0.6/labdop/" target="blank"><div id="divLogoSistemas" style="background: lightpink"><img src="<?php echo $ambiente ?>/dependencias/images/lbcd.png" width="60" height="60"></div>LABDOP</a>
                                     </td>
                                     <td width="33,3%" align="center">
                                             <div id="divLogoSistemas" style="background: lightgray"><img src="<?php echo $ambiente ?>/dependencias/images/sm_pb.png" width="60" height="60"></div>SM WEB</a>
