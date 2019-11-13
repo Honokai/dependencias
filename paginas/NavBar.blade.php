@@ -261,9 +261,9 @@ else
                                     <font color="gray">ATIVOS</font>
                                 </td>
                             </tr>
-                            <tr onclick=carregarPagina("'.$ambiente.'/colaboradores/desligados");>
+                            <tr onclick=carregarPagina("'.$ambiente.'/colaboradores/inativos");>
                                 <td>
-                                    <font color="gray">DESLIGADOS</font>
+                                    <font color="gray">INATIVOS</font>
                                 </td>
                             </tr>
                         </table>
