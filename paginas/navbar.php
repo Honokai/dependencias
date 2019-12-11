@@ -28,10 +28,8 @@ else
         background-color: #f5f5f5">
 
             <!-- Menu Principal -->
-            <div style="margin: 4px">
-                <a class="nav-link" href="#" onmouseover="javascript:exibeMenuPrincipal();">
-                    <img src="<?php echo $ambiente ?>/dependencias/images/menu.png" width="18" height="18">
-                </a>
+            <div style="margin: 10px" class="arrow-hover-hand" onmouseover="exibeMenuPrincipal()">
+                <i class="fas fa-bars"></i>
             </div>
             
             <div id="menuPrincipal" style="display:none;" class="groupMenuPrincipal">
@@ -266,8 +264,33 @@ else
                                     <font color="gray">INATIVOS</font>
                                 </td>
                             </tr>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <font color="#565656">VISUALIZAR<a href="#"></font>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr onclick=carregarPagina("'.$ambiente.'/colaboradores/inativos");>
+                                <td>
+                                    <font color="gray">TELEFONES</font>
+                                </td>
+                                <td>
+                                    <b><a href="#"><i class="fas fa-file-download"></i></b>
+                                </td>
+                            </tr>
+                            <tr onclick=carregarPagina("'.$ambiente.'/colaboradores/inativos");>
+                                <td>
+                                    <font color="gray">RAMAIS</font>
+                                </td>
+                            </tr>
+                            <tr onclick=carregarPagina("'.$ambiente.'/colaboradores/inativos");>
+                                <td>
+                                    <font color="gray">VEICULOS</font>
+                                </td>
+                            </tr>
                         </table>
-                    </div>
+                    </div>https://rh.localhost.com/export/ramais/
                 ';
                 }
                 ?>
@@ -277,15 +300,21 @@ else
             <!-- Informa o nome do sistema em que usuário está -->
             <b><?php echo ucfirst($_GET['sistema']).' '.substr(strstr($_GET['pagina'], '/'), 1) ?></b>
 
-            <!-- Busca -->
-            <div class="input-group" style="width:60%;">
-                <input type="text" size="60%" class="form-control ml-4" id="search" name="search" onkeyup="javascript:verificaSubmit(event);" placeholder="Pesquisar" style="border-color: #FFFFFF;-webkit-box-shadow: none; box-shadow: none; background-color: #e9e9e9">
-                <div class="input-append">
-                    <button class="btn btn-link" type="button" onclick="javascript:buscar();" style="background-color: #FFFFFF;">
-                        <i class="fas fa-search"></i>
-                    </button>
+            <!-- Campo de busca, exceto se página não precisa ter pela condição '0' -->
+            <?php if($_GET['pagina'] != '0') { ?>
+                <div class="input-group" style="width:60%;">
+                    <input type="text" size="60%" class="form-control ml-4" id="search" name="search" onkeyup="javascript:verificaSubmit(event);" placeholder="Pesquisar" style="border-color: #FFFFFF;-webkit-box-shadow: none; box-shadow: none; background-color: #e9e9e9">
+                    <div class="input-append">
+                        <button class="btn btn-link" type="button" onclick="javascript:buscar();" style="background-color: #FFFFFF;">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
+    
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <?php } ?> 
 
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -354,10 +383,8 @@ else
                     <!-- Fim Menu todos os sistemas --> 
                     <!-- Menu User -->
                     <li class="nav-item">
-                        <div style="margin: 4px">
-                            <a class="nav-link" href="#" onmouseover="javascript:exibeMenuUsuario();">
-                                <img src="<?php echo $ambiente ?>/dependencias/images/user.png" width="18" height="18">
-                            </a>
+                        <div style="margin-top: 15px; margin-right: 10px" class="arrow-hover-hand" onmouseover="exibeMenuUsuario()">
+                            <h6><i class="far fa-user"></i></h6>
                         </div>
                         <div id="menuUsuario" style="display:none;" class="DivMenuUser">
                             <div align="center">
@@ -395,21 +422,6 @@ else
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal chamado new, link na navbar -->
-<div id="modal" class="modal fade bd-modal-medium" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-medium">
-        <div class="modal-content">
-            <div style="text-align:right;" class="modal_header">
-                <font size="2" color="gray" style="cursor: pointer;" onClick="location.reload()"> <a href=""> <i class="fas fa-sync-alt"></i> <i class="fas fa-times-circle"></i></a>&nbsp;</font>
-            </div>
-            <div class="modal-body">
-                <!-- iframe abre com os parâmetros segundo função js 'abrirIFrame' -->
-                <iframe id="js_iframe" scrolling="auto" src="" width="100%" height="544px" frameborder="0"></iframe>
             </div>
         </div>
     </div>
