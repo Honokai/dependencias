@@ -246,7 +246,7 @@ else
                     case "rh":
                         echo '
                     <div style="margin: 20px">
-                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                        <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
                             <thead>
                                 <tr>
                                     <th>
@@ -271,26 +271,32 @@ else
                                     </th>
                                 </tr>
                             </thead>
-                            <tr onclick=carregarPagina("'.$ambiente.'/colaboradores/inativos");>
-                                <td>
+                            <tr>
+                                <td onclick=carregarPagina("'.$ambiente.'/listar/contatos");>
                                     <font color="gray">TELEFONES</font>
                                 </td>
-                                <td>
-                                    <b><a href="#"><i class="fas fa-file-download"></i></b>
+                                <td onclick=carregarPagina("'.$ambiente.'/export/contatos")>
+                                    <b><i class="fas fa-file-download"></i></b>
                                 </td>
                             </tr>
-                            <tr onclick=carregarPagina("'.$ambiente.'/colaboradores/inativos");>
-                                <td>
+                            <tr>
+                                <td onclick=carregarPagina("'.$ambiente.'/listar/ramais");>
                                     <font color="gray">RAMAIS</font>
                                 </td>
+                                <td onclick=carregarPagina("'.$ambiente.'/export/ramais");>
+                                    <b><i class="fas fa-file-download"></i></b>
+                                </td>
                             </tr>
-                            <tr onclick=carregarPagina("'.$ambiente.'/colaboradores/inativos");>
-                                <td>
+                            <tr>
+                                <td onclick=carregarPagina("'.$ambiente.'/listar/veiculos");>
                                     <font color="gray">VEICULOS</font>
+                                </td>
+                                <td onclick=carregarPagina("'.$ambiente.'/export/veiculos");>
+                                    <b><i class="fas fa-file-download"></i></b>
                                 </td>
                             </tr>
                         </table>
-                    </div>https://rh.localhost.com/export/ramais/
+                    </div>
                 ';
                 }
                 ?>
