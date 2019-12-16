@@ -295,6 +295,39 @@ else
                                     <b><i class="fas fa-file-download"></i></b>
                                 </td>
                             </tr>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <font color="#565656">AREA ADMINISTRATIVA<a href="#"></font>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td onclick=abrirIFrame("'.$ambiente.'/instituicoes"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                    <font color="gray">INSTITUIÇÕES</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick=abrirIFrame("'.$ambiente.'/cursos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                    <font color="gray">CURSOS</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick=abrirIFrame("'.$ambiente.'/vinculos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                    <font color="gray">VINCULOS</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick=abrirIFrame("'.$ambiente.'/cargos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                    <font color="gray">CARGOS</font>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td onclick=carregarPagina("'.$ambiente.'/#");>
+                                    <font color="gray">CARREIRAS</font>
+                                </td>
+                            </tr>
                         </table>
                     </div>
                 ';
