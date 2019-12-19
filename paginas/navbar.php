@@ -427,7 +427,7 @@ else
                         </div>
                         <div id="menuUsuario" style="display:none;" class="DivMenuUser">
                             <div align="center">
-                                <a href="<?php echo $ambiente ?>/dependencias/paginas/logout.php?env=<?php echo $ambiente ?>">Sair do sistema</a>
+                                <a href="/dependencias/paginas/logout.php">Sair do sistema</a>
                             </div>
                         </div>
                     </li>
