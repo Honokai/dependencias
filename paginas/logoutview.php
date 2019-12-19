@@ -55,7 +55,7 @@
                     <font face="verdana" size="6" color="white">
                         <b>SUA SESSÃO EXPIROU :(
                             <br/><br/>
-                        <a href="<?php $env ?>/login">CLIQUE AQUI</a>
+                        <a href="<?php $env ?>">CLIQUE AQUI</a>
                         <br/>PARA FAZER LOGIN NOVAMENTE
                         </b>
                     </font>
