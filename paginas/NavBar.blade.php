@@ -244,6 +244,103 @@ else
                         </table>
                     </div>
                 ';
+                break;
+                case "rh":
+                        echo '
+                    <div style="margin: 20px">
+                        <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <font color="#565656">COLABORADORES<a href="#"></font>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr onClick=carregarPagina("'.$ambiente.'/rh/colaboradores");>
+                                <td>
+                                    <font color="gray">ATIVOS</font>
+                                </td>
+                            </tr>
+                            <tr onclick=carregarPagina("'.$ambiente.'/rh/colaboradores/inativos");>
+                                <td>
+                                    <font color="gray">INATIVOS</font>
+                                </td>
+                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <font color="#565656">VISUALIZAR<a href="#"></font>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td onclick=carregarPagina("'.$ambiente.'/rh/listar/aniversarios");>
+                                    <font color="gray">ANIVERSARIANTES</font>
+                                </td>
+                                <td onclick=carregarPagina("'.$ambiente.'/rh/export/aniversarios")>
+                                    <b><i class="fas fa-file-download"></i></b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick=carregarPagina("'.$ambiente.'/rh/listar/contatos");>
+                                    <font color="gray">TELEFONES</font>
+                                </td>
+                                <td onclick=carregarPagina("'.$ambiente.'/rh/export/contatos")>
+                                    <b><i class="fas fa-file-download"></i></b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick=carregarPagina("'.$ambiente.'/rh/listar/ramais");>
+                                    <font color="gray">RAMAIS</font>
+                                </td>
+                                <td onclick=carregarPagina("'.$ambiente.'/rh/export/ramais");>
+                                    <b><i class="fas fa-file-download"></i></b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick=carregarPagina("'.$ambiente.'/rh/listar/veiculos");>
+                                    <font color="gray">VEICULOS</font>
+                                </td>
+                                <td onclick=carregarPagina("'.$ambiente.'/rh/export/veiculos");>
+                                    <b><i class="fas fa-file-download"></i></b>
+                                </td>
+                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <font color="#565656">AREA ADMINISTRATIVA<a href="#"></font>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td onclick=abrirIFrame("'.$ambiente.'/rh/instituicoes"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                    <font color="gray">INSTITUIÇÕES</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick=abrirIFrame("'.$ambiente.'/rh/cursos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                    <font color="gray">CURSOS</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick=abrirIFrame("'.$ambiente.'/rh/vinculos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                    <font color="gray">VINCULOS</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick=abrirIFrame("'.$ambiente.'/rh/cargos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                    <font color="gray">CARGOS</font>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td onclick=carregarPagina("'.$ambiente.'/rh/#");>
+                                    <font color="gray">CARREIRAS</font>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                ';
                 }
                 ?>
             </div>
@@ -370,21 +467,6 @@ else
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal chamado new, link na navbar -->
-<div id="modal" class="modal fade bd-modal-medium" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-medium">
-        <div class="modal-content">
-            <div style="text-align:right;" class="modal_header">
-                <font size="2" color="gray" style="cursor: pointer;" onClick="location.reload()"> fechar e atualizar <b><span aria-hidden="true">&times;</spam></b>&nbsp;</font>
-            </div>
-            <div class="modal-body">
-                <!-- iframe abre com os parâmetros segundo função js 'abrirIFrame' -->
-                <iframe id="js_iframe" scrolling="auto" src="" width="100%" height="544px" frameborder="0"></iframe>
             </div>
         </div>
     </div>

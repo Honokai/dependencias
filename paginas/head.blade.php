@@ -23,7 +23,7 @@
     <title>Sistemas Ladetec</title>
     <link rel="stylesheet" type="text/css" href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/bootstrap/4.2.1/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/personalizacoes/css.php">
-    <link rel="stylesheet" href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/fontawesome/5.8.2/css/all.css">
+    <link rel="stylesheet" href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/fontawesome/5.11.2/css/all.css">
     <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/popper/1.14.7/popper.js"></script>
     <script src="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/ajax/3.3.1/jquery.js"></script>
     <link href="<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/select2/4.0.5/select2.min.css" rel="stylesheet" />
@@ -32,3 +32,18 @@
 
 </head>
 <body>
+
+<!-- Modal chamado new, link na navbar -->
+<div id="modal" class="modal fade bd-modal-medium" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-medium">
+        <div class="modal-content">
+            <div style="text-align:right;" class="modal_header">
+                <font size="2" color="gray" style="cursor: pointer;" onClick="location.reload()"> fechar e atualizar <b><span aria-hidden="true">&times;</spam></b>&nbsp;</font>
+            </div>
+            <div class="modal-body">
+                <!-- iframe abre com os parâmetros segundo função js 'abrirIFrame' -->
+                <iframe id="js_iframe" scrolling="auto" src="" width="100%" height="544px" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
