@@ -22,6 +22,7 @@
     <link href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/dependencias/css_js/select2/4.0.11/select2.min.css" rel="stylesheet" />
     <script src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/dependencias/css_js/select2/4.0.11/select2.min.js"></script>
     <script src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/dependencias/css_js/mask/1.14.10/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/dependencias/css_js/sweetalert/9.5.4/dist/sweetalert2.all.min.js"></script>
 </head>
 <body>
 

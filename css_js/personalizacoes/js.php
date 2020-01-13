@@ -1,6 +1,5 @@
 <?php
     $url = $_GET['url'];
-    $push = $_GET['push'];
 ?>
 <script type="text/javascript">
     // (Menu) Abre e Fecha super menus 
@@ -109,10 +108,14 @@
         document.getElementById("js_iframe").src = rota;
     }
 
+    function abrirIFrameCliente(rota) {
+        document.getElementById("loginCliente_iframe").src = rota;
+    }
+
     // (Select2 - suporte.new) Funções aceleram o carregamento durante as buscas do Select2
     //TODO:Ordem em que o jQuery foi carregado no sistema está incorreta.
     //Carregando o jQuery depois de app.js, que é o certo.
-    loadFile('<?php echo $url; ?>/<?php echo $push; ?>dependencias/css_js/ajax/3.4.0/jquery.js');
+    loadFile('<?php echo $url; ?>/dependencias/css_js/ajax/3.4.0/jquery.js');
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')

@@ -1,8 +1,300 @@
 <?php
-if($_GET['push'] === 'hml/')
-    $ambiente = '/hml';
-else
-    $ambiente = '';
+$uriSistemas = [
+    'login' => [0 => 'https://login.localhost.com',
+                1 => '
+                <div style="margin: 20px">
+                    <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <font color="#565656">DASHBOARD</font>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr onclick=abrirIFrame("https://suporte.localhost.com/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                            <td>
+                                <font color="gray">NOVO CHAMADO</font>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            '],
+    'suporte' => [0 => 'https://suporte.localhost.com',
+                 1 => '
+                 <div style="margin: 20px">
+                     <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                         <thead>
+                             <tr>
+                                 <th>
+                                     <font color="#565656">SUPORTE <a href="#"></font>
+                                 </th>
+                             </tr>
+                         </thead>
+                         <tr onClick=carregarPagina("/chamado/geral");>
+                             <td>
+                                 <font color="gray">PÁGINA PRINCIPAL</font>
+                             </td>
+                         </tr>
+                         <tr onclick=abrirIFrame("/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                             <td>
+                                 <font color="gray">NOVO CHAMADO</font>
+                             </td>
+                         </tr>
+                         <thead>
+                             <tr>
+                                 <th>
+                                     <font color="#565656">VISUALIZAR CHAMADOS
+                                 </th>
+                             </tr>  
+                         </thead> 
+                         <tr onClick=carregarPagina("/chamado/bioinformatica");>
+                             <td>
+                                 <font color="gray">BIOINFORMÁTICA</font>
+                             </td>
+                         </tr> 
+                         <tr onClick=carregarPagina("/chamado/calibração");>
+                             <td>
+                                 <font color="gray">CALIBRAÇÃO</font>
+                             </td>
+                         </tr>
+                         <tr onClick=carregarPagina("/chamado/suprimentos");>
+                             <td>
+                                 <font color="gray">SUPRIMENTOS</font>
+                             </td>
+                         </tr>
+                         <tr onClick=carregarPagina("/chamado/manutencao");>
+                             <td>
+                                 <font color="gray">MANUTENÇÃO</font>
+                             </td>
+                         </tr>
+                         <tr onClick=carregarPagina("/chamado/qualidade");>    
+                             <td>
+                                 <font color="gray">QUALIDADE</font>
+                             </td>
+                         </tr>
+                         <tr onClick=carregarPagina("/chamado/secretaria");>
+                             <td>
+                                 <font color="gray">SECRETARIA</font>
+                             </td>
+                         </tr>
+                         <tr onClick=carregarPagina("/chamado/spet");>
+                             <td>
+                                 <font color="gray">SPET</font>
+                             </td>
+                         </tr>
+                         <tr onClick=carregarPagina("/chamado/ti");>
+                             <td>
+                                 <font color="gray">TI</font>
+                             </td>
+                         </tr>
+                         <thead>
+                             <tr>
+                                 <th>
+                                     <font color="#565656">AREA ADMINISTRATIVA</font>
+                                 </th>
+                             </tr>
+                         </thead>
+                         <tr onClick=carregarPagina("/categorias/");>
+                             <td>
+                                 <font color="gray">CATEGORIAS</font>
+                             </td>
+                         </tr>
+                     </table>
+                 </div>
+             '],
+    'rh' => [0 => 'https://rh.localhost.com',
+            1 => '
+            <div style="margin: 20px">
+                <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
+                    <thead>
+                        <tr>
+                            <th>
+                                <font color="#565656">COLABORADORES<a href="#"></font>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr onClick=carregarPagina("/colaboradores");>
+                        <td>
+                            <font color="gray">ATIVOS</font>
+                        </td>
+                    </tr>
+                    <tr onclick=carregarPagina("/colaboradores/inativos");>
+                        <td>
+                            <font color="gray">INATIVOS</font>
+                        </td>
+                    </tr>
+                    <thead>
+                        <tr>
+                            <th>
+                                <font color="#565656">VISUALIZAR<a href="#"></font>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td onclick=carregarPagina("/listar/contatos");>
+                            <font color="gray">TELEFONES</font>
+                        </td>
+                        <td onclick=carregarPagina("/export/contatos")>
+                            <b><i class="fas fa-file-download"></i></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td onclick=carregarPagina("/listar/ramais");>
+                            <font color="gray">RAMAIS</font>
+                        </td>
+                        <td onclick=carregarPagina("/export/ramais");>
+                            <b><i class="fas fa-file-download"></i></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td onclick=carregarPagina("/listar/veiculos");>
+                            <font color="gray">VEICULOS</font>
+                        </td>
+                        <td onclick=carregarPagina("/export/veiculos");>
+                            <b><i class="fas fa-file-download"></i></b>
+                        </td>
+                    </tr>
+                    <thead>
+                        <tr>
+                            <th>
+                                <font color="#565656">AREA ADMINISTRATIVA<a href="#"></font>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td onclick=abrirIFrame("/instituicoes"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                            <font color="gray">INSTITUIÇÕES</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td onclick=abrirIFrame("/cursos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                            <font color="gray">CURSOS</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td onclick=abrirIFrame("/vinculos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                            <font color="gray">VINCULOS</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td onclick=abrirIFrame("/cargos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                            <font color="gray">CARGOS</font>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td onclick=carregarPagina("/#");>
+                            <font color="gray">CARREIRAS</font>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        '],
+    'almoxarife' => [0 => 'https://almoxarife.localhost.com',
+                    1 => '
+                    <div style="margin: 20px">
+                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        ALMOXARIFE <a href="#" data-toggle="modal" data-target="#modalMenuAlmoxarife"><span class="badge badge-info">?</span></a>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        MEU ESTOQUE
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr onClick=carregarPagina("/material/");>
+                                <td>
+                                    <a href="#">MATERIAIS</a>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/entrada-padrao");>
+                                <td>
+                                    <a href="#">ENTRADA DE PADRÕES</a>
+                                </td>
+                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        ESTOQUE GERAL
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr onClick=carregarPagina("/material_all");>
+                                <td>
+                                    <a href="#">MATERIAIS</a>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/entrada-padrao_all");>
+                                <td>
+                                    <a href="#">ENTRADA DE PADRÕES</a>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/padrao");>
+                                <td>
+                                    <a href="#">PADRÕES</a>
+                                </td>
+                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        ÁREA ADMINISTRATIVA
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr onClick=carregarPagina("/log-material");>
+                                <td>
+                                    <a href="#">EDITAR DE SAÍDAS DE MATERIAL</a>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/log-padrao");>
+                                <td>
+                                    <a href="#">EDITAR DE SAÍDAS DE PADRAO</a>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/localizacao");>
+                                <td>
+                                    <a href="#">EDITAR LOCALIZAÇÕES</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                '],
+    'ftp' => [0 => 'https://ftp.localhost.com',
+                1 => '
+                <div style="margin: 20px">
+                    <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                        <thead>
+                            <tr>
+                                <th>
+                                    FTP
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>
+                                <a href="/ftp/usada">USADA</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="/ftp/idtm">IDTM</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            '],
+    'localizacao' => [0 => 'https://localizacao.localhost.com'],
+    'calibracao' => '',
+    'qualidade' => '',
+    'almolab' => '',
+    'solucoes' => '',
+    'bibilivre' => 'https://10.10.0.25/Biblivre5/',
+    'labdop' => 'https://10.10.0.6/labdop/'
+    ];
 ?>
 
 <!-- Div fecha todos os menus -->
@@ -34,304 +326,7 @@ else
             
             <div id="menuPrincipal" style="display:none;" class="groupMenuPrincipal">
                 <?php
-                switch ($_GET['sistema']) {
-                    case "ftp":
-                        echo '
-                    <div style="margin: 20px">
-                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        FTP
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tr>
-                                <td>
-                                    <a href="'.$ambiente.'/ftp/usada">USADA</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="'.$ambiente.'/ftp/idtm">IDTM</a>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                ';
-                    break;
-                    case "login":
-                        echo '
-                    <div style="margin: 20px">
-                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <font color="#565656">DASHBOARD</font>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tr onClick=carregarPagina("'.$ambiente.'/login");>
-                                <td>
-                                    <font color="gray">MINHA DASHBOARD</font>
-                                </td>
-                            </tr>
-                            <tr onclick=abrirIFrame("'.$ambiente.'/suporte/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
-                                <td>
-                                    <font color="gray">NOVO CHAMADO</font>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                ';
-                        break;
-                    case "almoxarife":
-                        echo '
-                    <div style="margin: 20px">
-                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        ALMOXARIFE <a href="#" data-toggle="modal" data-target="#modalMenuAlmoxarife"><span class="badge badge-info">?</span></a>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        MEU ESTOQUE
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/material/");>
-                                <td>
-                                    <a href="#">MATERIAIS</a>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/entrada-padrao");>
-                                <td>
-                                    <a href="#">ENTRADA DE PADRÕES</a>
-                                </td>
-                            </tr>
-                            <thead>
-                                <tr>
-                                    <th>
-                                        ESTOQUE GERAL
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/material_all");>
-                                <td>
-                                    <a href="#">MATERIAIS</a>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/entrada-padrao_all");>
-                                <td>
-                                    <a href="#">ENTRADA DE PADRÕES</a>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/padrao");>
-                                <td>
-                                    <a href="#">PADRÕES</a>
-                                </td>
-                            </tr>
-                            <thead>
-                                <tr>
-                                    <th>
-                                        ÁREA ADMINISTRATIVA
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/log-material");>
-                                <td>
-                                    <a href="#">EDITAR DE SAÍDAS DE MATERIAL</a>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/log-padrao");>
-                                <td>
-                                    <a href="#">EDITAR DE SAÍDAS DE PADRAO</a>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/almoxarife/localizacao");>
-                                <td>
-                                    <a href="#">EDITAR LOCALIZAÇÕES</a>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                ';
-                        break;
-                    case "suporte":
-                        echo '
-                    <div style="margin: 20px">
-                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <font color="#565656">SUPORTE <a href="#"></font>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/geral");>
-                                <td>
-                                    <font color="gray">PÁGINA PRINCIPAL</font>
-                                </td>
-                            </tr>
-                            <tr onclick=abrirIFrame("'.$ambiente.'/suporte/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
-                                <td>
-                                    <font color="gray">NOVO CHAMADO</font>
-                                </td>
-                            </tr>
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <font color="#565656">VISUALIZAR CHAMADOS
-                                    </th>
-                                </tr>  
-                            </thead> 
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/bioinformatica");>
-                                <td>
-                                    <font color="gray">BIOINFORMÁTICA</font>
-                                </td>
-                            </tr> 
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/calibração");>
-                                <td>
-                                    <font color="gray">CALIBRAÇÃO</font>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/suprimentos");>
-                                <td>
-                                    <font color="gray">SUPRIMENTOS</font>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/manutencao");>
-                                <td>
-                                    <font color="gray">MANUTENÇÃO</font>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/qualidade");>    
-                                <td>
-                                    <font color="gray">QUALIDADE</font>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/secretaria");>
-                                <td>
-                                    <font color="gray">SECRETARIA</font>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/spet");>
-                                <td>
-                                    <font color="gray">SPET</font>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/ti");>
-                                <td>
-                                    <font color="gray">TI</font>
-                                </td>
-                            </tr>
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <font color="#565656">AREA ADMINISTRATIVA</font>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/categorias/");>
-                                <td>
-                                    <font color="gray">CATEGORIAS</font>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                ';
-                        break;
-                    case "rh":
-                        echo '
-                    <div style="margin: 20px">
-                        <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <font color="#565656">COLABORADORES<a href="#"></font>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tr onClick=carregarPagina("'.$ambiente.'/colaboradores");>
-                                <td>
-                                    <font color="gray">ATIVOS</font>
-                                </td>
-                            </tr>
-                            <tr onclick=carregarPagina("'.$ambiente.'/colaboradores/inativos");>
-                                <td>
-                                    <font color="gray">INATIVOS</font>
-                                </td>
-                            </tr>
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <font color="#565656">VISUALIZAR<a href="#"></font>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tr>
-                                <td onclick=carregarPagina("'.$ambiente.'/listar/contatos");>
-                                    <font color="gray">TELEFONES</font>
-                                </td>
-                                <td onclick=carregarPagina("'.$ambiente.'/export/contatos")>
-                                    <b><i class="fas fa-file-download"></i></b>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td onclick=carregarPagina("'.$ambiente.'/listar/ramais");>
-                                    <font color="gray">RAMAIS</font>
-                                </td>
-                                <td onclick=carregarPagina("'.$ambiente.'/export/ramais");>
-                                    <b><i class="fas fa-file-download"></i></b>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td onclick=carregarPagina("'.$ambiente.'/listar/veiculos");>
-                                    <font color="gray">VEICULOS</font>
-                                </td>
-                                <td onclick=carregarPagina("'.$ambiente.'/export/veiculos");>
-                                    <b><i class="fas fa-file-download"></i></b>
-                                </td>
-                            </tr>
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <font color="#565656">AREA ADMINISTRATIVA<a href="#"></font>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tr>
-                                <td onclick=abrirIFrame("'.$ambiente.'/instituicoes"); id="rota"; data-target="#modal"; data-toggle="modal";>
-                                    <font color="gray">INSTITUIÇÕES</font>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td onclick=abrirIFrame("'.$ambiente.'/cursos"); id="rota"; data-target="#modal"; data-toggle="modal";>
-                                    <font color="gray">CURSOS</font>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td onclick=abrirIFrame("'.$ambiente.'/vinculos"); id="rota"; data-target="#modal"; data-toggle="modal";>
-                                    <font color="gray">VINCULOS</font>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td onclick=abrirIFrame("'.$ambiente.'/cargos"); id="rota"; data-target="#modal"; data-toggle="modal";>
-                                    <font color="gray">CARGOS</font>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                <td onclick=carregarPagina("'.$ambiente.'/#");>
-                                    <font color="gray">CARREIRAS</font>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                ';
-                }
+                    echo $uriSistemas[$_GET['sistema']][1];
                 ?>
             </div>
             <!-- Fim Menu Principal -->    
@@ -374,10 +369,10 @@ else
                             <table class="table table-sm table-borderless">
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $ambiente ?>/login"><div id="divLogoSistemas" style="background: orange;"><img src="<?php echo $ambiente ?>/dependencias/images/adm.png" width="60" height="60"></div>DASHBOARD</a>
+                                        <a href="<?php echo $uriSistemas['login'][0] ?>"><div id="divLogoSistemas" style="background: orange;"><img src="<?php echo $ambiente ?>/dependencias/images/adm.png" width="60" height="60"></div>DASHBOARD</a>
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $ambiente ?>/suporte/chamado/geral"><div id="divLogoSistemas" style="background: red"><img src="<?php echo $ambiente ?>/dependencias/images/ti.png" width="60" height="60"></div>SUPORTE</a>
+                                        <a href="<?php echo $uriSistemas['suporte'][0] ?>"><div id="divLogoSistemas" style="background: red"><img src="<?php echo $ambiente ?>/dependencias/images/ti.png" width="60" height="60"></div>SUPORTE</a>
                                     </td>
                                     <td width="33,3%" align="center">
                                         <div id="divLogoSistemas" style="background: lightgray;"><img src="<?php echo $ambiente ?>/dependencias/images/bs.png" width="60" height="60"></div>SOLUÇÃO
@@ -388,10 +383,10 @@ else
                                         <div id="divLogoSistemas" style="background: lightgray;"><img src="<?php echo $ambiente ?>/dependencias/images/alm.png" width="60" height="60"></div>ALMOLAB
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $ambiente ?>/almoxarife"><div id="divLogoSistemas" style="background: #1b80a5;"><img src="<?php echo $ambiente ?>/dependencias/images/almo.png" width="60" height="60"></div>ALMOXARIFE</a>
+                                        <a href="<?php echo $uriSistemas['almoxarife'][0] ?>"><div id="divLogoSistemas" style="background: #1b80a5;"><img src="<?php echo $ambiente ?>/dependencias/images/almo.png" width="60" height="60"></div>ALMOXARIFE</a>
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $ambiente ?>/ftp"><div id="divLogoSistemas" style="background: green"><img src="<?php echo $ambiente ?>/dependencias/images/ft.png" width="60" height="60"></div>FTP</a>
+                                        <a href="<?php echo $uriSistemas['ftp'][0] ?>"><div id="divLogoSistemas" style="background: green"><img src="<?php echo $ambiente ?>/dependencias/images/ft.png" width="60" height="60"></div>FTP</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -407,10 +402,10 @@ else
                                 </tr>
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <a href="https://10.10.0.25/Biblivre5/" target="blank"><div id="divLogoSistemas" style="background: purple"><img src="<?php echo $ambiente ?>/dependencias/images/bibi.png" width="60" height="60"></div>BIBLIVRE</a>
+                                        <a href="<?php echo $uriSistemas['bibilivre'] ?>" target="blank"><div id="divLogoSistemas" style="background: purple"><img src="<?php echo $ambiente ?>/dependencias/images/bibi.png" width="60" height="60"></div>BIBLIVRE</a>
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="https://10.10.0.6/labdop/" target="blank"><div id="divLogoSistemas" style="background: lightpink"><img src="<?php echo $ambiente ?>/dependencias/images/lbcd.png" width="60" height="60"></div>LABDOP</a>
+                                        <a href="<?php echo $uriSistemas['labdop'] ?>" target="blank"><div id="divLogoSistemas" style="background: lightpink"><img src="<?php echo $ambiente ?>/dependencias/images/lbcd.png" width="60" height="60"></div>LABDOP</a>
                                     </td>
                                     <td width="33,3%" align="center">
                                             <div id="divLogoSistemas" style="background: lightgray"><img src="<?php echo $ambiente ?>/dependencias/images/sm_pb.png" width="60" height="60"></div>SM WEB</a>

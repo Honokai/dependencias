@@ -1,4 +1,5 @@
-/* (todos os sistemas) Tamanho do texto */
+<style>
+    /* (todos os sistemas) Tamanho do texto */
     body {
         font-size: 14px;
     }
@@ -117,3 +118,4 @@
         position: fixed;
         top: 0px;
     }
+</style>
