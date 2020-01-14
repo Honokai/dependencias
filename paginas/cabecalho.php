@@ -14,15 +14,15 @@
         gtag('config', 'UA-143362354-1');
     </script>
     <!-- js e css -->
-    <link rel="stylesheet" type="text/css" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/dependencias/css_js/bootstrap/4.2.1/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/dependencias/css_js/personalizacoes/css.css">
-    <link rel="stylesheet" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/dependencias/css_js/fontawesome/5.11.2/css/all.css">
-    <script src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/dependencias/css_js/popper/1.14.7/popper.js"></script>
-    <script src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/dependencias/css_js/ajax/3.3.1/jquery.js"></script>
-    <link href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/dependencias/css_js/select2/4.0.11/select2.min.css" rel="stylesheet" />
-    <script src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/dependencias/css_js/select2/4.0.11/select2.min.js"></script>
-    <script src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/dependencias/css_js/mask/1.14.10/jquery.mask.min.js"></script>
-    <script type="text/javascript" src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/dependencias/css_js/sweetalert/9.5.4/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/dependencias/css_js/bootstrap/4.2.1/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/dependencias/css_js/personalizacoes/css.css">
+    <link rel="stylesheet" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/dependencias/css_js/fontawesome/5.11.2/css/all.css">
+    <script src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/dependencias/css_js/popper/1.14.7/popper.js"></script>
+    <script src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/dependencias/css_js/ajax/3.3.1/jquery.js"></script>
+    <link href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/dependencias/css_js/select2/4.0.11/select2.min.css" rel="stylesheet" />
+    <script src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/dependencias/css_js/select2/4.0.11/select2.min.js"></script>
+    <script src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/dependencias/css_js/mask/1.14.10/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/dependencias/css_js/sweetalert/9.5.4/dist/sweetalert2.all.min.js"></script>
 </head>
 <body>
 
