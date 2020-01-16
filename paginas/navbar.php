@@ -276,12 +276,12 @@ $uriSistemas = [
                         </thead>
                         <tr>
                             <td>
-                                <a href="/ftp/usada">USADA</a>
+                                <a href="/usada">USADA</a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="/ftp/idtm">IDTM</a>
+                                <a href="/idtm">IDTM</a>
                             </td>
                         </tr>
                     </table>
