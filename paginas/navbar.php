@@ -297,9 +297,6 @@ $uriSistemas = [
     ];
 ?>
 
-
-
-
 <!-- Div fecha todos os menus -->
 <div id="fechar_allmenu" style="display:none;" class="fechar_allmenu" onmouseover="javascript:fecharAllMenu();"></div>
 
