@@ -396,15 +396,15 @@ else
                                         <a href="<?php echo $ambiente ?>/almoxarife"><div id="divLogoSistemas" style="background: #1b80a5;"><img src="<?php echo $ambiente ?>/dependencias/images/almo.png" width="60" height="60"></div>ALMOXARIFE</a>
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $ambiente ?>/ftp"><div id="divLogoSistemas" style="background: green"><img src="<?php echo $ambiente ?>/dependencias/images/ft.png" width="60" height="60"></div>FTP</a>
+                                        <a href="<?php echo $ambiente ?>/ftp"><div id="divLogoSistemas" style="background: lightblue"><img src="<?php echo $ambiente ?>/dependencias/images/ft.png" width="60" height="60"></div>FTP</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: green"><img src="<?php echo $ambiente ?>/dependencias/images/fc.png" width="60" height="60"></div>FICHA C.
+                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: green"><img src="<?php echo $ambiente ?>/dependencias/images/fc.png" width="60" height="60"></div>SECRETARIA
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: orange"><img src="<?php echo $ambiente ?>/dependencias/images/ga.png" width="60" height="60"></div>SECRETARIA
+                                        <a href="http://10.10.0.14/rh/"><div id="divLogoSistemas" style="background: green"><img src="<?php echo $ambiente ?>/dependencias/images/ga.png" width="60" height="60"></div>RH</a>
                                     </td>
                                     <td width="33,3%" align="center">
                                         <div id="divLogoSistemas" style="background: lightgray;" style="background: orange"><img src="<?php echo $ambiente ?>/dependencias/images/gt.png" width="60" height="60"></div>TI
