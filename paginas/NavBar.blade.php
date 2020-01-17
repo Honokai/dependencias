@@ -341,6 +341,7 @@ else
                         </table>
                     </div>
                 ';
+                break;
                 }
                 ?>
             </div>

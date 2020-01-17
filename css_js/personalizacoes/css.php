@@ -20,6 +20,11 @@
         background-color: #ADD8E6;
     }
 
+    /* (todos os sistemas) Bootstrap cor do hover das listas em zebra para menu */
+    .table-hover-menu tbody td:hover {
+        background-color: #ADD8E6;
+    }
+
     /* (suporte.chamadolist) Muda o cursor de eta para mão */
     .arrow-hover-hand {
         cursor: pointer;
