@@ -409,7 +409,7 @@ $uriSistemas = [
                                         <a href="<?php echo $uriSistemas['almoxarife'][0] ?>"><div id="divLogoSistemas" style="background: #1b80a5;"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/almo.png" width="60" height="60"></div>ALMOXARIFE</a>
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $uriSistemas['ftp'][0] ?>"><div id="divLogoSistemas" style="background: green"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/ft.png" width="60" height="60"></div>FTP</a>
+                                        <a href="<?php echo $uriSistemas['ftp'][0] ?>"><div id="divLogoSistemas" style="background: lightblue"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/ft.png" width="60" height="60"></div>FTP</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -417,7 +417,7 @@ $uriSistemas = [
                                         <div id="divLogoSistemas" style="background: lightgray;" style="background: green"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/fc.png" width="60" height="60"></div>FICHA C.
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: orange"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/ga.png" width="60" height="60"></div>SECRETARIA
+                                        <div id="divLogoSistemas" style="background: green"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/ga.png" width="60" height="60"></div>SECRETARIA
                                     </td>
                                     <td width="33,3%" align="center">
                                         <div id="divLogoSistemas" style="background: lightgray;" style="background: orange"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/gt.png" width="60" height="60"></div>TI
