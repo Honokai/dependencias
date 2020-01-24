@@ -287,7 +287,30 @@ $uriSistemas = [
                     </table>
                 </div>
             '],
-    'localizacao' => [0 => 'https://locais.hml.intranet.ladetec.iq.ufrj.br'],
+    'locais' => [0 => 'https://locais.hml.intranet.ladetec.iq.ufrj.br',
+                1 => '
+                <div style="margin: 20px">
+                <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
+                    <thead>
+                        <tr>
+                            <th>
+                                <font color="#565656">Localizacoes<a href="#"></font>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr onClick=carregarPagina("/localizacoes/create");>
+                        <td>
+                            <font color="gray">Nova Localizacão</font>
+                        </td>
+                    </tr>
+                    <tr onclick=carregarPagina("/setores/create");>
+                        <td>
+                            <font color="gray">Novo Setor ou Laboratório</font>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+                '],
     'calibracao' => '',
     'qualidade' => '',
     'almolab' => '',
@@ -361,7 +384,7 @@ $uriSistemas = [
                     <li class="nav-item">
                         <div style="margin: 4px">
                             <a class="nav-link" href="#" onmouseover="javascript:exibeMenuSistemas();">
-                                <img src="<?php echo $ambiente ?>/dependencias/images/sistemas.png" width="18" height="18">
+                                <img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/sistemas.png" width="18" height="18">
                             </a>
                         </div>
                         <div id="menuSistemas" style="display:none;" class="groupMenuSistemas">
@@ -369,46 +392,46 @@ $uriSistemas = [
                             <table class="table table-sm table-borderless">
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $uriSistemas['login'][0] ?>"><div id="divLogoSistemas" style="background: orange;"><img src="<?php echo $ambiente ?>/dependencias/images/adm.png" width="60" height="60"></div>DASHBOARD</a>
+                                        <a href="<?php echo $uriSistemas['login'][0] ?>"><div id="divLogoSistemas" style="background: orange;"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/adm.png" width="60" height="60"></div>DASHBOARD</a>
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $uriSistemas['suporte'][0] ?>"><div id="divLogoSistemas" style="background: red"><img src="<?php echo $ambiente ?>/dependencias/images/ti.png" width="60" height="60"></div>SUPORTE</a>
+                                        <a href="<?php echo $uriSistemas['suporte'][0] ?>"><div id="divLogoSistemas" style="background: red"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/ti.png" width="60" height="60"></div>SUPORTE</a>
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <div id="divLogoSistemas" style="background: lightgray;"><img src="<?php echo $ambiente ?>/dependencias/images/bs.png" width="60" height="60"></div>SOLUÇÃO
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="33,3%" align="center">
-                                        <div id="divLogoSistemas" style="background: lightgray;"><img src="<?php echo $ambiente ?>/dependencias/images/alm.png" width="60" height="60"></div>ALMOLAB
-                                    </td>
-                                    <td width="33,3%" align="center">
-                                        <a href="<?php echo $uriSistemas['almoxarife'][0] ?>"><div id="divLogoSistemas" style="background: #1b80a5;"><img src="<?php echo $ambiente ?>/dependencias/images/almo.png" width="60" height="60"></div>ALMOXARIFE</a>
-                                    </td>
-                                    <td width="33,3%" align="center">
-                                        <a href="<?php echo $uriSistemas['ftp'][0] ?>"><div id="divLogoSistemas" style="background: green"><img src="<?php echo $ambiente ?>/dependencias/images/ft.png" width="60" height="60"></div>FTP</a>
+                                        <div id="divLogoSistemas" style="background: lightgray;"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/bs.png" width="60" height="60"></div>SOLUÇÃO
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: green"><img src="<?php echo $ambiente ?>/dependencias/images/fc.png" width="60" height="60"></div>FICHA C.
+                                        <div id="divLogoSistemas" style="background: lightgray;"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/alm.png" width="60" height="60"></div>ALMOLAB
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: orange"><img src="<?php echo $ambiente ?>/dependencias/images/ga.png" width="60" height="60"></div>SECRETARIA
+                                        <a href="<?php echo $uriSistemas['almoxarife'][0] ?>"><div id="divLogoSistemas" style="background: #1b80a5;"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/almo.png" width="60" height="60"></div>ALMOXARIFE</a>
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: orange"><img src="<?php echo $ambiente ?>/dependencias/images/gt.png" width="60" height="60"></div>TI
+                                        <a href="<?php echo $uriSistemas['ftp'][0] ?>"><div id="divLogoSistemas" style="background: green"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/ft.png" width="60" height="60"></div>FTP</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $uriSistemas['bibilivre'] ?>" target="blank"><div id="divLogoSistemas" style="background: purple"><img src="<?php echo $ambiente ?>/dependencias/images/bibi.png" width="60" height="60"></div>BIBLIVRE</a>
+                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: green"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/fc.png" width="60" height="60"></div>FICHA C.
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $uriSistemas['labdop'] ?>" target="blank"><div id="divLogoSistemas" style="background: lightpink"><img src="<?php echo $ambiente ?>/dependencias/images/lbcd.png" width="60" height="60"></div>LABDOP</a>
+                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: orange"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/ga.png" width="60" height="60"></div>SECRETARIA
                                     </td>
                                     <td width="33,3%" align="center">
-                                            <div id="divLogoSistemas" style="background: lightgray"><img src="<?php echo $ambiente ?>/dependencias/images/sm_pb.png" width="60" height="60"></div>SM WEB</a>
+                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: orange"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/gt.png" width="60" height="60"></div>TI
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="33,3%" align="center">
+                                        <a href="<?php echo $uriSistemas['bibilivre'] ?>" target="blank"><div id="divLogoSistemas" style="background: purple"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/bibi.png" width="60" height="60"></div>BIBLIVRE</a>
+                                    </td>
+                                    <td width="33,3%" align="center">
+                                        <a href="<?php echo $uriSistemas['labdop'] ?>" target="blank"><div id="divLogoSistemas" style="background: lightpink"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/lbcd.png" width="60" height="60"></div>LABDOP</a>
+                                    </td>
+                                    <td width="33,3%" align="center">
+                                            <div id="divLogoSistemas" style="background: lightgray"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/sm_pb.png" width="60" height="60"></div>SM WEB</a>
                                     </td>
                                 </tr>    
                             </table>
