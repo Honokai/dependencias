@@ -351,7 +351,7 @@ else
             <b><?php echo ucfirst($_GET['sistema']).' '.substr(strstr($_GET['pagina'], '/'), 1) ?></b>
 
             <!-- Busca (não exibe em alguns casos, ex.: aniversariantes do RH)  -->
-            <?php if($_GET['pagina'] != 0){ ?>
+            <?php if($_GET['pagina'] != '0'){ ?>
                 <div class="input-group" style="width:60%;">
                     <input type="text" size="60%" class="form-control ml-4" id="search" name="search" onkeyup="javascript:verificaSubmit(event);" placeholder="Pesquisar" style="border-color: #FFFFFF;-webkit-box-shadow: none; box-shadow: none; background-color: #e9e9e9">
                     <div class="input-append">
