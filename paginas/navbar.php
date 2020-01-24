@@ -417,7 +417,7 @@ $uriSistemas = [
                                         <div id="divLogoSistemas" style="background: lightgray;" style="background: green"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/fc.png" width="60" height="60"></div>FICHA C.
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <div id="divLogoSistemas" style="background: green"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/ga.png" width="60" height="60"></div>SECRETARIA
+                                        <a href="<?php echo $uriSistemas['rh'][0] ?>"><div id="divLogoSistemas" style="background: green"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/ga.png" width="60" height="60"></div>SECRETARIA</a>
                                     </td>
                                     <td width="33,3%" align="center">
                                         <div id="divLogoSistemas" style="background: lightgray;" style="background: orange"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/gt.png" width="60" height="60"></div>TI
