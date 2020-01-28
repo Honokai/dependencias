@@ -1,6 +1,6 @@
 <?php
 $uriSistemas = [
-    'login' => [0 => 'https://login.hml.intranet.ladetec.iq.ufrj.br',
+    'login' => [0 => 'https://login.intranet.ladetec.iq.ufrj.br',
                 1 => '
                 <div style="margin: 20px">
                     <table class="table table-sm table-hover arrow-hover-hand table-borderless">
@@ -11,7 +11,7 @@ $uriSistemas = [
                                 </th>
                             </tr>
                         </thead>
-                        <tr onclick=abrirIFrame("https://suporte.hml.intranet.ladetec.iq.ufrj.br/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                        <tr onclick=abrirIFrame("https://suporte.intranet.ladetec.iq.ufrj.br/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
                             <td>
                                 <font color="gray">NOVO CHAMADO</font>
                             </td>
@@ -19,7 +19,7 @@ $uriSistemas = [
                     </table>
                 </div>
             '],
-    'suporte' => [0 => 'https://suporte.hml.intranet.ladetec.iq.ufrj.br',
+    'suporte' => [0 => 'https://suporte.intranet.ladetec.iq.ufrj.br',
                  1 => '
                  <div style="margin: 20px">
                      <table class="table table-sm table-hover arrow-hover-hand table-borderless">
@@ -102,7 +102,7 @@ $uriSistemas = [
                      </table>
                  </div>
              '],
-    'rh' => [0 => 'https://rh.hml.intranet.ladetec.iq.ufrj.br',
+    'rh' => [0 => 'https://rh.intranet.ladetec.iq.ufrj.br',
             1 => '
             <div style="margin: 20px">
                 <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
@@ -190,7 +190,7 @@ $uriSistemas = [
                 </table>
             </div>
         '],
-    'almoxarife' => [0 => 'https://almoxarife.hml.intranet.ladetec.iq.ufrj.br',
+    'almoxarife' => [0 => 'https://almoxarife.intranet.ladetec.iq.ufrj.br',
                     1 => '
                     <div style="margin: 20px">
                         <table class="table table-sm table-hover arrow-hover-hand table-borderless">
@@ -263,7 +263,7 @@ $uriSistemas = [
                         </table>
                     </div>
                 '],
-    'ftp' => [0 => 'https://ftp.hml.intranet.ladetec.iq.ufrj.br',
+    'ftp' => [0 => 'https://ftp.intranet.ladetec.iq.ufrj.br',
                 1 => '
                 <div style="margin: 20px">
                     <table class="table table-sm table-hover arrow-hover-hand table-borderless">
@@ -287,7 +287,7 @@ $uriSistemas = [
                     </table>
                 </div>
             '],
-    'locais' => [0 => 'https://locais.hml.intranet.ladetec.iq.ufrj.br',
+    'locais' => [0 => 'https://locais.intranet.ladetec.iq.ufrj.br',
                 1 => '
                 <div style="margin: 20px">
                 <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
