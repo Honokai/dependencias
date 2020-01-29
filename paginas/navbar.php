@@ -439,9 +439,16 @@ $uriSistemas = [
                     </li>
                     <!-- Fim Menu todos os sistemas --> 
                     <!-- Menu User -->
+                    <!-- Time logoff -->
+                    <li class="nav-item">
+                        <div style="margin-top: 14px">
+                            <span id="time">load</span>
+                        </div>
+                    </li>
+                    <!-- Fim Time logoff -->
                     <li class="nav-item">
                         <div style="margin-top: 15px; margin-right: 10px" class="arrow-hover-hand" onmouseover="exibeMenuUsuario()">
-                            <h6><i class="far fa-user"></i></h6>
+                            <h6><i class="fas fa-sign-out-alt"></i></h6>
                         </div>
                         <div id="menuUsuario" style="display:none;" class="DivMenuUser">
                             <div align="center">
@@ -450,13 +457,7 @@ $uriSistemas = [
                         </div>
                     </li>
                     <!-- Fim Menu User -->
-                    <!-- Time logoff -->
-                    <li class="nav-item">
-                        <div style="margin-top: 14px">
-                            <span id="time">load</span>
-                        </div>
-                    </li>
-                    <!-- Fim Time logoff -->
+                    
                 </ul>
             </div>
         </nav>
