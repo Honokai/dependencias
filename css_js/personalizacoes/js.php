@@ -7,13 +7,13 @@
         document.getElementById('menuSistemas').style.display = 'block';
         document.getElementById('fechar_allmenu').style.display = 'block';
         document.getElementById('menuPrincipal').style.display = 'none';
-        document.getElementById('menuUsuario').style.display = 'none';
+        //document.getElementById('menuUsuario').style.display = 'none';
     }
 
     function exibeMenuPrincipal() {
         document.getElementById('menuPrincipal').style.display = 'block';
         document.getElementById('fechar_allmenu').style.display = 'block';
-        document.getElementById('menuUsuario').style.display = 'none';
+        //document.getElementById('menuUsuario').style.display = 'none';
         document.getElementById('menuSistemas').style.display = 'none';
     }
 
@@ -28,7 +28,7 @@
         document.getElementById('fechar_allmenu').style.display = 'none';
         document.getElementById('menuPrincipal').style.display = 'none';
         document.getElementById('menuSistemas').style.display = 'none';
-        document.getElementById('menuUsuario').style.display = 'none';
+        //document.getElementById('menuUsuario').style.display = 'none';
     }
 
     // (Busca) Buscar identificando o sistema em que se está 
@@ -54,14 +54,16 @@
     // (Contador) Abrir div informando timout de sessão (em milessegundo, 1h:55min)
     onload = setTimeout(function() {
         document.getElementById('timeout_logout').style.display = 'block';
-    }, 6600000);
+    }, 6900000);
 
     // (Contador) Encaminha para logoff (em segundo, 2h)
-    var contador = '7000';
+    var contador = 7200;
 
     function startTimer(duration, display) {
-        var timer = duration,
-            minutes, seconds;
+        var timer = duration, minutes, seconds;
+
+        var display = display;
+
         setInterval(function() {
             minutes = parseInt(timer / 60, 10)
             seconds = parseInt(timer % 60, 10);
@@ -72,17 +74,20 @@
             display.textContent = minutes + ":" + seconds;
 
             if (--timer < 0) {
-                window.location.href = "<?php echo $url.'/'.$push; ?>dependencias/paginas/logout.php";
+                window.location.href = "<?php echo $url; ?>/dependencias/paginas/logout.php";
             }
         }, 1000);
     }
 
     // (Contador) Exibe na tela tempo restante antes de timeout de sessão (5 min antes do timeout)
-    /* window.onload = function() {
+    window.onload = function() {
         var count = parseInt(contador),
-            display = document.querySelector('#time');
-        startTimer(count, display);
-    } */
+            display = document.querySelector('#time'),
+            pagina = '<?php echo $_GET['pagina'] ?>';
+        
+        if (pagina != 'autenticacao')
+            startTimer(contador, display);
+    } 
 
     // (Contador) Fecha div de timeout
     function fecharTimeout() {

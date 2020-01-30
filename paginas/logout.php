@@ -1,4 +1,4 @@
 <?php
-header("Location: https://login.hml.intranet.ladetec.iq.ufrj.br/deslogar");
+header("Location: https://login.localhost.com/deslogar");
 
 exit();
