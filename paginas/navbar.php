@@ -441,7 +441,7 @@ $uriSistemas = [
                     <!-- Time logoff -->
                     <li class="nav-item">
                         <div style="margin-top: 14px">
-                            <span id="time"></span>
+                            <i class="fas fa-clock"><span id="time"></i></span>
                         </div>
                     </li>
                     <li class="nav-item arrow-hover-hand">
