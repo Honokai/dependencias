@@ -445,8 +445,9 @@ $uriSistemas = [
                     <!-- Fim Menu todos os sistemas -->
                     <!-- Time logoff -->
                     <li class="nav-item">
-                        <div style="margin-top: 14px">
-                            <i class="far fa-clock fa-lg">&nbsp</i><span id="time"></span>
+                        <div class="nav-link" style="margin-top: 7px">
+                            <i class="far fa-clock fa-lg">&nbsp</i>
+                            <span id="time"></span>
                         </div>
                     </li>
                     <li class="nav-item arrow-hover-hand">
