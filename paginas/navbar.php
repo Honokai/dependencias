@@ -72,6 +72,11 @@ $uriSistemas = [
                                  <font color="gray">QUALIDADE</font>
                              </td>
                          </tr>
+                         <tr onClick=carregarPagina("/chamado/financeiro");>    
+                             <td>
+                                 <font color="gray">FINANCEIRO</font>
+                             </td>
+                         </tr>
                          <tr onClick=carregarPagina("/chamado/secretaria");>
                              <td>
                                  <font color="gray">SECRETARIA</font>
@@ -382,7 +387,7 @@ $uriSistemas = [
                 <ul class="navbar-nav ml-auto">
                     <!-- Menu todos os sistemas -->
                     <li class="nav-item">
-                        <div style="margin: 4px">
+                        <div style="margin-top: 4px;">
                             <a class="nav-link" href="#" onmouseover="javascript:exibeMenuSistemas();">
                                 <img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/sistemas.png" width="18" height="18">
                             </a>
@@ -437,27 +442,29 @@ $uriSistemas = [
                             </table>
                         </div>              
                     </li>
-                    <!-- Fim Menu todos os sistemas --> 
-                    <!-- Menu User -->
+                    <!-- Fim Menu todos os sistemas -->
                     <!-- Time logoff -->
                     <li class="nav-item">
-                        <div style="margin-top: 14px">
-                            <span id="time">load</span>
+                        <div class="nav-link" style="margin-top: 7px">
+                            <i class="far fa-clock fa-lg">&nbsp</i>
+                            <span id="time"></span>
                         </div>
+                    </li>
+                    <li class="nav-item arrow-hover-hand">
+                        <a class="nav-link" style="margin-top:7px" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/dependencias/paginas/logout.php" id="logoff" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-sign-out-alt fa-lg"></i>
+                            <span>Sair</span>
+                        </a>
                     </li>
                     <!-- Fim Time logoff -->
-                    <li class="nav-item">
-                        <div style="margin-top: 15px; margin-right: 10px" class="arrow-hover-hand" onmouseover="exibeMenuUsuario()">
-                            <h6><i class="fas fa-sign-out-alt"></i></h6>
-                        </div>
-                        <div id="menuUsuario" style="display:none;" class="DivMenuUser">
-                            <div align="center">
-                                <a href="/dependencias/paginas/logout.php">Sair do sistema</a>
-                            </div>
-                        </div>
+                    <!-- Menu User 
+                    <li class="nav-item arrow-hover-hand">
+                        <a class="nav-link" style="margin-top:5px" href="#" id="logoff" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-sign-out-alt fa-lg"></i>
+                            <span>Sair</span>
+                        </a>
                     </li>
-                    <!-- Fim Menu User -->
-                    
+                    Fim Menu User -->
                 </ul>
             </div>
         </nav>
