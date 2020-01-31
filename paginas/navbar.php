@@ -72,6 +72,11 @@ $uriSistemas = [
                                  <font color="gray">QUALIDADE</font>
                              </td>
                          </tr>
+                         <tr onClick=carregarPagina("/chamado/financeiro");>    
+                             <td>
+                                 <font color="gray">FINANCEIRO</font>
+                             </td>
+                         </tr>
                          <tr onClick=carregarPagina("/chamado/secretaria");>
                              <td>
                                  <font color="gray">SECRETARIA</font>
@@ -441,7 +446,7 @@ $uriSistemas = [
                     <!-- Time logoff -->
                     <li class="nav-item">
                         <div style="margin-top: 14px">
-                            <i class="fas fa-clock"><span id="time"></i></span>
+                            <i class="far fa-clock fa-lg">&nbsp</i><span id="time"></span>
                         </div>
                     </li>
                     <li class="nav-item arrow-hover-hand">
