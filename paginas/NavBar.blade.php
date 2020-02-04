@@ -229,6 +229,11 @@ else
                                     <font color="gray">TI</font>
                                 </td>
                             </tr>
+                            <tr onClick=carregarPagina("'.$ambiente.'/suporte/chamado/financeiro");>
+                                <td>
+                                    <font color="gray">FINANCEIRO</font>
+                                </td>
+                            </tr>
                             <thead>
                                 <tr>
                                     <th>
@@ -264,6 +269,11 @@ else
                             <tr onclick=carregarPagina("'.$ambiente.'/rh/colaboradores/inativos");>
                                 <td>
                                     <font color="gray">INATIVOS</font>
+                                </td>
+                            </tr>
+                            <tr onclick=carregarPagina("'.$ambiente.'/rh/colaboradores/desatualizados");>
+                                <td>
+                                    <font color="gray">DESATUALIZADOS</font>
                                 </td>
                             </tr>
                             <thead>
