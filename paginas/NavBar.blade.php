@@ -1,4 +1,7 @@
 <?php
+
+$colaborador = $_GET['perfil'];
+
 if($_GET['push'] === 'hml/')
     $ambiente = '/hml';
 else
@@ -73,6 +76,11 @@ else
                                     </th>
                                 </tr>
                             </thead>
+                            <tr onClick=carregarPagina("' . $colaborador . '")>
+                                <td>
+                                    <font color="gray">FICHA CADASTRAL</font>
+                                </td>
+                            </tr>
                             <tr onClick=carregarPagina("'.$ambiente.'/login");>
                                 <td>
                                     <font color="gray">MINHA DASHBOARD</font>
