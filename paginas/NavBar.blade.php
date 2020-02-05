@@ -76,19 +76,14 @@ else
                                     </th>
                                 </tr>
                             </thead>
-                            <tr onClick=carregarPagina("' . $colaborador . '")>
-                                <td>
-                                    <font color="gray">FICHA CADASTRAL</font>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("'.$ambiente.'/login");>
-                                <td>
-                                    <font color="gray">MINHA DASHBOARD</font>
-                                </td>
-                            </tr>
                             <tr onclick=abrirIFrame("'.$ambiente.'/suporte/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
                                 <td>
                                     <font color="gray">NOVO CHAMADO</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("' . $colaborador . '")>
+                                <td>
+                                    <font color="gray">FICHA CADASTRAL</font>
                                 </td>
                             </tr>
                         </table>
