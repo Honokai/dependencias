@@ -287,6 +287,14 @@ else
                                 </tr>
                             </thead>
                             <tr>
+                                <td onclick=carregarPagina("'.$ambiente.'/rh/listar/colaboradores");>
+                                    <font color="gray">COLABORADORES</font>
+                                </td>
+                                <td onclick=carregarPagina("'.$ambiente.'/rh/export/colaboradores")>
+                                    <b><i class="fas fa-file-download"></i></b>
+                                </td>
+                            </tr> 
+                            <tr>
                                 <td onclick=carregarPagina("'.$ambiente.'/rh/listar/aniversarios");>
                                     <font color="gray">ANIVERSARIANTES</font>
                                 </td>
