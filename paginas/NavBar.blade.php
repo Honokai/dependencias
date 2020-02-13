@@ -334,7 +334,17 @@ else
                                 </tr>
                             </thead>
                             <tr>
-                                <td onclick=abrirIFrame("'.$ambiente.'/rh/instituicoes"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <td onclick=carregarPagina("https://www.ladetec.iq.ufrj.br/formulario");>
+                                    <font color="gray">NOVO COLABORADOR</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick=carregarPagina("'.$ambiente.'/rh/colaboradores/create");>
+                                    <font color="gray">IMPORTAR COLABORADOR</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick=abrirIFrame("'.$ambiente.'/rh/instituicoes");>
                                     <font color="gray">INSTITUIÇÕES</font>
                                 </td>
                             </tr>
