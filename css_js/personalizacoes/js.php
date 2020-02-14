@@ -109,8 +109,13 @@
     });
 
     // (almoxarife.index, suporte.index) Função js abre iframe no modal somente quando é chamado
-    function abrirIFrame(rota) {
+    function abrirIFrame(rota, variaveisDoModal) {
         document.getElementById("js_iframe").src = rota;
+    }
+
+    // (almoxarife.index, suporte.index) Função js abre iframe no modal somente quando é chamado
+    function abrirIFrameAutoPreenchido(rota, variaveisDoModal) {
+        document.getElementById("js_iframe").src = rota+variaveisDoModal;
     }
 
     function abrirIFrameCliente(rota) {
