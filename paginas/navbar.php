@@ -1,6 +1,10 @@
 <?php
+$retiraSistema = preg_replace('/(\.\w+)+/', '', $_SERVER['SERVER_NAME']);
+
+$dominio = preg_replace('/('.$retiraSistema.')+/', '', $_SERVER['SERVER_NAME']);
+
 $uriSistemas = [
-    'login' => [0 => 'https://login.hml.intranet.ladetec.iq.ufrj.br',
+    'login' => [0 => 'https://login'.$dominio,
                 1 => '
                 <div style="margin: 20px">
                     <table class="table table-sm table-hover arrow-hover-hand table-borderless">
@@ -11,15 +15,16 @@ $uriSistemas = [
                                 </th>
                             </tr>
                         </thead>
-                        <tr onclick=abrirIFrame("https://suporte.hml.intranet.ladetec.iq.ufrj.br/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                        <tr onclick=abrirIFrame("https://suporte'.$dominio.'/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
                             <td>
                                 <font color="gray">NOVO CHAMADO</font>
                             </td>
                         </tr>
+                        <input type="hidden" id="rotaAutoPreencher"; data-target="#modal"; data-toggle="modal";>
                     </table>
                 </div>
             '],
-    'suporte' => [0 => 'https://suporte.hml.intranet.ladetec.iq.ufrj.br',
+    'suporte' => [0 => 'https://suporte'.$dominio,
                  1 => '
                  <div style="margin: 20px">
                      <table class="table table-sm table-hover arrow-hover-hand table-borderless">
@@ -107,7 +112,7 @@ $uriSistemas = [
                      </table>
                  </div>
              '],
-    'rh' => [0 => 'https://rh.hml.intranet.ladetec.iq.ufrj.br',
+    'rh' => [0 => 'https://rh'.$dominio,
             1 => '
             <div style="margin: 20px">
                 <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
@@ -195,7 +200,7 @@ $uriSistemas = [
                 </table>
             </div>
         '],
-    'almoxarife' => [0 => 'https://almoxarife.hml.intranet.ladetec.iq.ufrj.br',
+    'almoxarife' => [0 => 'https://almoxarife'.$dominio,
                     1 => '
                     <div style="margin: 20px">
                         <table class="table table-sm table-hover arrow-hover-hand table-borderless">
@@ -268,7 +273,7 @@ $uriSistemas = [
                         </table>
                     </div>
                 '],
-    'ftp' => [0 => 'https://ftp.hml.intranet.ladetec.iq.ufrj.br',
+    'ftp' => [0 => 'https://ftp'.$dominio,
                 1 => '
                 <div style="margin: 20px">
                     <table class="table table-sm table-hover arrow-hover-hand table-borderless">
@@ -292,7 +297,7 @@ $uriSistemas = [
                     </table>
                 </div>
             '],
-    'locais' => [0 => 'https://locais.hml.intranet.ladetec.iq.ufrj.br',
+    'locais' => [0 => 'https://locais'.$dominio,
                 1 => '
                 <div style="margin: 20px">
                 <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
@@ -419,10 +424,10 @@ $uriSistemas = [
                                 </tr>
                                 <tr>
                                     <td width="33,3%" align="center">
-                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: green"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/fc.png" width="60" height="60"></div>FICHA C.
+                                        <div id="divLogoSistemas" style="background: lightgray;" style="background: green"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/fc.png" width="60" height="60"></div>SECRETARIA
                                     </td>
                                     <td width="33,3%" align="center">
-                                        <a href="<?php echo $uriSistemas['rh'][0] ?>"><div id="divLogoSistemas" style="background: green"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/ga.png" width="60" height="60"></div>SECRETARIA</a>
+                                        <a href="<?php echo $uriSistemas['rh'][0] ?>"><div id="divLogoSistemas" style="background: green"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/ga.png" width="60" height="60"></div>RH</a>
                                     </td>
                                     <td width="33,3%" align="center">
                                         <div id="divLogoSistemas" style="background: lightgray;" style="background: orange"><img src="https://<?php echo $_SERVER['SERVER_NAME'] ?>/dependencias/images/gt.png" width="60" height="60"></div>TI
@@ -446,7 +451,7 @@ $uriSistemas = [
                     <!-- Time logoff -->
                     <li class="nav-item">
                         <div class="nav-link" style="margin-top: 7px">
-                            <i class="far fa-clock fa-lg">&nbsp</i>
+                            <i class="far fa-clock fa-lg"></i>
                             <span id="time"></span>
                         </div>
                     </li>
