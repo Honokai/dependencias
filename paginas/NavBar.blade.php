@@ -344,8 +344,8 @@ else
                                 </td>
                             </tr>
                             <tr>
-                                <td onclick=abrirIFrame("'.$ambiente.'/rh/instituicoes");>
-                                    <font color="gray">INSTITUIÇÕES</font>
+                                <td onclick=abrirIFrame("'.$ambiente.'/rh/instituicoes"); id="rota"; data-target="#modal"; data-toggle="modal";> 
+                                    <font color="gray">INSTITUIÇÕES</font> 
                                 </td>
                             </tr>
                             <tr>

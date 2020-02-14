@@ -9,7 +9,7 @@
         document.getElementById('fechar_allmenu').style.display = 'block';
         document.getElementById('menuPrincipal').style.display = 'none';
         document.getElementById('menuUsuario').style.display = 'none';
-    }
+    } 
 
     function exibeMenuPrincipal() {
         document.getElementById('menuPrincipal').style.display = 'block';
