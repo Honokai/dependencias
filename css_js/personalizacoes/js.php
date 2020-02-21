@@ -43,9 +43,9 @@
             location.reload();
         } else {
             if (sistema == 'rh') {
-                window.location = window.location.origin + '/' + sistema + '/' + pagina + '/pesquisar/' + search + '/' + aspects;
+                window.location = window.location.origin + '/' + pagina + '/pesquisar/' + search + '/' + aspects;
             } else {
-                window.location = window.location.origin + '/' + sistema + '/' + pagina + '/search/' + search;
+                window.location = window.location.origin +  '/' + pagina + '/search/' + search;
             }
         }
     }
