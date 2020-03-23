@@ -35,13 +35,19 @@
     function buscar() {
         sistema = '<?php echo $_GET['sistema'] ?>';
         pagina = '<?php echo $_GET['pagina'] ?>';
+        aspects = '<?php echo $_GET['aspects'] ?? '' ?>';
         search = document.getElementById('search').value.trim();
         if (search == '') {
             <?php setcookie('buscaVazia', 1, time() + 3600); ?>;
             // window.location = window.location.origin + '/' + sistema + '/' + pagina;
             location.reload();
-        } else
-            window.location = window.location.origin +/* '/' + sistema + */'/' + pagina + '/search/' + search;
+        } else {
+            if (sistema == 'rh') {
+                window.location = window.location.origin + '/' + pagina + '/pesquisar/' + search + '/' + aspects;
+            } else {
+                window.location = window.location.origin +  '/' + pagina + '/search/' + search;
+            }
+        }
     }
 
     // (Busca) Busca ser realizado quando botão ENTER do teclado ser pressionado

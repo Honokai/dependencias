@@ -193,7 +193,7 @@ $uriSistemas = [
                     </tr>
                     
                     <tr>
-                        <td onclick=carregarPagina("/#");>
+                        <td onclick=carregarPagina("/carreira");>
                             <font color="gray">CARREIRAS</font>
                         </td>
                     </tr>
