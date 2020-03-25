@@ -172,6 +172,16 @@ $uriSistemas = [
                         </tr>
                     </thead>
                     <tr>
+                        <td onclick=carregarPagina("https://www.ladetec.iq.ufrj.br/formulario");>
+                            <font color="gray">NOVO COLABORADOR</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td onclick=carregarPagina("/candidatos");>
+                            <font color="gray">IMPORTAR NOVO COLABORADOR</font>
+                        </td>
+                    </tr>
+                    <tr>
                         <td onclick=abrirIFrame("/instituicoes"); id="rota"; data-target="#modal"; data-toggle="modal";>
                             <font color="gray">INSTITUIÇÕES</font>
                         </td>
