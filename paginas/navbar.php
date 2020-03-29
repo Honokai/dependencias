@@ -203,7 +203,7 @@ $uriSistemas = [
                     </tr>
                     
                     <tr>
-                        <td onclick=carregarPagina("/carreira");>
+                        <td onclick=abrirIFrame("/carreira"); id="rota"; data-target="#modal"; data-toggle="modal";>
                             <font color="gray">CARREIRAS</font>
                         </td>
                     </tr>
