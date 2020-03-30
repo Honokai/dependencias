@@ -133,6 +133,11 @@ $uriSistemas = [
                             <font color="gray">INATIVOS</font>
                         </td>
                     </tr>
+                    <tr onclick=carregarPagina("/colaboradores/desatualizados");>
+                                <td>
+                                    <font color="gray">DESATUALIZADOS</font>
+                                </td>
+                            </tr>
                     <thead>
                         <tr>
                             <th>
@@ -140,6 +145,22 @@ $uriSistemas = [
                             </th>
                         </tr>
                     </thead>
+                    <tr>
+                        <td onclick=carregarPagina("/listar/colaboradores");>
+                            <font color="gray">COLABORADORES</font>
+                        </td>
+                        <td onclick=carregarPagina("/export/colaboradores")>
+                            <b><i class="fas fa-file-download"></i></b>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td onclick=carregarPagina("/listar/aniversarios");>
+                            <font color="gray">ANIVERSARIANTES</font>
+                        </td>
+                        <td onclick=carregarPagina("/export/aniversarios")>
+                            <b><i class="fas fa-file-download"></i></b>
+                        </td>
+                    </tr>
                     <tr>
                         <td onclick=carregarPagina("/listar/contatos");>
                             <font color="gray">TELEFONES</font>
