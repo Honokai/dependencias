@@ -3,6 +3,8 @@ $retiraSistema = preg_replace('/(\.\w+)+/', '', $_SERVER['SERVER_NAME']);
 
 $dominio = preg_replace('/('.$retiraSistema.')+/', '', $_SERVER['SERVER_NAME']);
 
+$colaborador = $_GET['perfil'];
+
 $uriSistemas = [
     'login' => [0 => 'https://login'.$dominio,
                 1 => '
@@ -18,6 +20,11 @@ $uriSistemas = [
                         <tr onclick=abrirIFrame("https://suporte'.$dominio.'/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
                             <td>
                                 <font color="gray">NOVO CHAMADO</font>
+                            </td>
+                        </tr>
+                        <tr onClick=carregarPagina("' . $colaborador . '")>
+                            <td>
+                                <font color="gray">FICHA CADASTRAL</font>
                             </td>
                         </tr>
                         <input type="hidden" id="rotaAutoPreencher"; data-target="#modal"; data-toggle="modal";>
