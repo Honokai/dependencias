@@ -3,7 +3,10 @@ $retiraSistema = preg_replace('/(\.\w+)+/', '', $_SERVER['SERVER_NAME']);
 
 $dominio = preg_replace('/('.$retiraSistema.')+/', '', $_SERVER['SERVER_NAME']);
 
-$colaborador = $_GET['perfil'];
+if (isset($_GET['perfil']))
+    $colaborador = $_GET['perfil'];
+else
+    $colaborador = null;
 
 $uriSistemas = [
     'login' => [0 => 'https://login'.$dominio,
