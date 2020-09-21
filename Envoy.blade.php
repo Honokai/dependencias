@@ -29,6 +29,6 @@
 @endtask
 
 
-@finished
+<!-- @finished
     @discord('https://discordapp.com/api/webhooks/695700395800002581/qJLUmyXO3f-BBtl07MI1dbcMyIMYKEPSMGAvMBVi-dJzaC83TSEaPA1RUOUTrni6G_Mu', "deploy de {$projeto} realizado com sucesso em $env")
-@endfinished
+@endfinished -->
