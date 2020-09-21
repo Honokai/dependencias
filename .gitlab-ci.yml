@@ -1,0 +1,28 @@
+stages:
+  - deploy
+
+# Homologação
+homolog:
+  stage: deploy
+  environment:
+    name: hml
+  rules:
+    - when: manual
+  script:
+    - eval $(ssh-agent -s)
+    - echo "$TI_SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - ~/.config/composer/vendor/bin/envoy run deploy --projeto=$CI_PROJECT_NAME --env=$CI_ENVIRONMENT_NAME --namespace=$CI_PROJECT_NAMESPACE
+
+# Produção
+deploy to production:
+  stage: deploy
+  environment:
+    name: production
+  rules:
+    - when: manual
+  script:
+    - eval $(ssh-agent -s)
+    - echo "$TI_SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - ~/.config/composer/vendor/bin/envoy run deploy --projeto=$CI_PROJECT_NAME --env=$CI_ENVIRONMENT_NAME --namespace=$CI_PROJECT_NAMESPACE
