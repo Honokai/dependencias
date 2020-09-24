@@ -10,7 +10,7 @@ if (isset($_GET['perfil']))
 else
     $colaborador = null;
 
-if ($hml[0] !== null) {
+if ($hml[0] === null) {
     $uriSistemas = [
         'login' => [0 => 'https://login'.$dominio,
                     1 => '
