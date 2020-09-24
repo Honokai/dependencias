@@ -3,372 +3,738 @@ $retiraSistema = preg_replace('/(\.\w+)+/', '', $_SERVER['SERVER_NAME']);
 
 $dominio = preg_replace('/('.$retiraSistema.')+/', '', $_SERVER['SERVER_NAME']);
 
+preg_match('/(hmlss)/', $retiraSistema, $hml, PREG_UNMATCHED_AS_NULL);
+
 if (isset($_GET['perfil']))
     $colaborador = $_GET['perfil'];
 else
     $colaborador = null;
 
-$uriSistemas = [
-    'login' => [0 => 'https://login'.$dominio,
-                1 => '
-                <div style="margin: 20px">
-                    <table class="table table-sm table-hover arrow-hover-hand table-borderless">
-                        <thead>
-                            <tr>
-                                <th>
-                                    <font color="#565656">DASHBOARD</font>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tr onclick=abrirIFrame("https://suporte'.$dominio.'/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
-                            <td>
-                                <font color="gray">NOVO CHAMADO</font>
-                            </td>
-                        </tr>
-                        <tr onClick=carregarPagina("' . $colaborador . '")>
-                            <td>
-                                <font color="gray">FICHA CADASTRAL</font>
-                            </td>
-                        </tr>
-                        <input type="hidden" id="rotaAutoPreencher"; data-target="#modal"; data-toggle="modal";>
-                    </table>
-                </div>
-            '],
-    'suporte' => [0 => 'https://suporte'.$dominio,
-                 1 => '
-                 <div style="margin: 20px">
-                     <table class="table table-sm table-hover arrow-hover-hand table-borderless">
-                         <thead>
-                             <tr>
-                                 <th>
-                                     <font color="#565656">SUPORTE <a href="#"></font>
-                                 </th>
-                             </tr>
-                         </thead>
-                         <tr onClick=carregarPagina("/chamado/geral");>
-                             <td>
-                                 <font color="gray">PÁGINA PRINCIPAL</font>
-                             </td>
-                         </tr>
-                         <tr onclick=abrirIFrame("/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
-                             <td>
-                                 <font color="gray">NOVO CHAMADO</font>
-                             </td>
-                         </tr>
-                         <thead>
-                             <tr>
-                                 <th>
-                                     <font color="#565656">VISUALIZAR CHAMADOS
-                                 </th>
-                             </tr>  
-                         </thead> 
-                         <tr onClick=carregarPagina("/chamado/bioinformatica");>
-                             <td>
-                                 <font color="gray">BIOINFORMÁTICA</font>
-                             </td>
-                         </tr> 
-                         <tr onClick=carregarPagina("/chamado/calibração");>
-                             <td>
-                                 <font color="gray">CALIBRAÇÃO</font>
-                             </td>
-                         </tr>
-                         <tr onClick=carregarPagina("/chamado/suprimentos");>
-                             <td>
-                                 <font color="gray">SUPRIMENTOS</font>
-                             </td>
-                         </tr>
-                         <tr onClick=carregarPagina("/chamado/manutencao");>
-                             <td>
-                                 <font color="gray">MANUTENÇÃO</font>
-                             </td>
-                         </tr>
-                         <tr onClick=carregarPagina("/chamado/qualidade");>    
-                             <td>
-                                 <font color="gray">QUALIDADE</font>
-                             </td>
-                         </tr>
-                         <tr onClick=carregarPagina("/chamado/financeiro");>    
-                             <td>
-                                 <font color="gray">FINANCEIRO</font>
-                             </td>
-                         </tr>
-                         <tr onClick=carregarPagina("/chamado/secretaria");>
-                             <td>
-                                 <font color="gray">SECRETARIA</font>
-                             </td>
-                         </tr>
-                         <tr onClick=carregarPagina("/chamado/spet");>
-                             <td>
-                                 <font color="gray">SPET</font>
-                             </td>
-                         </tr>
-                         <tr onClick=carregarPagina("/chamado/ti");>
-                             <td>
-                                 <font color="gray">TI</font>
-                             </td>
-                         </tr>
-                         <thead>
-                             <tr>
-                                 <th>
-                                     <font color="#565656">AREA ADMINISTRATIVA</font>
-                                 </th>
-                             </tr>
-                         </thead>
-                         <tr onClick=carregarPagina("/categorias/");>
-                             <td>
-                                 <font color="gray">CATEGORIAS</font>
-                             </td>
-                         </tr>
-                     </table>
-                 </div>
-             '],
-    'rh' => [0 => 'https://rh'.$dominio,
-            1 => '
-            <div style="margin: 20px">
-                <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
-                    <thead>
-                        <tr>
-                            <th>
-                                <font color="#565656">COLABORADORES<a href="#"></font>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tr onClick=carregarPagina("/colaboradores");>
-                        <td>
-                            <font color="gray">ATIVOS</font>
-                        </td>
-                    </tr>
-                    <tr onclick=carregarPagina("/colaboradores/inativos");>
-                        <td>
-                            <font color="gray">INATIVOS</font>
-                        </td>
-                    </tr>
-                    <tr onclick=carregarPagina("/colaboradores/desatualizados");>
-                                <td>
-                                    <font color="gray">DESATUALIZADOS</font>
-                                </td>
-                            </tr>
-                    <thead>
-                        <tr>
-                            <th>
-                                <font color="#565656">VISUALIZAR<a href="#"></font>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td onclick=carregarPagina("/listar/colaboradores");>
-                            <font color="gray">COLABORADORES</font>
-                        </td>
-                        <td onclick=carregarPagina("/export/colaboradores")>
-                            <b><i class="fas fa-file-download"></i></b>
-                        </td>
-                    </tr> 
-                    <tr>
-                        <td onclick=carregarPagina("/listar/aniversarios");>
-                            <font color="gray">ANIVERSARIANTES</font>
-                        </td>
-                        <td onclick=carregarPagina("/export/aniversarios")>
-                            <b><i class="fas fa-file-download"></i></b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td onclick=carregarPagina("/listar/contatos");>
-                            <font color="gray">TELEFONES</font>
-                        </td>
-                        <td onclick=carregarPagina("/export/contatos")>
-                            <b><i class="fas fa-file-download"></i></b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td onclick=carregarPagina("/listar/ramais");>
-                            <font color="gray">RAMAIS</font>
-                        </td>
-                        <td onclick=carregarPagina("/export/ramais");>
-                            <b><i class="fas fa-file-download"></i></b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td onclick=carregarPagina("/listar/veiculos");>
-                            <font color="gray">VEICULOS</font>
-                        </td>
-                        <td onclick=carregarPagina("/export/veiculos");>
-                            <b><i class="fas fa-file-download"></i></b>
-                        </td>
-                    </tr>
-                    <thead>
-                        <tr>
-                            <th>
-                                <font color="#565656">AREA ADMINISTRATIVA<a href="#"></font>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td onclick=carregarPagina("https://www.ladetec.iq.ufrj.br/formulario");>
-                            <font color="gray">NOVO COLABORADOR</font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td onclick=carregarPagina("/candidatos");>
-                            <font color="gray">IMPORTAR NOVO COLABORADOR</font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td onclick=abrirIFrame("/instituicoes"); id="rota"; data-target="#modal"; data-toggle="modal";>
-                            <font color="gray">INSTITUIÇÕES</font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td onclick=abrirIFrame("/cursos"); id="rota"; data-target="#modal"; data-toggle="modal";>
-                            <font color="gray">CURSOS</font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td onclick=abrirIFrame("/vinculos"); id="rota"; data-target="#modal"; data-toggle="modal";>
-                            <font color="gray">VINCULOS</font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td onclick=abrirIFrame("/cargos"); id="rota"; data-target="#modal"; data-toggle="modal";>
-                            <font color="gray">CARGOS</font>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td onclick=abrirIFrame("/carreira"); id="rota"; data-target="#modal"; data-toggle="modal";>
-                            <font color="gray">CARREIRAS</font>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        '],
-    'almoxarife' => [0 => 'https://almoxarife'.$dominio,
+if ($hml[0] !== null) {
+    $uriSistemas = [
+        'login' => [0 => 'https://login'.$dominio,
                     1 => '
                     <div style="margin: 20px">
                         <table class="table table-sm table-hover arrow-hover-hand table-borderless">
                             <thead>
                                 <tr>
                                     <th>
-                                        ALMOXARIFE <a href="#" data-toggle="modal" data-target="#modalMenuAlmoxarife"><span class="badge badge-info">?</span></a>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        MEU ESTOQUE
+                                        <font color="#565656">DASHBOARD</font>
                                     </th>
                                 </tr>
                             </thead>
-                            <tr onClick=carregarPagina("/material/");>
+                            <tr onclick=abrirIFrame("https://suporte'.$dominio.'/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
                                 <td>
-                                    <a href="#">MATERIAIS</a>
+                                    <font color="gray">NOVO CHAMADO</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("/entrada-padrao");>
+                            <tr onClick=carregarPagina("' . $colaborador . '")>
                                 <td>
-                                    <a href="#">ENTRADA DE PADRÕES</a>
+                                    <font color="gray">FICHA CADASTRAL</font>
+                                </td>
+                            </tr>
+                            <input type="hidden" id="rotaAutoPreencher"; data-target="#modal"; data-toggle="modal";>
+                        </table>
+                    </div>
+                '],
+        'suporte' => [0 => 'https://suporte'.$dominio,
+                    1 => '
+                    <div style="margin: 20px">
+                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <font color="#565656">SUPORTE <a href="#"></font>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr onClick=carregarPagina("/chamado/geral");>
+                                <td>
+                                    <font color="gray">PÁGINA PRINCIPAL</font>
+                                </td>
+                            </tr>
+                            <tr onclick=abrirIFrame("/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <td>
+                                    <font color="gray">NOVO CHAMADO</font>
                                 </td>
                             </tr>
                             <thead>
                                 <tr>
                                     <th>
-                                        ESTOQUE GERAL
+                                        <font color="#565656">VISUALIZAR CHAMADOS
                                     </th>
-                                </tr>
-                            </thead>
-                            <tr onClick=carregarPagina("/material_all");>
+                                </tr>  
+                            </thead> 
+                            <tr onClick=carregarPagina("/chamado/bioinformatica");>
                                 <td>
-                                    <a href="#">MATERIAIS</a>
+                                    <font color="gray">BIOINFORMÁTICA</font>
+                                </td>
+                            </tr> 
+                            <tr onClick=carregarPagina("/chamado/calibração");>
+                                <td>
+                                    <font color="gray">CALIBRAÇÃO</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("/entrada-padrao_all");>
+                            <tr onClick=carregarPagina("/chamado/suprimentos");>
                                 <td>
-                                    <a href="#">ENTRADA DE PADRÕES</a>
+                                    <font color="gray">SUPRIMENTOS</font>
                                 </td>
                             </tr>
-                            <tr onClick=carregarPagina("/padrao");>
+                            <tr onClick=carregarPagina("/chamado/manutencao");>
                                 <td>
-                                    <a href="#">PADRÕES</a>
+                                    <font color="gray">MANUTENÇÃO</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/chamado/qualidade");>    
+                                <td>
+                                    <font color="gray">QUALIDADE</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/chamado/financeiro");>    
+                                <td>
+                                    <font color="gray">FINANCEIRO</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/chamado/secretaria");>
+                                <td>
+                                    <font color="gray">SECRETARIA</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/chamado/spet");>
+                                <td>
+                                    <font color="gray">SPET</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/chamado/ti");>
+                                <td>
+                                    <font color="gray">TI</font>
                                 </td>
                             </tr>
                             <thead>
                                 <tr>
                                     <th>
-                                        ÁREA ADMINISTRATIVA
+                                        <font color="#565656">AREA ADMINISTRATIVA</font>
                                     </th>
                                 </tr>
                             </thead>
-                            <tr onClick=carregarPagina("/log-material");>
+                            <tr onClick=carregarPagina("/categorias/");>
                                 <td>
-                                    <a href="#">EDITAR DE SAÍDAS DE MATERIAL</a>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("/log-padrao");>
-                                <td>
-                                    <a href="#">EDITAR DE SAÍDAS DE PADRAO</a>
-                                </td>
-                            </tr>
-                            <tr onClick=carregarPagina("/localizacao");>
-                                <td>
-                                    <a href="#">EDITAR LOCALIZAÇÕES</a>
+                                    <font color="gray">CATEGORIAS</font>
                                 </td>
                             </tr>
                         </table>
                     </div>
                 '],
-    'ftp' => [0 => 'https://ftp'.$dominio,
+        'rh' => [0 => 'https://rh'.$dominio,
                 1 => '
                 <div style="margin: 20px">
-                    <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                    <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
                         <thead>
                             <tr>
                                 <th>
-                                    FTP
+                                    <font color="#565656">COLABORADORES<a href="#"></font>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr onClick=carregarPagina("/colaboradores");>
+                            <td>
+                                <font color="gray">ATIVOS</font>
+                            </td>
+                        </tr>
+                        <tr onclick=carregarPagina("/colaboradores/inativos");>
+                            <td>
+                                <font color="gray">INATIVOS</font>
+                            </td>
+                        </tr>
+                        <tr onclick=carregarPagina("/colaboradores/desatualizados");>
+                                    <td>
+                                        <font color="gray">DESATUALIZADOS</font>
+                                    </td>
+                                </tr>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <font color="#565656">VISUALIZAR<a href="#"></font>
                                 </th>
                             </tr>
                         </thead>
                         <tr>
-                            <td>
-                                <a href="/usada">USADA</a>
+                            <td onclick=carregarPagina("/listar/colaboradores");>
+                                <font color="gray">COLABORADORES</font>
+                            </td>
+                            <td onclick=carregarPagina("/export/colaboradores")>
+                                <b><i class="fas fa-file-download"></i></b>
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td onclick=carregarPagina("/listar/aniversarios");>
+                                <font color="gray">ANIVERSARIANTES</font>
+                            </td>
+                            <td onclick=carregarPagina("/export/aniversarios")>
+                                <b><i class="fas fa-file-download"></i></b>
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <a href="/idtm">IDTM</a>
+                            <td onclick=carregarPagina("/listar/contatos");>
+                                <font color="gray">TELEFONES</font>
+                            </td>
+                            <td onclick=carregarPagina("/export/contatos")>
+                                <b><i class="fas fa-file-download"></i></b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=carregarPagina("/listar/ramais");>
+                                <font color="gray">RAMAIS</font>
+                            </td>
+                            <td onclick=carregarPagina("/export/ramais");>
+                                <b><i class="fas fa-file-download"></i></b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=carregarPagina("/listar/veiculos");>
+                                <font color="gray">VEICULOS</font>
+                            </td>
+                            <td onclick=carregarPagina("/export/veiculos");>
+                                <b><i class="fas fa-file-download"></i></b>
+                            </td>
+                        </tr>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <font color="#565656">AREA ADMINISTRATIVA<a href="#"></font>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td onclick=carregarPagina("https://www.ladetec.iq.ufrj.br/formulario");>
+                                <font color="gray">NOVO COLABORADOR</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=carregarPagina("/candidatos");>
+                                <font color="gray">IMPORTAR NOVO COLABORADOR</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=abrirIFrame("/instituicoes"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <font color="gray">INSTITUIÇÕES</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=abrirIFrame("/cursos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <font color="gray">CURSOS</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=abrirIFrame("/vinculos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <font color="gray">VINCULOS</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=abrirIFrame("/cargos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <font color="gray">CARGOS</font>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td onclick=abrirIFrame("/carreira"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <font color="gray">CARREIRAS</font>
                             </td>
                         </tr>
                     </table>
                 </div>
             '],
-    'locais' => [0 => 'https://locais'.$dominio,
+        'almoxarife' => [0 => 'https://almoxarife'.$dominio,
+                        1 => '
+                        <div style="margin: 20px">
+                            <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            ALMOXARIFE <a href="#" data-toggle="modal" data-target="#modalMenuAlmoxarife"><span class="badge badge-info">?</span></a>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            MEU ESTOQUE
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr onClick=carregarPagina("/material/");>
+                                    <td>
+                                        <a href="#">MATERIAIS</a>
+                                    </td>
+                                </tr>
+                                <tr onClick=carregarPagina("/entrada-padrao");>
+                                    <td>
+                                        <a href="#">ENTRADA DE PADRÕES</a>
+                                    </td>
+                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            ESTOQUE GERAL
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr onClick=carregarPagina("/material_all");>
+                                    <td>
+                                        <a href="#">MATERIAIS</a>
+                                    </td>
+                                </tr>
+                                <tr onClick=carregarPagina("/entrada-padrao_all");>
+                                    <td>
+                                        <a href="#">ENTRADA DE PADRÕES</a>
+                                    </td>
+                                </tr>
+                                <tr onClick=carregarPagina("/padrao");>
+                                    <td>
+                                        <a href="#">PADRÕES</a>
+                                    </td>
+                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            ÁREA ADMINISTRATIVA
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr onClick=carregarPagina("/log-material");>
+                                    <td>
+                                        <a href="#">EDITAR DE SAÍDAS DE MATERIAL</a>
+                                    </td>
+                                </tr>
+                                <tr onClick=carregarPagina("/log-padrao");>
+                                    <td>
+                                        <a href="#">EDITAR DE SAÍDAS DE PADRAO</a>
+                                    </td>
+                                </tr>
+                                <tr onClick=carregarPagina("/localizacao");>
+                                    <td>
+                                        <a href="#">EDITAR LOCALIZAÇÕES</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    '],
+        'ftp' => [0 => 'https://ftp'.$dominio,
+                    1 => '
+                    <div style="margin: 20px">
+                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        FTP
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    <a href="/usada">USADA</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="/idtm">IDTM</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                '],
+        'locais' => [0 => 'https://locais'.$dominio,
+                    1 => '
+                    <div style="margin: 20px">
+                    <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <font color="#565656">Localizacoes<a href="#"></font>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr onClick=carregarPagina("/localizacoes/create");>
+                            <td>
+                                <font color="gray">Nova Localizacão</font>
+                            </td>
+                        </tr>
+                        <tr onclick=carregarPagina("/setores/create");>
+                            <td>
+                                <font color="gray">Novo Setor ou Laboratório</font>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                    '],
+        'calibracao' => '',
+        'qualidade' => '',
+        'almolab' => '',
+        'solucoes' => '',
+        'bibilivre' => 'https://10.10.0.25/Biblivre5/',
+        'labdop' => 'https://10.10.0.6/labdop/'
+        ];
+} else {
+    $uriSistemas = [
+        'login' => [0 => 'https://hmlsslogin'.$dominio,
+                    1 => '
+                    <div style="margin: 20px">
+                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <font color="#565656">DASHBOARD</font>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr onclick=abrirIFrame("https://suporte'.$dominio.'/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <td>
+                                    <font color="gray">NOVO CHAMADO</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("' . $colaborador . '")>
+                                <td>
+                                    <font color="gray">FICHA CADASTRAL</font>
+                                </td>
+                            </tr>
+                            <input type="hidden" id="rotaAutoPreencher"; data-target="#modal"; data-toggle="modal";>
+                        </table>
+                    </div>
+                '],
+        'suporte' => [0 => 'https://hmlsssuporte'.$dominio,
+                    1 => '
+                    <div style="margin: 20px">
+                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <font color="#565656">SUPORTE <a href="#"></font>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr onClick=carregarPagina("/chamado/geral");>
+                                <td>
+                                    <font color="gray">PÁGINA PRINCIPAL</font>
+                                </td>
+                            </tr>
+                            <tr onclick=abrirIFrame("/chamados/create"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <td>
+                                    <font color="gray">NOVO CHAMADO</font>
+                                </td>
+                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <font color="#565656">VISUALIZAR CHAMADOS
+                                    </th>
+                                </tr>  
+                            </thead> 
+                            <tr onClick=carregarPagina("/chamado/bioinformatica");>
+                                <td>
+                                    <font color="gray">BIOINFORMÁTICA</font>
+                                </td>
+                            </tr> 
+                            <tr onClick=carregarPagina("/chamado/calibração");>
+                                <td>
+                                    <font color="gray">CALIBRAÇÃO</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/chamado/suprimentos");>
+                                <td>
+                                    <font color="gray">SUPRIMENTOS</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/chamado/manutencao");>
+                                <td>
+                                    <font color="gray">MANUTENÇÃO</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/chamado/qualidade");>    
+                                <td>
+                                    <font color="gray">QUALIDADE</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/chamado/financeiro");>    
+                                <td>
+                                    <font color="gray">FINANCEIRO</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/chamado/secretaria");>
+                                <td>
+                                    <font color="gray">SECRETARIA</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/chamado/spet");>
+                                <td>
+                                    <font color="gray">SPET</font>
+                                </td>
+                            </tr>
+                            <tr onClick=carregarPagina("/chamado/ti");>
+                                <td>
+                                    <font color="gray">TI</font>
+                                </td>
+                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <font color="#565656">AREA ADMINISTRATIVA</font>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr onClick=carregarPagina("/categorias/");>
+                                <td>
+                                    <font color="gray">CATEGORIAS</font>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                '],
+        'rh' => [0 => 'https://hmlssrh'.$dominio,
                 1 => '
                 <div style="margin: 20px">
-                <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
-                    <thead>
-                        <tr>
-                            <th>
-                                <font color="#565656">Localizacoes<a href="#"></font>
-                            </th>
+                    <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <font color="#565656">COLABORADORES<a href="#"></font>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr onClick=carregarPagina("/colaboradores");>
+                            <td>
+                                <font color="gray">ATIVOS</font>
+                            </td>
                         </tr>
-                    </thead>
-                    <tr onClick=carregarPagina("/localizacoes/create");>
-                        <td>
-                            <font color="gray">Nova Localizacão</font>
-                        </td>
-                    </tr>
-                    <tr onclick=carregarPagina("/setores/create");>
-                        <td>
-                            <font color="gray">Novo Setor ou Laboratório</font>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+                        <tr onclick=carregarPagina("/colaboradores/inativos");>
+                            <td>
+                                <font color="gray">INATIVOS</font>
+                            </td>
+                        </tr>
+                        <tr onclick=carregarPagina("/colaboradores/desatualizados");>
+                                    <td>
+                                        <font color="gray">DESATUALIZADOS</font>
+                                    </td>
+                                </tr>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <font color="#565656">VISUALIZAR<a href="#"></font>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td onclick=carregarPagina("/listar/colaboradores");>
+                                <font color="gray">COLABORADORES</font>
+                            </td>
+                            <td onclick=carregarPagina("/export/colaboradores")>
+                                <b><i class="fas fa-file-download"></i></b>
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td onclick=carregarPagina("/listar/aniversarios");>
+                                <font color="gray">ANIVERSARIANTES</font>
+                            </td>
+                            <td onclick=carregarPagina("/export/aniversarios")>
+                                <b><i class="fas fa-file-download"></i></b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=carregarPagina("/listar/contatos");>
+                                <font color="gray">TELEFONES</font>
+                            </td>
+                            <td onclick=carregarPagina("/export/contatos")>
+                                <b><i class="fas fa-file-download"></i></b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=carregarPagina("/listar/ramais");>
+                                <font color="gray">RAMAIS</font>
+                            </td>
+                            <td onclick=carregarPagina("/export/ramais");>
+                                <b><i class="fas fa-file-download"></i></b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=carregarPagina("/listar/veiculos");>
+                                <font color="gray">VEICULOS</font>
+                            </td>
+                            <td onclick=carregarPagina("/export/veiculos");>
+                                <b><i class="fas fa-file-download"></i></b>
+                            </td>
+                        </tr>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <font color="#565656">AREA ADMINISTRATIVA<a href="#"></font>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td onclick=carregarPagina("https://www.ladetec.iq.ufrj.br/formulario");>
+                                <font color="gray">NOVO COLABORADOR</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=carregarPagina("/candidatos");>
+                                <font color="gray">IMPORTAR NOVO COLABORADOR</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=abrirIFrame("/instituicoes"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <font color="gray">INSTITUIÇÕES</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=abrirIFrame("/cursos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <font color="gray">CURSOS</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=abrirIFrame("/vinculos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <font color="gray">VINCULOS</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick=abrirIFrame("/cargos"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <font color="gray">CARGOS</font>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td onclick=abrirIFrame("/carreira"); id="rota"; data-target="#modal"; data-toggle="modal";>
+                                <font color="gray">CARREIRAS</font>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            '],
+        'almoxarife' => [0 => 'https://hmlssalmoxarife'.$dominio,
+                        1 => '
+                        <div style="margin: 20px">
+                            <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            ALMOXARIFE <a href="#" data-toggle="modal" data-target="#modalMenuAlmoxarife"><span class="badge badge-info">?</span></a>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            MEU ESTOQUE
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr onClick=carregarPagina("/material/");>
+                                    <td>
+                                        <a href="#">MATERIAIS</a>
+                                    </td>
+                                </tr>
+                                <tr onClick=carregarPagina("/entrada-padrao");>
+                                    <td>
+                                        <a href="#">ENTRADA DE PADRÕES</a>
+                                    </td>
+                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            ESTOQUE GERAL
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr onClick=carregarPagina("/material_all");>
+                                    <td>
+                                        <a href="#">MATERIAIS</a>
+                                    </td>
+                                </tr>
+                                <tr onClick=carregarPagina("/entrada-padrao_all");>
+                                    <td>
+                                        <a href="#">ENTRADA DE PADRÕES</a>
+                                    </td>
+                                </tr>
+                                <tr onClick=carregarPagina("/padrao");>
+                                    <td>
+                                        <a href="#">PADRÕES</a>
+                                    </td>
+                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            ÁREA ADMINISTRATIVA
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr onClick=carregarPagina("/log-material");>
+                                    <td>
+                                        <a href="#">EDITAR DE SAÍDAS DE MATERIAL</a>
+                                    </td>
+                                </tr>
+                                <tr onClick=carregarPagina("/log-padrao");>
+                                    <td>
+                                        <a href="#">EDITAR DE SAÍDAS DE PADRAO</a>
+                                    </td>
+                                </tr>
+                                <tr onClick=carregarPagina("/localizacao");>
+                                    <td>
+                                        <a href="#">EDITAR LOCALIZAÇÕES</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    '],
+        'ftp' => [0 => 'https://hmlssftp'.$dominio,
+                    1 => '
+                    <div style="margin: 20px">
+                        <table class="table table-sm table-hover arrow-hover-hand table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        FTP
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    <a href="/usada">USADA</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="/idtm">IDTM</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 '],
-    'calibracao' => '',
-    'qualidade' => '',
-    'almolab' => '',
-    'solucoes' => '',
-    'bibilivre' => 'https://10.10.0.25/Biblivre5/',
-    'labdop' => 'https://10.10.0.6/labdop/'
-    ];
+        'locais' => [0 => 'https://hmlsslocais'.$dominio,
+                    1 => '
+                    <div style="margin: 20px">
+                    <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <font color="#565656">Localizacoes<a href="#"></font>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr onClick=carregarPagina("/localizacoes/create");>
+                            <td>
+                                <font color="gray">Nova Localizacão</font>
+                            </td>
+                        </tr>
+                        <tr onclick=carregarPagina("/setores/create");>
+                            <td>
+                                <font color="gray">Novo Setor ou Laboratório</font>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                    '],
+        'calibracao' => '',
+        'qualidade' => '',
+        'almolab' => '',
+        'solucoes' => '',
+        'bibilivre' => 'https://10.10.0.25/Biblivre5/',
+        'labdop' => 'https://10.10.0.6/labdop/'
+        ];
+}
 ?>
 
 <!-- Div fecha todos os menus -->
