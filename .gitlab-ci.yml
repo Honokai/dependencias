@@ -18,7 +18,7 @@ homolog:
 deploy to production:
   stage: deploy
   environment:
-    name: production
+    name: prod
   rules:
     - when: manual
   script:
