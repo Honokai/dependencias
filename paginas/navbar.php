@@ -12,7 +12,7 @@ else
 
 if ($hml[0] === null) {
     $uriSistemas = [
-        'login' => [0 => 'https://login'.$dominio,
+        'login' => [0 => 'https://slogin'.$dominio,
                     1 => '
                     <div style="margin: 20px">
                         <table class="table table-sm table-hover arrow-hover-hand table-borderless">
@@ -37,7 +37,7 @@ if ($hml[0] === null) {
                         </table>
                     </div>
                 '],
-        'suporte' => [0 => 'https://suporte'.$dominio,
+        'suporte' => [0 => 'https://ssuporte'.$dominio,
                     1 => '
                     <div style="margin: 20px">
                         <table class="table table-sm table-hover arrow-hover-hand table-borderless">
@@ -125,7 +125,7 @@ if ($hml[0] === null) {
                         </table>
                     </div>
                 '],
-        'rh' => [0 => 'https://rh'.$dominio,
+        'rh' => [0 => 'https://srh'.$dominio,
                 1 => '
                 <div style="margin: 20px">
                     <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
@@ -244,7 +244,7 @@ if ($hml[0] === null) {
                     </table>
                 </div>
             '],
-        'almoxarife' => [0 => 'https://almoxarife'.$dominio,
+        'almoxarife' => [0 => 'https://salmoxarife'.$dominio,
                         1 => '
                         <div style="margin: 20px">
                             <table class="table table-sm table-hover arrow-hover-hand table-borderless">
@@ -317,7 +317,7 @@ if ($hml[0] === null) {
                             </table>
                         </div>
                     '],
-        'ftp' => [0 => 'https://ftp'.$dominio,
+        'ftp' => [0 => 'https://sftp'.$dominio,
                     1 => '
                     <div style="margin: 20px">
                         <table class="table table-sm table-hover arrow-hover-hand table-borderless">
@@ -341,7 +341,7 @@ if ($hml[0] === null) {
                         </table>
                     </div>
                 '],
-        'locais' => [0 => 'https://locais'.$dominio,
+        'locais' => [0 => 'https://slocais'.$dominio,
                     1 => '
                     <div style="margin: 20px">
                     <table class="table table-sm table-hover-menu arrow-hover-hand table-borderless">
