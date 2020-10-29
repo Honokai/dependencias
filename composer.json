@@ -17,7 +17,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "TI\\Dependencias\\": "src/"
+            "TI\\Dependencias\\": "src"
         }
     },
     "extra": {
