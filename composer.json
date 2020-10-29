@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ti\\Dependencias\\DependenciaServiceProvider"
+                "TI\\Dependencias\\DependenciaServiceProvider"
             ]
         }
     }

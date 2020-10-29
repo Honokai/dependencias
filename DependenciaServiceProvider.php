@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace TI\Dependencias;
 
 use Illuminate\Support\ServiceProvider;
 
