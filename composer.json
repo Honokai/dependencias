@@ -2,9 +2,12 @@
     "name": "ti/dependencias",
     "type": "library",
     "description": "Pacote contendo as dependências necessárias para os projetos Laravel",
-    "keywords": ["dependencias"],
+    "keywords": ["dependencias","laravel"],
     "homepage": "https://gitlab.ladetec.iq.ufrj.br/ti/dependencias",
     "license": "MIT",
+    "require": {
+        "php": "^7.0"
+    },
     "authors": [
         {
             "name": "Emerson Ferreira Fernandes",
@@ -15,6 +18,13 @@
     "autoload": {
         "psr-4": {
             "Ti\\Dependencias\\": "vendor/ti/dependencias"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ti\\Dependencias\\DependenciaServiceProvider"
+            ]
         }
     }
 }
