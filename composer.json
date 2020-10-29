@@ -12,7 +12,7 @@
             "role": "Developer"
         }
     ],
-    "autoload": {
+    "autoload-dev": {
         "psr-4": {
             "Ti\\Dependencias\\": "vendor/ti/dependencias"
         }
