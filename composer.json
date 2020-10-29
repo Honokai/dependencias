@@ -1,0 +1,15 @@
+{
+    "name": "ti/dependencias",
+    "type": "library",
+    "description": "Pacote contendo as dependências necessárias para os projetos Laravel",
+    "keywords": ["dependencias"],
+    "homepage": "https://gitlab.ladetec.iq.ufrj.br/ti/dependencias",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Emerson Ferreira Fernandes",
+            "email": "eff@iq.ufrj.br",
+            "role": "Developer"
+        }
+    ]
+}
