@@ -11,5 +11,19 @@
             "email": "eff@iq.ufrj.br",
             "role": "Developer"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ti\\Dependencias\\": "vendor/ti/dependencias"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TI\\Dependencias\\DependenciaServiceProvider"
+            ]
+        }
+    }
+
 }
