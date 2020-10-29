@@ -5,9 +5,6 @@
     "keywords": ["dependencias","laravel"],
     "homepage": "https://gitlab.ladetec.iq.ufrj.br/ti/dependencias",
     "license": "MIT",
-    "require": {
-        "php": "^7.0"
-    },
     "authors": [
         {
             "name": "Emerson Ferreira Fernandes",
