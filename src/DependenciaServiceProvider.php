@@ -25,15 +25,15 @@ class DependenciaServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/css_js' => public_path('dependencias/css_js'),
-        ], 'dependencias-cssJs');
+        ], ['dependencias-cssJs','dependenciasTudo']);
 
         $this->publishes([
             __DIR__.'/images' => public_path('dependencias/images'),
-        ], 'dependencias-images');
+        ], ['dependencias-images','dependenciasTudo']);
 
         $this->publishes([
             __DIR__.'/paginas' => resource_path('views/dependencias'),
-        ], 'dependencias-views');
+        ], ['dependencias-views','dependenciasTudo']);
     }
     
 }
