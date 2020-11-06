@@ -11,7 +11,6 @@ Criando branch de dev outra vez
 Você pode instalar esse pacote via Composer, por meio do Satis.  
 
 Adicione o satis no seu arquivo composer.json:
-
 ```json
 "repositories": [
   {
